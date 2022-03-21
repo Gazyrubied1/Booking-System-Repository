@@ -9,11 +9,13 @@ public class RegisteredUser {
     private boolean RewardMember;
     private int NumFlights;
     private double Review;
-    private ArrayList<Flight> PastFlight;
+    private ArrayList<Ticket> PastReservation;
     private ArrayList<String> blacklisted;
     private ArrayList<Pet> pets;
+    private String id;
 
-    public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flights> PastFlight, ArrayList<Airport> Blacklisted, ArrayList<Pet> pets) {
+    public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember,
+                          int NumFlights, double Review, ArrayList<Ticket> PastReservation, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.DateOfBirth =DOB;
@@ -22,9 +24,11 @@ public class RegisteredUser {
         this.RewardMember = RewardMember;
         this.NumFlights = NumFlights;
         this.Review = Review;
-        this.PastFlight = PastFlight;
+        this.PastReservation = PastReservation;
         this. blacklisted = Blacklisted;
-        this.pets =pets;
+        this.pets = pets;
+        this.id = id;
+
     }
     // gettters
     public String getFirstName() {
@@ -52,14 +56,18 @@ public class RegisteredUser {
     public double getReview() {
         return Review;
     }
-    public ArrayList<Flight> getPastFlight() {
-        return PastFlight;
+    public ArrayList<Ticket> getPastReservation() {
+        return PastReservation;
     }
     public ArrayList<String> getBlackList() {
         return blacklisted;
     }
     public ArrayList<Pet> getPets(){
         return pets;
+    }
+
+    public String getID() {
+        return id;
     }
 // setters
 
@@ -85,14 +93,18 @@ public class RegisteredUser {
     public void setReview(double Review) {
         this.Review = Review;
     }
-    public void setPastFlight(ArrayList<Flight> PastFlight) {
-        this.PastFlight = PastFlight;
+    public void setPastFlight(ArrayList<Ticket> PastReservation) {
+        this.PastReservation = PastReservation;
     }
     public void setBlacklisted(ArrayList<String> blackList) {
         this.blacklisted = blackList;
     }
     public void setPets(ArrayList<Pet> pets) {
         this.pets = pets;
+    }
+
+    public void setId(String Id) {
+        this.id = Id;
     }
 
     /**
@@ -127,7 +139,7 @@ public class RegisteredUser {
      * 
      * @return
      */
-    public Flights SavedFlights() {
+    public Flight SavedFlights() {
         return null;
     }
 
