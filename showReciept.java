@@ -17,7 +17,7 @@ public class showReciept {
      * 
      * @return
      */
-    public int checkAge(HashMap<Flights, ArrayList<RegisteredUser>>) {
+    public int checkAge(HashMap<Flights, ArrayList<RegisteredUser>> users) { // what does this do??
 
     }
 

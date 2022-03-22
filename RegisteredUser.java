@@ -143,7 +143,7 @@ public class RegisteredUser {
     /**
      * possible change to have string input
      */
-    public void blacklistAirport() {
+    public void blacklistAirport() { // will take parameter Airport
         return;
     }
 
@@ -153,6 +153,10 @@ public class RegisteredUser {
      */
     public Flights SavedFlights() {
         return null;
+    }
+
+    public void addPet(Pet pet) {
+        pets.add(pet);
     }
 
 }

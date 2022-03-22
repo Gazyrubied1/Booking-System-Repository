@@ -33,11 +33,11 @@
 		"pets": [
 			{
 				"type": Dog,
-				"Name": Sparky
+				"Name": "Sparky"
 			},
 			{
 				"type": Cat,
-				"Name": Mr. Mittens
+				"Name": "Mr. Mittens"
 			}
 		]
 	}
@@ -67,7 +67,7 @@
 		"pets": [
 			{
 				"type": Fish,
-				"Name": Nemo
+				"Name": "Nemo"
 			}
 		]
 	}

@@ -6,10 +6,10 @@ public class Account {
     public UUID UserID;
     private String Email;
     private String Password;
-    private ArrayList<RegisteredUser> Users;
+    private ArrayList<RegisteredUser> users;
     public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights; 
 
-    public Account ( UUID UserID, String Email, String Password, ArrayList<RegisteredUser> Users, HashMap<Flights, ArrayList<RegisteredUser> currentFlights) {
+    public Account (UUID UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
         this.UserID = UserID;
         this.Email = Email;
         this.Password = Password;
