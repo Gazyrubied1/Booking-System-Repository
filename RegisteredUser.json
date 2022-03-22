@@ -1,0 +1,74 @@
+[
+    {
+		"id": 1,
+		"firstName": "John",
+		"lastName": "Smith",
+		"DateOfBirth": "3-12-95",
+		"BillingAddress": "1234 Main Street", 
+		"Discount": false, 
+		"rewardMember": false,
+		"NumFlights": 2,
+		"Review": 4.0,
+		"PastFlight": [
+			{
+				"departureLocation": "ATL",
+				"arrivalLocation": "JFK",
+				"FlightDuration": 3,
+				"DepartureDate": "1-16-2022",
+				"Seats": 100,
+				"cost": 150
+			},
+			{
+				"departureLocation": "JFK",
+				"arrivalLocation": "ATL",
+				"FlightDuration": 12,
+				"DepartureDate": "9-23-2021",
+				"Seats": 200,
+				"cost": 250
+			}
+		],
+		"blacklistedAirports": [
+            "SLC", "LAS"
+        ],
+		"pets": [
+			{
+				"type": Dog,
+				"Name": Sparky
+			},
+			{
+				"type": Cat,
+				"Name": Mr. Mittens
+			}
+		]
+	}
+	{
+		"id": 2,
+		"firstName": "Dorothy",
+		"lastName": "Thomas",
+		"DateOfBirth": "6-23-45",
+		"BillingAddress": "1234 Main Street", 
+		"Discount": true, 
+		"rewardMember": true,
+		"NumFlights": 6,
+		"Review": 5.0,
+		"PastFlight": [
+			{
+				"departureLocation": "SLC",
+				"arrivalLocation": "LAS",
+				"FlightDuration": 2,
+				"DepartureDate": "2-15-2022",
+				"Seats": 75,
+				"cost": 150
+			}
+		],
+		"blacklistedAirports": [
+            "JFK", "ATL"
+        ],
+		"pets": [
+			{
+				"type": Fish,
+				"Name": Nemo
+			}
+		]
+	}
+]

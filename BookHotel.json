@@ -1,0 +1,17 @@
+[
+    {
+		"nameHotel": "Courtyard by Marriott",
+		"location": "ATL",
+		"guest": ,
+		"RoomType": King_Bed,
+		"Brand": Marriott,
+	}
+
+	{
+		"nameHotel": "DoubleTree by Hilton",
+		"location": "LAS",
+		"guest": ,
+		"RoomType": Twin_Beds,
+		"Brand": Hilton
+	}
+]
