@@ -3,7 +3,7 @@ public class BookHotel {
     private String location;
     private String guest;
     private RoomType roomType;
-    private Brand HotelBrands;
+    private HotelBrands Brand;
     
     public Book(){
         

@@ -1,24 +1,21 @@
+import java.util.ArrayList;
+
 public class seats {
-    private char row;
-    private int col;
+    private static seats seats = null;
+    private static ArrayList<seat> seatList = new ArrayList<>();
 
-    public seats(char row, int col) {
-        this.row = row;
-        this.col = col;
-    }
-    public void setRow(char row) {
-        this.row = row;
+    private seats() {
+        seatList = GenerateSeats.generateSeats();
     }
 
-    public void setCol( int col) {
-        this.col = col;
+    public static seats getInstance() {
+        if(seats == null) {
+            seats = new seats();
+        }
+        return seats;
     }
 
-    public char getRow() {
-        return row;
-    }
-
-    public int getCol() {
-        return col;
+    public void addSeat(char row, int col, String Id) {
+        seatList.add(new seat(row, col));
     }
 }

@@ -1,12 +1,14 @@
+import java.util.ArrayList;
+
 public class Flight {
-    private AirPort departureLocation;
-    private AirPort arrivalLocation;
+    private String departureLocation;
+    private String arrivalLocation;
     private int FlightDuration;
     private String DepartureDate;
-    private ArrayList<Seats> SeatAvalable;
+    private ArrayList<seats> SeatAvalable;
     private int cost; 
 
-    public Flight(AirPort departureLocation, AirPort arrivalLocation, int FlightDuration,String DepartureDate, ArrayList<Seats> SeatAvalable, int cost) {
+    public Flight(String departureLocation, String arrivalLocation, int FlightDuration,String DepartureDate, ArrayList<seats> SeatAvalable, int cost) {
             
            this.departureLocation = departureLocation;
            this.arrivalLocation = arrivalLocation;
@@ -16,12 +18,12 @@ public class Flight {
            this.cost = cost;
 }
 
-    public void setdepartureLocation (AirPort departureLocation) {
+    public void setdepartureLocation (String departureLocation) {
 
        this.departureLocation = departureLocation;
     }
 
-    public void setarrivalLocation(AirPort arrivalLocation) {
+    public void setarrivalLocation(String arrivalLocation) {
 
         this.arrivalLocation = arrivalLocation;
     }
@@ -32,7 +34,7 @@ public class Flight {
 
         this.DepartureDate = DepartureDate;
     }
-    public void setSeatAvalable(ArrayList<Seats> SeatsAvalable) {
+    public void setSeatAvalable(ArrayList<seats> SeatsAvalable) {
 
         this.SeatAvalable = SeatsAvalable;
     }
@@ -40,24 +42,24 @@ public class Flight {
 
         this.cost = cost;
     }
-    public AirPort getDepartureLocation  () {
+    public String getDepartureLocation  () {
 
-        return null;
+        return departureLocation;
     }
 
-    public AirPort getArrivalLocation() {
-        return null;
+    public String getArrivalLocation() {
+        return arrivalLocation;
     }
 
     public int getFlightDuration() {
-        return null;
+        return FlightDuration;
     }
 
     public String getDepartureDate() {
-        return null;
+        return DepartureDate;
     }
 
-    public ArrayList<Seats> getSeatAvalable () {
+    public ArrayList<seats> getSeatAvalable () {
         return SeatAvalable;
     }
 
@@ -65,11 +67,18 @@ public class Flight {
         return cost;
     }
 
+    /**
+     * prints out if the flight is Flight is canceld or not
+     */
     public boolean isFlightCanceled() {
+        return true; 
 
     }
 
-    public void print(int time, AirPort destination, int cost) {
+    /**
+     *prints out the info of the flight before the flight  
+     */
+    public void print(int time, String destination, int cost) {
 
     }
 }

@@ -36,7 +36,7 @@ public class BookFlight {
      * @param Date
      * @return
      */
-    public ArrayList<Flights> searchDate(String Date) {
+    public ArrayList<Flight> searchDate(String Date) {
         return null;
     }
     /**
@@ -45,7 +45,7 @@ public class BookFlight {
      * @param time
      * @return
      */
-    public ArrayList<Flights> searchDateTime(String Date, String time) {
+    public ArrayList<Flight> searchDateTime(String Date, String time) {
         return null;
     } 
     /**
