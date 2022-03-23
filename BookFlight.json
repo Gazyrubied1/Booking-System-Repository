@@ -1,0 +1,84 @@
+[
+    {
+        "UserId": 1,
+        "FlightId": 1,
+		"departureLocation": "ATL",
+		"hasPets": false,
+		"ArrivalLocation": "JFK",
+		"Flights": [
+			{
+				"departureLocation": "ATL",
+				"arrivalLocation": "JFK",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 75,
+				"cost": 150
+			},
+			{
+				"departureLocation": "ATL",
+				"arrivalLocation": "JFK",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 150,
+				"cost": 100
+			},
+			{
+				"departureLocation": "ATL",
+				"arrivalLocation": "JFK",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 300,
+				"cost": 200
+			},
+			{
+				"departureLocation": "ATL",
+				"arrivalLocation": "JFK",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 120,
+				"cost": 150
+			}
+		]
+	}, 
+    {
+        "UserId": 2,
+        "FlightId": 2,
+		"departureLocation": "JFK",
+		"hasPets": false,
+		"ArrivalLocation": "ATL",
+		"Flights": [
+			{
+				"departureLocation": "JFK",
+				"arrivalLocation": "ATL",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 75,
+				"cost": 150
+			},
+			{
+				"departureLocation": "JFK",
+				"arrivalLocation": "ATL",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 150,
+				"cost": 100
+			},
+			{
+				"departureLocation": "JFK",
+				"arrivalLocation": "ATL",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 300,
+				"cost": 200
+			},
+			{
+				"departureLocation": "JFK",
+				"arrivalLocation": "ATL",
+				"FlightDuration": 2,
+				"DepartureDate": "3-16-2022",
+				"Seats": 120,
+				"cost": 150
+			}
+		]
+	}
+]

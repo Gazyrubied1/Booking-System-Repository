@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class RegisteredUser {
+    private UUID id;
     private String firstName;
     private String lastName;
     private String DateOfBirth;
@@ -30,7 +31,28 @@ public class RegisteredUser {
         this.id = id;
 
     }
+
+    // existing account loaded from JSON
+    public RegisteredUser(UUID id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flights> PastFlight, ArrayList<Airport> Blacklisted, ArrayList<Pet> pets) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.DateOfBirth =DOB;
+        this.BillingAddress = BillingAddress;
+        this.Discount = Discount;
+        this.RewardMember = RewardMember;
+        this.NumFlights = NumFlights;
+        this.Review = Review;
+        this.PastFlight = PastFlight;
+        this. blacklisted = Blacklisted;
+        this.pets =pets;
+    }
+
     // gettters
+    public UUID getUserID() {
+        return id;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -108,21 +130,21 @@ public class RegisteredUser {
     }
 
     /**
-     * 
+     *
      * @param flight
      */
     public void cancelFlight(Flight flight){
-        return;   
+        return;
      }
      /**
-      * 
+      *
       */
      public void addPastFlight() {
          return;
      }
 
     /**
-     * 
+     *
      */
     public void viewPastFlights() {
         return;
@@ -131,16 +153,20 @@ public class RegisteredUser {
     /**
      * possible change to have string input
      */
-    public void blacklistAirport() {
+    public void blacklistAirport() { // will take parameter Airport
         return;
     }
 
     /**
-     * 
+     *
      * @return
      */
     public Flight SavedFlights() {
         return null;
+    }
+
+    public void addPet(Pet pet) {
+        pets.add(pet);
     }
 
 }
