@@ -1,60 +1,49 @@
 public class Flight {
-    private AirPort departureLocation;
-    private AirPort arrivalLocation;
+    private ArrayList<String> locations;
     private int FlightDuration;
     private String DepartureDate;
     private ArrayList<Seats> SeatAvalable;
     private int cost; 
+    int transfers;
 
-    public Flight(AirPort departureLocation, AirPort arrivalLocation, int FlightDuration,String DepartureDate, ArrayList<Seats> SeatAvalable, int cost) {
-            
-           this.departureLocation = departureLocation;
-           this.arrivalLocation = arrivalLocation;
-           this.FlightDuration = FlightDuration;
-           this.DepartureDate = DepartureDate;
-           this.SeatAvalable = SeatAvalable;
-           this.cost = cost;
+    public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, ArrayList<Seats> SeatAvalable, int cost, int transfers) {
+        this.locations = locations;
+        this.arrivalLocations = arrivalLocations;
+        this.FlightDuration = FlightDuration;
+        this.DepartureDate = DepartureDate;
+        this.SeatAvalable = SeatAvalable;
+        this.cost = cost;
+        this.transfets = transfers;
 }
 
-    public void setdepartureLocation (AirPort departureLocation) {
-
-       this.departureLocation = departureLocation;
+    public void addLocation (String location) {
+       this.locations.add(location);
     }
 
-    public void setarrivalLocation(AirPort arrivalLocation) {
-
-        this.arrivalLocation = arrivalLocation;
-    }
-    public void setFlightDurrantion(int time) {
+    public void setFlightDuration(int time) {
         this.FlightDuration = time;
     }
     public void setDepartureDate(String DepartureDate) {
-
         this.DepartureDate = DepartureDate;
     }
     public void setSeatAvalable(ArrayList<Seats> SeatsAvalable) {
-
         this.SeatAvalable = SeatsAvalable;
     }
     public void setCost  (int cost) {
 
         this.cost = cost;
     }
-    public AirPort getDepartureLocation  () {
-
-        return null;
-    }
-
-    public AirPort getArrivalLocation() {
-        return null;
+ 
+    public ArrayList<String> getlocations() {
+        return locations;
     }
 
     public int getFlightDuration() {
-        return null;
+        return FlightDuration;
     }
 
     public String getDepartureDate() {
-        return null;
+        return DepartureDate;
     }
 
     public ArrayList<Seats> getSeatAvalable () {
@@ -66,10 +55,20 @@ public class Flight {
     }
 
     public boolean isFlightCanceled() {
-
+        return false;
     }
 
-    public void print(int time, AirPort destination, int cost) {
-
+    public void print() {
+        System.out.println("Flight details:\nYour trip has " + transfers + "transfers.");
+        for (int i = 0; i < locations.size(); i++) { // prints travel path
+            System.out.print(locations.get(i) + " ");
+            if (i != locations.size()) {
+                System.out.print("-> ");
+            }
+            else {
+                System.out.println();
+            }
+        }
+        System.out.println("cost: " + cost + "\ndate: " + DepartureDate);
     }
 }
