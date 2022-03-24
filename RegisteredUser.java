@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class RegisteredUser {
-    private UUID id;
     private String firstName;
     private String lastName;
     private String DateOfBirth;
@@ -10,6 +9,7 @@ public class RegisteredUser {
     private boolean RewardMember;
     private int NumFlights;
     private double Review;
+    private ArrayList<Flight> PastFlight;
     private ArrayList<Ticket> PastReservation;
     private ArrayList<String> blacklisted;
     private ArrayList<Pet> pets;
@@ -33,19 +33,19 @@ public class RegisteredUser {
     }
 
     // existing account loaded from JSON
-    public RegisteredUser(UUID id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flights> PastFlight, ArrayList<Airport> Blacklisted, ArrayList<Pet> pets) {
+    public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flight> PastFlight, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.DateOfBirth =DOB;
+        this.DateOfBirth = DOB;
         this.BillingAddress = BillingAddress;
         this.Discount = Discount;
         this.RewardMember = RewardMember;
         this.NumFlights = NumFlights;
         this.Review = Review;
         this.PastFlight = PastFlight;
-        this. blacklisted = Blacklisted;
-        this.pets =pets;
+        this.blacklisted = Blacklisted;
+        this.pets = pets;
     }
 
     // gettters
