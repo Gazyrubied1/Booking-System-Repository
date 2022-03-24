@@ -1,14 +1,11 @@
 public abstract class Book {
     private String Book;
-    private boolean Cancel;
+    private boolean cancel;
     private String date;
     private String type;
 
-    public Book(String date, String location){
-
-    }
+    public Book(String Book, boolean cancel, String date, String type){ }
 
     public void Cancel(){
-        
     }
 }

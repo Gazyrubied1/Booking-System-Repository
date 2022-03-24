@@ -6,7 +6,7 @@ public class Flight {
     private String DepartureDate;
     private ArrayList<seats> SeatAvalable;
     private int cost; 
-    int transfers;
+    private int transfers;
 
     public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, ArrayList<Seats> SeatAvalable, int cost, int transfers) {
         this.locations = locations;

@@ -33,6 +33,7 @@ public class RegisteredUser {
     }
 
     // existing account loaded from JSON
+
     public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flight> PastFlight, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
         this.id = id;
         this.firstName = firstName;
@@ -49,10 +50,6 @@ public class RegisteredUser {
     }
 
     // gettters
-    public UUID getUserID() {
-        return id;
-    }
-
     public String getFirstName() {
         return firstName;
     }
