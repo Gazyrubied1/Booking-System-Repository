@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 
-public class BookFlight {
+public class BookFlight extends Book{
     private boolean hasPets; 
     private ArrayList<Flight> Flights;
 
-    public BookFlight (boolean hasPets, ArrayList<Flight> Flights) {
+    public BookFlight (String date, String location,boolean hasPets, ArrayList<Flight> Flights) {
+        super(date, hasPets, location, location);
         this.hasPets =hasPets;
         this.Flights = Flights;
     }
@@ -28,7 +29,7 @@ public class BookFlight {
      * @param State
      * @return
      */
-    public ArrayList<Flights> searchLocation(String State) {
+    public ArrayList<Flight> searchLocation(String State) {
         return null;
     }
     /**

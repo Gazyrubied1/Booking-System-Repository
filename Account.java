@@ -2,23 +2,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.*;
 
-public class Account {
-    public UUID UserID;
+public class Account extends User {
+    public String UserID;
     private String Email;
     private String Password;
     private ArrayList<RegisteredUser> users;
     public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights; 
 
-    public Account (UUID UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
+    public Account (int AccountNum,String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
+        super(AccountNum);
         this.UserID = UserID;
         this.Email = Email;
         this.Password = Password;
-        this.Users = Users;
+        this.users = users;
         this.currentFlights = currentFlights;
     }
     
     public boolean hasUser(String name) {
-        for (RegisteredUser user : Users) {
+        for (RegisteredUser user : users) {
             if ((user.getFirstName + user.getLastName).equals(name)) {
                 return true;
             }

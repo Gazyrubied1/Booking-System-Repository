@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class RegisteredUser {
-    private UUID id;
     private String firstName;
     private String lastName;
     private String DateOfBirth;
@@ -33,7 +32,7 @@ public class RegisteredUser {
     }
 
     // existing account loaded from JSON
-    public RegisteredUser(UUID id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flights> PastFlight, ArrayList<Airport> Blacklisted, ArrayList<Pet> pets) {
+    public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flights> PastFlight, ArrayList<Airport> Blacklisted, ArrayList<Pet> pets) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -49,10 +48,6 @@ public class RegisteredUser {
     }
 
     // gettters
-    public UUID getUserID() {
-        return id;
-    }
-
     public String getFirstName() {
         return firstName;
     }

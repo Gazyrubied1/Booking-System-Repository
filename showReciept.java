@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class showReciept {
@@ -17,8 +18,9 @@ public class showReciept {
      * 
      * @return
      */
-    public int checkAge(HashMap<Flights, ArrayList<RegisteredUser>> users) { // what does this do??
+    public int checkAge(HashMap<Flight, ArrayList<RegisteredUser>> users) { // what does this do??
 
+        return 0;
     }
 
     /**

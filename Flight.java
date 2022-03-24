@@ -7,8 +7,9 @@ public class Flight {
     private String DepartureDate;
     private ArrayList<seats> SeatAvalable;
     private int cost; 
+    private String id;
 
-    public Flight(String departureLocation, String arrivalLocation, int FlightDuration,String DepartureDate, ArrayList<seats> SeatAvalable, int cost) {
+    public Flight(String departureLocation, String arrivalLocation, int FlightDuration,String DepartureDate, ArrayList<seats> SeatAvalable, int cost, String id) {
             
            this.departureLocation = departureLocation;
            this.arrivalLocation = arrivalLocation;
@@ -16,6 +17,7 @@ public class Flight {
            this.DepartureDate = DepartureDate;
            this.SeatAvalable = SeatAvalable;
            this.cost = cost;
+           this.id = id;
 }
 
     public void setdepartureLocation (String departureLocation) {
