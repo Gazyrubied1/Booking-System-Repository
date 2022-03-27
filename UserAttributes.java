@@ -12,5 +12,4 @@ public abstract class UserAttributes {
 	protected static int NUM_FLIGHTS = 0;
 	protected static Double REVIEW = 0.0;
 	protected static ArrayList<RegisteredUser> PASTFLIGHTS = [1,2];
-
 }
