@@ -23,24 +23,24 @@ public class SystemUI {
                 System.out.println("Do you want to search hotels by:\n1) Name of hotel\n2) State the hotel is in\n3)Both");
                 int ans = scan.nextInt();
                 switch(ans) {
-                    case 1:
+                    case 1: // search hotels by brand
                         System.out.println("What hotel brand do you want to search for? (Choose from Marriott, Hilton, Wyndham, Hyatt)");
                         String brand = scan.next();
-                        hotels.searchHotels(hotelBrand);
+                        hotels.SearchHotel(brand);
                         break;
-                    case 2:
+                    case 2: // seach hotels by state
                         System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
                         String state = scan.next();
                         System.out.println("Below are all hotels in " + state + ": ");
                         hotels.SearchHotel(state);
                         break;
-                    case 3:
+                    case 3: // search hotels by state and brand
                         System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
                         state = scan.next();
                         System.out.println("What hotel brand do you want to search for? (brands: )");
                         brand = scan.next();
                         System.out.println("Below are all " + brand + " hotels in " + state);
-                        hotels.searchHotels(state, hotelBrand);
+                        hotels.SearchHotel(state, brand);
                         break;
                 }
             }
