@@ -5,6 +5,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class GenerateDaysBooked extends DaysBookedConstants {
+   
     public static ArrayList<DaysBooked> loadDaysBooked() {
        ArrayList<DaysBooked> daysBooked = new ArrayList<DaysBooked>();
 
@@ -14,11 +15,12 @@ public class GenerateDaysBooked extends DaysBookedConstants {
            JSONArray DayBookedJSON = (JSONArray) new JSONParser().parse(reader);
 
            for(int i = 0; i < DayBookedJSON.size(); ++i) {
-            JSONObject DaysBookedJSON = (JSONObject)DaysBookedJSON.get(i);
-            int year = (int)DaysBookedJSON.get(year);
+            JSONObject DaysBookedJSON = (JSONObject)DayBookedJSON.get(i);
+            int Year = (int)DaysBookedJSON.get(year);
             int [] dayRange = (int[])DaysBookedJSON.get(days);
-            String id = (String)DaysBookedJSON.get(id);
-            daysBooked.add(new DaysBooked(year, dayRange, id));
+            String ID = (String)DaysBookedJSON.get(id);
+            
+            daysBooked.add(new DaysBooked(Year, dayRange, ID));
            }
            return daysBooked;
        } catch(Exception e){
@@ -27,3 +29,4 @@ public class GenerateDaysBooked extends DaysBookedConstants {
 
         return null;
     }
+}

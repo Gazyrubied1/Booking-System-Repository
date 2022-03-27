@@ -10,20 +10,20 @@ public class Account extends User {
     public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights; 
 
 
-    public Account (int AccountNum,String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
+    public Account (String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
         super(AccountNum);
 
         this.UserID = UserID;
         this.Email = Email;
         this.Password = Password;
-        this.users = users;
+        this.Users = users;
         this.currentFlights = currentFlights;
     }
     
     public boolean hasUser(String name) {
 
-        for (RegisteredUser user : users) {
-            if ((user.getFirstName + user.getLastName).equals(name)) {
+        for (RegisteredUser user : Users) {
+            if ((user.getFirstName() + user.getLastName()).equals(name)) {
 
                 return true;
             }
