@@ -6,8 +6,8 @@ public class Account extends User {
     public String UserID;
     private String Email;
     private String Password;
-    private ArrayList<RegisteredUser> Users;
-    public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights; 
+    private ArrayList<RegisteredUser> Users = new ArrayList<RegisteredUser>();
+    public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights = new HashMap<Flight, ArrayList<RegisteredUser>>(); 
 
 
     public Account (String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {

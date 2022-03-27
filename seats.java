@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class seats {
     private static seats seats = null;
-    private static ArrayList<seat> seatList = new ArrayList<>();
+    private static ArrayList<seat> seatList = new ArrayList<seat>();
 
     private seats() {
         seatList = GenerateSeats.generateSeats();

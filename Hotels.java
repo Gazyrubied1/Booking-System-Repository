@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Hotels {
   
-    private ArrayList<HotelRoom> Rooms;
+    private ArrayList<HotelRoom> Rooms = new ArrayList<HotelRoom>();
     private String state;
     private HotelBrands Brand;
     

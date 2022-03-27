@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Flight {
-    private ArrayList<String> locations;
+    private ArrayList<String> locations = new ArrayList<String>();
     private int FlightDuration;
     private String DepartureDate;
     private seats SeatAvalable;

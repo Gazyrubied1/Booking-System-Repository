@@ -9,9 +9,9 @@ public class RegisteredUser {
     private boolean RewardMember;
     private int NumFlights;
     private double Review;
-    private ArrayList<Ticket> PastReservation;
-    private ArrayList<String> blacklisted;
-    private ArrayList<Pet> pets;
+    private ArrayList<Ticket> PastReservation = new ArrayList<Ticket>();
+    private ArrayList<String> blacklisted = new ArrayList<String>();
+    private ArrayList<Pet> pets = new ArrayList<Pet>();
     private String id;
     public int getFirstName;
     public int getLastName;
