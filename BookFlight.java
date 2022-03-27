@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class BookFlight extends Book{
-    private boolean hasPets; 
+    private boolean hasPets;
     private ArrayList<Flight> Flights;
 
     public BookFlight (String date, String location,boolean hasPets, ArrayList<Flight> Flights) {

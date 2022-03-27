@@ -9,15 +9,16 @@ public class Flight {
     private int transfers;
     private String id;
 
+
     public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, seats SeatAvalable, int cost, int transfers, String id) {
         this.locations = locations;
-        
         this.FlightDuration = FlightDuration;
         this.DepartureDate = DepartureDate;
         this.SeatAvalable = SeatAvalable;
         this.cost = cost;
         this.transfers = transfers;
         this.id = id;
+
 }
 
     public void addLocation (String location) {
@@ -32,7 +33,10 @@ public class Flight {
         this.DepartureDate = DepartureDate;
     }
 
+    
     public void setSeatAvalable(seats SeatsAvalable) {
+
+
         this.SeatAvalable = SeatsAvalable;
     }
 

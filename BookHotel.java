@@ -55,7 +55,10 @@ public class BookHotel extends Book {
         return Brand;
     }
     
-    public Book() {
+
+
+public void Book(){
+
         
     }
 

@@ -9,11 +9,12 @@ public class RegisteredUser {
     private boolean RewardMember;
     private int NumFlights;
     private double Review;
-    private ArrayList<Flight> PastFlight;
     private ArrayList<Ticket> PastReservation;
     private ArrayList<String> blacklisted;
     private ArrayList<Pet> pets;
     private String id;
+    public int getFirstName;
+    public int getLastName;
 
     public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember,
                           int NumFlights, double Review, ArrayList<Ticket> PastReservation, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) {
@@ -44,7 +45,6 @@ public class RegisteredUser {
         this.RewardMember = RewardMember;
         this.NumFlights = NumFlights;
         this.Review = Review;
-        this.PastFlight = PastFlight;
         this.blacklisted = Blacklisted;
         this.pets = pets;
     }

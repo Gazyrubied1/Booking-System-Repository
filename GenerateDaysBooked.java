@@ -28,5 +28,6 @@ public class GenerateDaysBooked extends DaysBookedConstants {
        }
 
         return null;
+        }
     }
 }
