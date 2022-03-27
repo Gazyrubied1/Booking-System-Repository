@@ -5,7 +5,7 @@ public class BookFlight extends Book{
     private ArrayList<Flight> Flights = new ArrayList<Flight>();
 
     public BookFlight (String date, String location,boolean hasPets, ArrayList<Flight> Flights) {
-        super(date, hasPets, location, location);
+        super();
         this.hasPets =hasPets;
         this.Flights = Flights;
     }

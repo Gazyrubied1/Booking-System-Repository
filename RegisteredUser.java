@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.io.*;
 
 public class RegisteredUser {
     private String firstName;
@@ -35,7 +36,7 @@ public class RegisteredUser {
 
     // existing account loaded from JSON
 
-    public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flight> PastFlight, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
+    public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Ticket> PastFlight, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -47,9 +48,12 @@ public class RegisteredUser {
         this.Review = Review;
         this.blacklisted = Blacklisted;
         this.pets = pets;
+        this.PastReservation = PastFlight;
     }
 
-    // gettters
+    public ArrayList<Ticket> getPastFlights() {
+        return PastReservation;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -84,7 +88,6 @@ public class RegisteredUser {
     public ArrayList<Pet> getPets(){
         return pets;
     }
-
     public String getID() {
         return id;
     }
@@ -164,6 +167,10 @@ public class RegisteredUser {
 
     public void addPet(Pet pet) {
         pets.add(pet);
+    }
+
+    public void printTicket() {
+
     }
 
 }

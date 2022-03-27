@@ -8,14 +8,8 @@ public class BookHotel extends Book {
     private String guest;
     private ArrayList<Hotels> HotelList = new ArrayList<Hotels>();
     
-    public BookHotel(String book, Boolean cancel, String date, String type, String HotelName, 
-        String location, String guest, RoomType roomType, HotelBrands brands, ArrayList<Hotels> hotel) {
-        
-        super(book, cancel, date, type);
-        this.HotelName = HotelName;
-        this.location = location;
-        this.guest = guest;
-        this.HotelList = hotel;
+    public BookHotel() {
+
     }
 
 
@@ -54,47 +48,35 @@ public void Book(){
  * @param State A string value of the two letter state abreviation
  * @return an array list of hotels from that state
  */
-public ArrayList<Hotels> SearchHotel(String State) {
-
-    ArrayList<Hotels> toReturn = new ArrayList<Hotels>();
+public void SearchHotel(String State) {
     for(int i = 0; i < HotelList.size(); ++i){
-    
         if(State.equalsIgnoreCase(HotelList.get(i).getState())) {
-            toReturn.add(HotelList.get(i));
+            System.out.println(HotelList.get(i).toString() + " ");
         }
-
     }
-    return toReturn;
 }
 
 
-public ArrayList<Hotels> SearchHotel(String State, HotelBrands brand) {
-
-    ArrayList<Hotels> toReturn = new ArrayList<Hotels>();
+public void SearchHotel(String State, HotelBrands brand) {
     String UseBrand = brand.toString();
     for (int i =0; i < HotelList.size(); ++i) {
         if(State.equalsIgnoreCase(HotelList.get(i).getState())){
             if (UseBrand.equalsIgnoreCase(HotelList.get(i).getBrands().toString())) {
-                toReturn.add(HotelList.get(i));
+                System.out.println(HotelList.get(i).toString() + " ");
             } 
         }
 
     }
-
-    return toReturn;
 }
 
 
-public ArrayList<Hotels> SearchHotel(HotelBrands brand) {
-
-    ArrayList<Hotels> toReturn = new ArrayList<Hotels>();
+public void SearchHotel(HotelBrands brand) {
     String UseBrand = brand.toString();
     for (int i = 0; i < HotelList.size();++i) {
         if(UseBrand.equalsIgnoreCase(HotelList.get(i).getBrands().toString())) {
-            toReturn.add(HotelList.get(i));
+            System.out.println(HotelList.get(i).toString() + " ");
         }
     }
-    return toReturn;
 }
 
 
