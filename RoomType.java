@@ -1,5 +1,3 @@
-
-
 public enum RoomType {
 King_Bed,
 Queen_Bed,
