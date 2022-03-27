@@ -1,25 +1,36 @@
 import java.io.*;
+import java.util.*;
 
 public class Ticket {
     
-    private String details;
+    private String departDate;
+    private String arriveDate;
+    private ArrayList<String> locations;
     private Book reservation;
 
-    public Ticket(String details, Book resrvation) {
-        this.details = details;
+    public Ticket() {}
+
+    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book resrvation) {
+        this.locations = locations;
+        this.departDate = departDate;
+        this.arriveDate = arriveDate;
         this.reservation = resrvation;
     }
 
-    public void setDetails(String details) {
-        this.details = details;
+    public String getDepartDate() {
+        return departDate;
+    }
+
+    public String getArriveDate() {
+        return arriveDate;
+    }
+
+    public ArrayList<String> getLocations() {
+        return locations;
     }
 
     public void setReservation(Book reservation) {
         this.reservation = reservation;
-    }
-
-    public String getDetails() {
-        return details;
     }
 
     public Book getReservation() {
@@ -30,7 +41,7 @@ public class Ticket {
      * will print out the details and reservation into text file
      */
     public void print() {
-        System.out.println(details);
+        System.out.println("details");
         
         try {
             File myObj = new File("filename.txt");

@@ -4,7 +4,7 @@ public enum Pet {
 Dog,
 Cat,
 Lizzard, 
-bird,
+Bird,
 Fish, 
 Rodent
 }

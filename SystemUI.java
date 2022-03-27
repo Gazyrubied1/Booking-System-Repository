@@ -17,10 +17,6 @@ public class SystemUI {
 
             Scanner scan = new Scanner(System.in);
             int answer = scan.nextInt();
-            if (answer != 1 || answer != 2 || answer != 3) {
-                System.out.println("Not a valid response");
-                continue;
-            }
             if (answer == 5) break;
             else if (answer == 4) { // search hotels
                 BookHotel hotels = new BookHotel();
@@ -36,7 +32,7 @@ public class SystemUI {
                         System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
                         String state = scan.next();
                         System.out.println("Below are all hotels in " + state + ": ");
-                        hotels.searchHotels(state);
+                        hotels.SearchHotel(state);
                         break;
                     case 3:
                         System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
@@ -47,10 +43,9 @@ public class SystemUI {
                         hotels.searchHotels(state, hotelBrand);
                         break;
                 }
-                hotels.searchHotels();
             }
             else if (answer == 3) { // search flights
-                //figure out how to search through existing flights using JSON
+                //figure out how to search through existing flights using BookFlights
             }
             else if (answer == 2) { // create account
                 System.out.println("Please enter the following information to create an account:");
@@ -109,7 +104,28 @@ public class SystemUI {
                     int temp = scan.nextInt();
                     if (temp == 1) {
                         System.out.println("What pet do you want to add?");
-                        user.addPet();//// fix this
+                        String tempPet = scan.next();
+                        boolean found = false;
+                        while (!found) {
+                            if (tempPet.equals("Dog")
+                            || tempPet.equals("Cat")
+                            || tempPet.equals("Lizzard")
+                            || tempPet.equals("Bird")
+                            || tempPet.equals("Fish")
+                            || tempPet.equals("Rodent")) {
+                                found = true;
+                            }
+                            if (found) {
+                                user.addPet(Pet.valueOf("tempPet"));
+                            }
+                            else {
+                                System.out.println("That is not a valid pet, if you want to retry typing your pet type, enter \"1\", enter any other key to continue without entering your pet");
+                                int tempInt = scan.nextInt();
+                                if (tempInt != 1) {
+                                    found = true;
+                                }
+                            }
+                        }  
                     }
                     else if (temp == 0) {
                         break;
@@ -160,10 +176,10 @@ public class SystemUI {
                 case 3: // view previous flights
                     System.out.println("Previous flights: ");
                     for (Ticket flight : user.getPastReservation()) {
-                        System.out.print(" Date: " + flight.getDepartureDate() + " --- ");
-                        for (int i = 0; i < flight.getlocations().size(); i++) {
-                            System.out.print(flight.getlocations().get(i));
-                            if (i < flight.getlocations().size()) {
+                        System.out.print(" Date: " + flight.getDepartDate() + " --- ");
+                        for (int i = 0; i < flight.getLocations().size(); i++) {
+                            System.out.print(flight.getLocations().get(i));
+                            if (i < flight.getLocations().size()) {
                                 System.out.print(" -> ");
                             }
                             else {
