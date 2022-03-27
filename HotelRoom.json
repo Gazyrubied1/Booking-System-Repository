@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "roomType": "King_Bed",
+        "DaysBooked": [
+            {
+                "Year": "2022",
+                "dayRange": [
+                    {
+                        "startDay": "3/22/2022",
+                        "endDay": "3/28/2022"
+                    }
+                ]
+            }
+        ]
+    }
+]

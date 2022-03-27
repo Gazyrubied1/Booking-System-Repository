@@ -1,19 +1,10 @@
 import java.util.ArrayList;
 
 public class User {
-    private int AccountNum;
 
-    public User (int AccountNum) {
-        this.AccountNum = AccountNum;
+    public User () {
     }
 
-    public int getAccountNum() {
-        return AccountNum; 
-    }
-
-    public void setAccountNum(int AccountNum) {
-        this.AccountNum = AccountNum;
-    }
 
     public ArrayList<String> SearchFlights() {
 

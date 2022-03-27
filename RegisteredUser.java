@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.io.*;
 
-public class RegisteredUser extends Account{
+public class RegisteredUser {
     private String firstName;
     private String lastName;
     private String DateOfBirth;
@@ -32,28 +32,14 @@ public class RegisteredUser extends Account{
         this.id = id;
 
     }
-
-    // existing account loaded from JSON
-    public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Flight> PastFlight, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.DateOfBirth = DOB;
-        this.BillingAddress = BillingAddress;
-        this.Discount = Discount;
-        this.RewardMember = RewardMember;
-        this.NumFlights = NumFlights;
-        this.Review = Review;
-        this.PastFlight = PastFlight;
-        this.blacklisted = Blacklisted;
-        this.pets = pets;
-    }
-
     // gettters
-    public UUID getUserID() {
+    public String getUserID() {
         return id;
     }
 
+    public ArrayList<Flight> getPastFlights() {
+        return PastFlight;
+    }
     public String getFirstName() {
         return firstName;
     }

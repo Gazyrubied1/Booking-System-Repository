@@ -28,7 +28,7 @@ public class SystemUI {
                 String email = scan.next();
                 System.out.println("Password");
                 String password = scan.next();
-                accounts.add(new Account(UUID.randomUUID(), email, password, new ArrayList<RegisteredUser>(), new HashMap<Flight, ArrayList<RegisteredUser>>()));
+                accounts.add(new Account(UUID.randomUUID().toString(), email, password, new ArrayList<RegisteredUser>(), new HashMap<Flight, ArrayList<RegisteredUser>>()));
                 System.out.println("Congratulations!! You have created an account with email " + email + " and password " + password);
             }
             else if (answer == 1) { // login to account
@@ -59,7 +59,7 @@ public class SystemUI {
             System.out.println("1. View this account's users\n2. Create user\n3. login to user\n4. Logout\n");
             int ans = scan.nextInt();
             if (ans == 1) { // view users
-                for (User user : account.getUsers()) {
+                for (RegisteredUser user : account.getUsers()) {
                     System.out.println("Name: " + user.getFirstName() + " " + user.getLastName());
                 }
             }
@@ -73,7 +73,7 @@ public class SystemUI {
                 String DOB = scan.next();
                 System.out.println("What is the address of your new user?");
                 String address = scan.next();
-                RegisteredUser user = new RegisteredUser(UUID.randomUUID(), firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<Flight>(), new ArrayList<Airport>(), new ArrayList<Pet>());
+                RegisteredUser user = new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<Ticket>(), new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
                 while (true) {
                     System.out.println("Do you want to add any pets to this user? 1 = yes, 0 = no");
                     int temp = scan.nextInt();
@@ -95,7 +95,7 @@ public class SystemUI {
                 System.out.print("Password for login: ");
                 String loginPass = scan.next();
                 for (RegisteredUser user : account.getUsers()) {
-                    if ((user.getEmail + user.getPassword).equals(loginEmail + loginPass)) {
+                    if ((user.getEmail() + user.getPassword()).equals(loginEmail + loginPass)) {
                         userUI(user);
                     }
                     else {
@@ -113,9 +113,9 @@ public class SystemUI {
     }
 
     public void userUI(RegisteredUser user) {
-        System.out.println("Hello " + user.getFirstName + "  " + user.getLastName + "!");
+        System.out.println("Hello " + user.getFirstName() + "  " + user.getLastName() + "!");
         System.out.println(WELCOME_MESSAGE_USER);
-        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change email\n7. Change name\n8. Change password\n9. Logout\n");
+        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change name\n7. Logout\n");
         Scanner scan = new Scanner(System.in);
         int ans = scan.nextInt();
         boolean cont = true;
@@ -129,8 +129,17 @@ public class SystemUI {
                     break;
                 case 3: // view previous flights
                     System.out.println("Previous flights: ");
-                    for (Flight flight : user.getPastFlight()) {
-                        System.out.println(" Date: " + flight.getDepartureDate() + " --- " + flight.getdepartureLocation() + " -> " + flight.getarrivalLocation());
+                    for (Flight flight : user.getPastFlights()) {
+                        System.out.print(" Date: " + flight.getDepartureDate() + " --- ");
+                        for (int i = 0; i < flight.getlocations().size(); i++) {
+                            System.out.print(flight.getlocations().get(i));
+                            if (i < flight.getlocations().size()) {
+                                System.out.print(" -> ");
+                            }
+                            else {
+                                System.out.println();
+                            }
+                        }
                     }
                     break;
                 case 4: // blacklist an airport
@@ -139,12 +148,8 @@ public class SystemUI {
                 case 5: // cancel flight
                     // fill in later
                     break;
-                case 6: // change email
-                    System.out.print("Enter new email:");
-                    String temp = scan.next();
-                    user.setEmail(temp);
-                    break;
-                case 7: // change name
+                case 6: // change name
+                    String temp;
                     System.out.print("Enter new first name: ");
                     temp = scan.next();
                     user.setfirstName(temp);
@@ -152,12 +157,7 @@ public class SystemUI {
                     temp = scan.next();
                     user.setlastName(temp);
                     break;
-                case 8: // change password
-                    System.out.println("Enter new password: ");
-                    temp = scan.next();
-                    user.setPassword(temp);
-                    break;
-                case 9:
+                case 7:
                     cont = false;
                     break;
                 default:
