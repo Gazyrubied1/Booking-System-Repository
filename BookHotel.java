@@ -57,7 +57,7 @@ public void SearchHotel(String State) {
 }
 
 
-public void SearchHotel(String State, HotelBrands brand) {
+public void SearchHotel(String State, String  brand) {
     String UseBrand = brand.toString();
     for (int i =0; i < HotelList.size(); ++i) {
         if(State.equalsIgnoreCase(HotelList.get(i).getState())){

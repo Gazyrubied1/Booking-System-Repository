@@ -36,9 +36,4 @@ public class Hotels {
     public ArrayList<HotelRoom> getRooms(){
         return Rooms;
     } 
-
-
-    public static Hotels getInstance() {
-        if (Rooms == null)
-    }
 }
