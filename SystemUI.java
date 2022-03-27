@@ -90,9 +90,9 @@ public class SystemUI {
                 }
             } 
             else if (ans == 3) { // login to user
-                System.out.print("Email for login: ");
+                System.out.print("First name of user: ");
                 String loginEmail = scan.next();
-                System.out.print("Password for login: ");
+                System.out.print("Last name of user: ");
                 String loginPass = scan.next();
                 for (RegisteredUser user : account.getUsers()) {
                     if ((user.getEmail() + user.getPassword()).equals(loginEmail + loginPass)) {

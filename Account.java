@@ -10,7 +10,7 @@ public class Account extends User {
     public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights; 
 
 
-    public Account (int AccountNum,String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
+    public Account (String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
         super();
         this.UserID = UserID;
         this.Email = Email;

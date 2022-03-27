@@ -10,7 +10,6 @@ public class RegisteredUser {
     private boolean RewardMember;
     private int NumFlights;
     private double Review;
-    private ArrayList<Flight> PastFlight;
     private ArrayList<Ticket> PastReservation;
     private ArrayList<String> blacklisted;
     private ArrayList<Pet> pets;
@@ -32,13 +31,26 @@ public class RegisteredUser {
         this.id = id;
 
     }
-    // gettters
-    public String getUserID() {
-        return id;
+
+    // existing account loaded from JSON
+
+    public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Ticket> PastFlight, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.DateOfBirth = DOB;
+        this.BillingAddress = BillingAddress;
+        this.Discount = Discount;
+        this.RewardMember = RewardMember;
+        this.NumFlights = NumFlights;
+        this.Review = Review;
+        this.blacklisted = Blacklisted;
+        this.pets = pets;
+        this.PastReservation = PastFlight;
     }
 
-    public ArrayList<Flight> getPastFlights() {
-        return PastFlight;
+    public ArrayList<Ticket> getPastFlights() {
+        return PastReservation;
     }
     public String getFirstName() {
         return firstName;

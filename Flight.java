@@ -10,7 +10,6 @@ public class Flight {
 
     public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, ArrayList<seats> SeatAvalable, int cost, int transfers) {
         this.locations = locations;
-        this.locations = locations;
         this.FlightDuration = FlightDuration;
         this.DepartureDate = DepartureDate;
         this.SeatAvalable = SeatAvalable;
