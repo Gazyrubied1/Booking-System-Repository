@@ -1,3 +1,5 @@
+import java.io.*;
+
 public class Ticket {
     
     private String details;
@@ -20,15 +22,23 @@ public class Ticket {
         return details;
     }
 
-    public Book getResrvation() {
+    public Book getReservation() {
         return reservation;
     }
 
     /**
-     * will print out the details and reservation in readable formate
+     * will print out the details and reservation into text file
      */
     public void print() {
         System.out.println(details);
         
+        try {
+            File myObj = new File("filename.txt");
+            myObj.createNewFile(); // creates file
+        } 
+        catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }

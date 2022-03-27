@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.io.*;
 
-public class RegisteredUser {
+public class RegisteredUser extends Account{
     private String firstName;
     private String lastName;
     private String DateOfBirth;
@@ -87,7 +88,6 @@ public class RegisteredUser {
     public ArrayList<Pet> getPets(){
         return pets;
     }
-
     public String getID() {
         return id;
     }
@@ -167,6 +167,10 @@ public class RegisteredUser {
 
     public void addPet(Pet pet) {
         pets.add(pet);
+    }
+
+    public void printTicket() {
+
     }
 
 }

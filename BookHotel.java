@@ -1,4 +1,4 @@
-public class BookHotel {
+public class BookHotel extends RegisteredUser{
     private String nameHotel;
     private String location;
     private String guest;

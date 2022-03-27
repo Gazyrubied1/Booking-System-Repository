@@ -115,7 +115,7 @@ public class SystemUI {
     public void userUI(RegisteredUser user) {
         System.out.println("Hello " + user.getFirstName + "  " + user.getLastName + "!");
         System.out.println(WELCOME_MESSAGE_USER);
-        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Leave a review on a flight\n6. Cancel flight\n7. Change email8. Change name\n9. Change password\n10. Logout\n");
+        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change email\n7. Change name\n8. Change password\n9. Logout\n");
         Scanner scan = new Scanner(System.in);
         int ans = scan.nextInt();
         boolean cont = true;
@@ -136,18 +136,15 @@ public class SystemUI {
                 case 4: // blacklist an airport
                     user.blacklistAirport(); // fill in later
                     break;
-                case 5: // leave a review on a flight
-                    // idk how this works rn
-                    break;
-                case 6: // cancel flight
+                case 5: // cancel flight
                     // fill in later
                     break;
-                case 7: // change email
+                case 6: // change email
                     System.out.print("Enter new email:");
                     String temp = scan.next();
                     user.setEmail(temp);
                     break;
-                case 8: // change name
+                case 7: // change name
                     System.out.print("Enter new first name: ");
                     temp = scan.next();
                     user.setfirstName(temp);
@@ -155,12 +152,12 @@ public class SystemUI {
                     temp = scan.next();
                     user.setlastName(temp);
                     break;
-                case 9: // change password
+                case 8: // change password
                     System.out.println("Enter new password: ");
                     temp = scan.next();
                     user.setPassword(temp);
                     break;
-                case 10:
+                case 9:
                     cont = false;
                     break;
                 default:
