@@ -28,7 +28,7 @@ public class SystemUI {
                 int ans = scan.nextInt();
                 switch(ans) {
                     case 1:
-                        System.out.println("What hotel brand do you want to search for?");
+                        System.out.println("What hotel brand do you want to search for? (Choose from Marriott, Hilton, Wyndham, Hyatt)");
                         String brand = scan.next();
                         hotels.searchHotels(hotelBrand);
                         break;

@@ -11,7 +11,8 @@ public class Account extends User {
 
 
     public Account (String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
-        super();
+        super(AccountNum);
+
         this.UserID = UserID;
         this.Email = Email;
         this.Password = Password;

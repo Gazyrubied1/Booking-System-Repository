@@ -21,15 +21,19 @@ public class GenerateFilght extends FlightConstant {
 
             JSONObject flightJSON = (JSONObjct)flightsJSON.get(i);
 
-            String depatureLocation = (String)flightJSON.get(Depature_Location);
-            String arrivalLocation = (String)flightJSON.get(Arrival_Location);
+            String[] depatureLocation = (String[])flightJSON.get(Locations);
+            ArrayList<String> location;
+            for(int ii = 0; ii < depatureLocation.length; ++ii) {
+                location.add(depatureLocation[i]);
+            }
             int Flight_Duration = (int)flightJSON.get(Flight_Duration);
             String depatureDate = (String)flightJSON.get(DepatureDate);
-            ArrayList<seats> SeatsAvalable = (ArrayList<seats>)flightJSON.get(SeatsAvalable);
+            ArrayList<seat>SeatsAvalable = (ArrayList<seat>)flightJSON.get(SeatsAvalable);
             int cost = (int)flightJSON.get(cost);
+            int trans = (int)flightJSON.get(transfers);
             String id = (String)flightJSON.get(id);
 
-            flights.add(new Flight(depatureLocation, arrivalLocation, Flight_Duration, depatureDate, SeatsAvalable, cost));
+            flights.add(new Flight(location, Flight_Duration, depatureDate, SeatsAvalable,cost,trans,id));
         }
         return flights;
     }catch(Exception e) {

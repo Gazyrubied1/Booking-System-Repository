@@ -14,6 +14,8 @@ public class RegisteredUser {
     private ArrayList<String> blacklisted;
     private ArrayList<Pet> pets;
     private String id;
+    public int getFirstName;
+    public int getLastName;
 
     public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember,
                           int NumFlights, double Review, ArrayList<Ticket> PastReservation, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) {

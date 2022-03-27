@@ -1,21 +1,16 @@
 import java.util.ArrayList;
 
 public class HotelRoom {
-    private String City;
     private RoomType roomType;
     private ArrayList<DaysBooked> DaysBook;
     private String id;
 
-    public HotelRoom(String City, RoomType roomType, ArrayList<DaysBooked> DaysBook, String id) {
-        this.City = City;
+    public HotelRoom(RoomType roomType, ArrayList<DaysBooked> DaysBook, String id) {
         this.roomType = roomType;
         this.DaysBook = DaysBook;
         this.id = id;
     }
 
-    public void setCity(String City) {
-        this.City = City;
-    }
 
     public void setRoomType(RoomType roomType) {
         this.roomType = roomType;
@@ -29,9 +24,6 @@ public class HotelRoom {
         this.id = Id;
     }
 
-    public String getCity(){
-        return City;
-    }
 
     public RoomType getRoomType() {
         return roomType;

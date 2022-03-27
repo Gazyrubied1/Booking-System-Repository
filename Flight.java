@@ -4,17 +4,21 @@ public class Flight {
     private ArrayList<String> locations;
     private int FlightDuration;
     private String DepartureDate;
-    private ArrayList<seats> SeatAvalable;
+    private seats SeatAvalable;
     private int cost; 
     private int transfers;
+    private String id;
 
-    public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, ArrayList<seats> SeatAvalable, int cost, int transfers) {
+
+    public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, seats SeatAvalable, int cost, int transfers, String id) {
         this.locations = locations;
         this.FlightDuration = FlightDuration;
         this.DepartureDate = DepartureDate;
         this.SeatAvalable = SeatAvalable;
         this.cost = cost;
         this.transfers = transfers;
+        this.id = id;
+
 }
 
     public void addLocation (String location) {
@@ -29,13 +33,21 @@ public class Flight {
         this.DepartureDate = DepartureDate;
     }
 
-    public void setSeatAvalable(ArrayList<seats> SeatsAvalable) {
+    
+    public void setSeatAvalable(seats SeatsAvalable) {
+
+
         this.SeatAvalable = SeatsAvalable;
     }
 
     public void setCost  (int cost) {
 
         this.cost = cost;
+    }
+
+    public void setid(String id) {
+
+        this.id = id;
     }
  
     public ArrayList<String> getlocations() {
@@ -50,12 +62,16 @@ public class Flight {
         return DepartureDate;
     }
 
-    public ArrayList<seats> getSeatAvalable () {
+    public seats getSeatAvalable () {
         return SeatAvalable;
     }
 
     public int getCost() {
         return cost;
+    }
+
+    public String getID() {
+        return id;
     }
 
     /**
