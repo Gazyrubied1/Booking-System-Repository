@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-public class BookHotel extends RegisteredUser{
-    private String nameHotel;
-=======
 public class BookHotel extends Book {
     
     private String HotelName;
->>>>>>> 3bcd90d55d793622dc607b8a3e19b26273816811
     private String location;
     private String guest;
     private RoomType roomType;

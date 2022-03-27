@@ -13,7 +13,7 @@ public class SystemUI {
         System.out.println(WELCOME_MESSAGE_SYSTEM);
 
         while (true) {
-            System.out.println("1. Login to an existing account\n2. Create an account\n3. Logout\n");
+            System.out.println("1. Login to an existing account\n2. Create an account\n3. Search Flights\n4. Search hotels\n5. Logout\n");
 
             Scanner scan = new Scanner(System.in);
             int answer = scan.nextInt();
@@ -21,8 +21,38 @@ public class SystemUI {
                 System.out.println("Not a valid response");
                 continue;
             }
-            if (answer == 3) break;
-            if (answer == 2) { // create account
+            if (answer == 5) break;
+            else if (answer == 4) { // search hotels
+                BookHotel hotels = new BookHotel();
+                System.out.println("Do you want to search hotels by:\n1) Name of hotel\n2) State the hotel is in\n3)Both");
+                int ans = scan.nextInt();
+                switch(ans) {
+                    case 1:
+                        System.out.println("What hotel brand do you want to search for?");
+                        String brand = scan.next();
+                        hotels.searchHotels(hotelBrand);
+                        break;
+                    case 2:
+                        System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
+                        String state = scan.next();
+                        System.out.println("Below are all hotels in " + state + ": ");
+                        hotels.searchHotels(state);
+                        break;
+                    case 3:
+                        System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
+                        state = scan.next();
+                        System.out.println("What hotel brand do you want to search for? (brands: )");
+                        brand = scan.next();
+                        System.out.println("Below are all " + brand + " hotels in " + state);
+                        hotels.searchHotels(state, hotelBrand);
+                        break;
+                }
+                hotels.searchHotels();
+            }
+            else if (answer == 3) { // search flights
+                //figure out how to search through existing flights using JSON
+            }
+            else if (answer == 2) { // create account
                 System.out.println("Please enter the following information to create an account:");
                 System.out.println("Email Address: ");
                 String email = scan.next();
@@ -91,11 +121,11 @@ public class SystemUI {
             } 
             else if (ans == 3) { // login to user
                 System.out.print("First name of user: ");
-                String loginEmail = scan.next();
+                String first = scan.next();
                 System.out.print("Last name of user: ");
-                String loginPass = scan.next();
+                String last = scan.next();
                 for (RegisteredUser user : account.getUsers()) {
-                    if ((user.getEmail() + user.getPassword()).equals(loginEmail + loginPass)) {
+                    if ((user.getFirstName() + user.getLastName()).equals(first + last)) {
                         userUI(user);
                     }
                     else {
@@ -129,7 +159,7 @@ public class SystemUI {
                     break;
                 case 3: // view previous flights
                     System.out.println("Previous flights: ");
-                    for (Flight flight : user.getPastFlights()) {
+                    for (Ticket flight : user.getPastReservation()) {
                         System.out.print(" Date: " + flight.getDepartureDate() + " --- ");
                         for (int i = 0; i < flight.getlocations().size(); i++) {
                             System.out.print(flight.getlocations().get(i));
