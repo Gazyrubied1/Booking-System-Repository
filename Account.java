@@ -73,7 +73,6 @@ public class Account extends User {
     }
 
     public String getUserID() {
-        //TODO Return UUID instead of String
         return UserID;
     }
 

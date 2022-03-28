@@ -3,8 +3,8 @@ import java.util.*;
 
 public class Ticket {
     
-    private String departDate;
-    private String arriveDate;
+    private String departDate;  //  
+    private String arriveDate;  //  for end date of hotel
     private ArrayList<String> locations;
     private Book reservation;
 

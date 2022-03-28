@@ -36,6 +36,10 @@ public class BookHotel extends Book {
     public String getGuest() {
         return guest;
     }
+
+    public ArrayList<Hotels> getHotelList() {
+        return HotelList;
+    }
     
 
 public void Book(){
@@ -56,7 +60,11 @@ public void SearchHotel(String State) {
     }
 }
 
-
+/**
+ * Searches throught the list of hotels by state an brand
+ * @param State a string state in form of two letter abreviation
+ * @param brand the hotel brand as a string
+ */
 public void SearchHotel(String State, String  brand) {
     String UseBrand = brand.toString();
     for (int i =0; i < HotelList.size(); ++i) {
@@ -69,7 +77,10 @@ public void SearchHotel(String State, String  brand) {
     }
 }
 
-
+/**
+ * Searches throught the list of hotels by brand
+ * @param brand the hotel brand as a string
+ */
 public void SearchHotel(HotelBrands brand) {
     String UseBrand = brand.toString();
     for (int i = 0; i < HotelList.size();++i) {
