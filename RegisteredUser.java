@@ -133,9 +133,9 @@ public class RegisteredUser {
      *
      * @param flight
      */
-    public void cancelFlight(Flight flight){
-        return;
-     }
+    public void cancelFlight(Ticket flight){
+        PastReservation.remove(flight);
+    }
      /**
       *
       */
@@ -153,8 +153,8 @@ public class RegisteredUser {
     /**
      * possible change to have string input
      */
-    public void blacklistAirport() { // will take parameter Airport
-        return;
+    public void blacklistAirport(String airport) { // will take parameter Airport
+        blacklisted.add(airport);
     }
 
     /**

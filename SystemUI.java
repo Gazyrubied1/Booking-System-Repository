@@ -6,9 +6,16 @@ public class SystemUI {
     private static final String WELCOME_MESSAGE_USER = "********** User's Menu *************";
     ArrayList<Account> accounts; // change this to JSON
 
+    /**
+     * Constructor for the UI class
+     */
     SystemUI() {
         accounts = new ArrayList();
     }
+
+    /**
+     * Opens the main System UI
+     */
     public void run() {
         System.out.println(WELCOME_MESSAGE_SYSTEM);
 
@@ -46,6 +53,14 @@ public class SystemUI {
             }
             else if (answer == 3) { // search flights
                 //figure out how to search through existing flights using BookFlights
+                System.out.println("What date do you want the flight to leave on? ");
+                String date = scan.next(); // date is not used in calling searchLocation (Change that)
+                System.out.println("What is your starting location? (Use state abbreviation)");
+                String startLoc = scan.nextLine();
+                System.out.println("What is your preferred destination state? (Use state abbreviation)");
+                String endLoc = scan.next();
+                BookFlight flights = new BookFlight();
+                flights.searchLocation(startLoc, endLoc, new ArrayList<String>());
             }
             else if (answer == 2) { // create account
                 System.out.println("Please enter the following information to create an account:");
@@ -76,6 +91,10 @@ public class SystemUI {
         }
     }
 
+    /**
+     * Runs the UI for each user that is logged into
+     * @param account the account that the UI is accessing
+     */
     void accountUI(Account account) {
         System.out.println("Welcome to your profile " + account.getEmail() + "!");
         System.out.println(WELCOME_MESSAGE_ACCOUNT);
@@ -158,6 +177,10 @@ public class SystemUI {
         }
     }
 
+    /**
+     * UI that allows the user to make descisions on their reservations
+     * @param user the user that will be modified by the UI
+     */
     public void userUI(RegisteredUser user) {
         System.out.println("Hello " + user.getFirstName() + "  " + user.getLastName() + "!");
         System.out.println(WELCOME_MESSAGE_USER);
@@ -174,7 +197,7 @@ public class SystemUI {
                 
                     break;
                 case 3: // view previous flights
-                    System.out.println("Previous flights: ");
+                    System.out.println("Previous flights: "); // add date parameter so this only views flights in past. Could add another option to view all flights
                     for (Ticket flight : user.getPastReservation()) {
                         System.out.print(" Date: " + flight.getDepartDate() + " --- ");
                         for (int i = 0; i < flight.getLocations().size(); i++) {
@@ -189,14 +212,36 @@ public class SystemUI {
                     }
                     break;
                 case 4: // blacklist an airport
+                    System.out.println("To blacklist airports, enter the state abbreviation of the state that you want to blacklist. (Enter \'-1\' to exit without blacklisting an airport)");
+                    String state = scan.next();
+                    if (state.equals("-1")) break;
+                    user.blacklistAirport(state);
                     break;
                 case 5: // cancel flight
                     System.out.println("These are your future flights: ");
-                    for (Ticket ticket : user.getPastFlights()) {
-                        System.out.prin
+                    int cnt = 1;
+                    for (int i = 0; i < user.getPastFlights().size(); i++) {
+                        Ticket ticket = user.getPastFlights().get(i);
+                        if (ticket.isFlight()) { // add parameter to check for date and make sure that the flight is booked for the future
+                            System.out.print((cnt+1) + ". ");
+                            ticket.printInfo();
+                            cnt++;
+                        }
                     }
-                    System.out.print("Enter the number of the fligh that you want to cancel. (Enter -1 to exit without canceling a flight.)");
-                    int temp = scan.nextInt();
+                    System.out.print("Enter the number of the flight that you want to cancel. (Enter -1 to exit without canceling a flight.)");
+                    int temps = scan.nextInt();
+                    if (temps == -1) break;
+                    cnt = 1;
+                    for (int i = 0; i < user.getPastFlights().size(); i++) { // really inefficent way of retrieving the flight that the user wants
+                        Ticket ticket = user.getPastFlights().get(i);
+                        if (ticket.isFlight()) {
+                            if (cnt == temps) {
+                                user.cancelFlight(user.getPastFlights().get(temps-1));
+                                break;
+                            }
+                            cnt++;
+                        }
+                    }
                     break;
                 case 6: // change name
                     String temp;
