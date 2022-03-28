@@ -97,7 +97,7 @@ public class SystemUI {
                 System.out.println("What is the DOB of your new user? Use format (MM/DD/YYYY)");
                 String DOB = scan.next();
                 System.out.println("What is the address of your new user?");
-                String address = scan.next();
+                String address = scan.nextLine();
                 RegisteredUser user = new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<Ticket>(), new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
                 while (true) {
                     System.out.println("Do you want to add any pets to this user? 1 = yes, 0 = no");
@@ -171,7 +171,7 @@ public class SystemUI {
 
                     break;
                 case 2: // book hotel
-
+                
                     break;
                 case 3: // view previous flights
                     System.out.println("Previous flights: ");
@@ -189,7 +189,6 @@ public class SystemUI {
                     }
                     break;
                 case 4: // blacklist an airport
-                    user.blacklistAirport(); // fill in later
                     break;
                 case 5: // cancel flight
                     // fill in later

@@ -10,11 +10,15 @@ public class Ticket {
 
     public Ticket() {}
 
-    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book resrvation) {
+    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book reservation) {
         this.locations = locations;
         this.departDate = departDate;
         this.arriveDate = arriveDate;
-        this.reservation = resrvation;
+        this.reservation = reservation;
+    }
+
+    public void hotel() {
+
     }
 
     public String getDepartDate() {

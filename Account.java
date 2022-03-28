@@ -97,6 +97,6 @@ public class Account extends User {
      * to string method
      */
     public String toString(){
-        return ;
+        return "id: " + this.getUserID() + " email: " + this.getEmail() + " password: " + this.getPassword() + " users: " + this.getUsers();
     }
 }
