@@ -1,21 +1,42 @@
 import java.util.ArrayList;
 
 public class seats {
-    private static seats seats = null;
-    private static ArrayList<seat> seatList = new ArrayList<seat>();
+    private ArrayList<seat> seatList = new ArrayList<seat>();
 
     private seats() {
         seatList = GenerateSeats.generateSeats();
     }
 
-    public static seats getInstance() {
-        if(seats == null) {
-            seats = new seats();
+    public ArrayList<seat> getRowSeat(int index){
+        if(index == seatList.size())
+            return null;
+        ArrayList<seat> toReturn = new ArrayList<seat>();
+        for(int i = index; i < seatList.size(); ++i) {
+            if(seatList.get(i).getCol() <= 5 && seatList.get(i) != null){
+                toReturn.add(seatList.get(i));
+            }
         }
-        return seats;
+        return toReturn;
     }
 
+    public seat getseat(int index){
+        return seatList.get(index);
+    }
     public void addSeat(char row, int col, String Id) {
-        seatList.add(new seat(row, col));
+        seatList.add(new seat(row, col, Id));
+    }
+
+    public seat removeSeat(char row, int col, String Id) {
+       for(int i = 0; i < seatList.size(); ++i){
+        if(seatList.get(i).getId().equals(Id)){
+            seatList.remove(i);
+            return seatList.get(i);
+        }
+       }
+       return null; 
+    }
+
+    public int getSize() {
+        return seatList.size();
     }
 }
