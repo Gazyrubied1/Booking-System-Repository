@@ -64,6 +64,7 @@ public class Account extends User {
     public void setUsers(ArrayList<RegisteredUser> Users) {
         this. Users = Users;
     }
+    
     /**
      * pribaly needs to be fixed
      * @param currentFlights
