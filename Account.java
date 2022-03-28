@@ -37,6 +37,9 @@ public class Account extends User {
         }
         return null;
     }
+    public void addUser(RegisteredUser user) {
+        Users.add(user);
+    }
 
     public boolean addUser(String firstName, String lastName, String DOB, String address) {
         if (hasUser(firstName + lastName)) return false;

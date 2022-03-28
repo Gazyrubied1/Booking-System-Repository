@@ -170,6 +170,7 @@ public class RegisteredUser {
     }
 
     public void printPets() {
+        if (pets.size() == 0) System.out.println("This user has no pets.");
         for (Pet pet : pets) {
             System.out.println("Pet: " + pet.toString());
         }
@@ -198,7 +199,7 @@ public class RegisteredUser {
      * @param hotelLocation the State the hotel is in/ 
      * @param hotel the type of booking 
      */
-    public void addHotelTicket(ArrayList<String> hotelLocation, BookHotel hotel) {
+    public void addHotelTicket(String startDay, String endDay, ArrayList<String> hotelLocation, BookHotel hotel) {
         Ticket toAdd = new Ticket();
         
         toAdd.flight(hotelLocation, endDay, startDay, hotel);

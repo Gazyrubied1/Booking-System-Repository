@@ -4,13 +4,13 @@ public class SystemUI {
     private static final String WELCOME_MESSAGE_SYSTEM = "Welcome to our flight booking system!\n\n*********** Main Menu **************";
     private static final String WELCOME_MESSAGE_ACCOUNT = "********* Account Menu ************";
     private static final String WELCOME_MESSAGE_USER = "********** User's Menu *************";
-    ArrayList<Account> accounts; // change this to JSON
+    ArrayList<Account> accounts;
 
     /**
      * Constructor for the UI class
      */
     SystemUI() {
-        accounts = new ArrayList();
+        accounts = new ArrayList(); // this should be loaded from the JSON here
     }
 
     /**
@@ -31,11 +31,26 @@ public class SystemUI {
                 int ans = scan.nextInt();
                 switch(ans) {
                     case 1: // search hotels by brand
-                        System.out.println("What hotel brand do you want to search for? (Choose from Marriott, Hilton, Wyndham, Hyatt)");
-                        String brand = scan.next();
-                        hotels.SearchHotel(brand);
+                        boolean cont = true;
+                        String brand;
+                        String temp;
+                        while (cont) {
+                            System.out.println("What hotel brand do you want to search for? (Choose from Marriott, Hilton, Wyndham, Hyatt)");
+                            brand = scan.next();
+                            if (brand.equals("Marriott") 
+                            || brand.equals("Hilton")
+                            || brand.equals("Wyndham")
+                            || brand.equals("Hyatt")) {
+                                hotels.SearchHotel(brand);
+                            }
+                            else {
+                                System.out.println("The hotel brand that you entered is not one of our supported brands. Type \'1\' to retry or any other key to exit.");
+                                temp = scan.next();
+                                if (!temp.equals("1")) cont = false;
+                            }
+                        }
                         break;
-                    case 2: // seach hotels by state
+                    case 2: // seach hotels by state (check over this)
                         System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
                         String state = scan.next();
                         System.out.println("Below are all hotels in " + state + ": ");
@@ -56,11 +71,11 @@ public class SystemUI {
                 System.out.println("What date do you want the flight to leave on? ");
                 String date = scan.next(); // date is not used in calling searchLocation (Change that)
                 System.out.println("What is your starting location? (Use state abbreviation)");
-                String startLoc = scan.nextLine();
+                String startLoc = scan.next();
                 System.out.println("What is your preferred destination state? (Use state abbreviation)");
                 String endLoc = scan.next();
                 BookFlight flights = new BookFlight();
-                flights.searchLocation(startLoc, endLoc, new ArrayList<String>());
+                flights.searchLocation(startLoc, endLoc, new ArrayList<String>()); // check over this
             }
             else if (answer == 2) { // create account
                 System.out.println("Please enter the following information to create an account:");
@@ -69,7 +84,7 @@ public class SystemUI {
                 System.out.println("Password");
                 String password = scan.next();
                 accounts.add(new Account(UUID.randomUUID().toString(), email, password, new ArrayList<RegisteredUser>(), new HashMap<Flight, ArrayList<RegisteredUser>>()));
-                System.out.println("Congratulations!! You have created an account with email " + email + " and password " + password);
+                System.out.println("\nCongratulations!! You have created an account with email " + email + " and password " + password);
             }
             else if (answer == 1) { // login to account
                 System.out.println("Enter email: ");
@@ -96,15 +111,16 @@ public class SystemUI {
      * @param account the account that the UI is accessing
      */
     void accountUI(Account account) {
-        System.out.println("Welcome to your profile " + account.getEmail() + "!");
+        System.out.println("\nWelcome to your profile " + account.getEmail() + "!");
         System.out.println(WELCOME_MESSAGE_ACCOUNT);
         while (true) {
             Scanner scan = new Scanner(System.in);
-            System.out.println("1. View this account's users\n2. Create user\n3. login to user\n4. Logout\n");
+            System.out.println("\n1. View this account's users\n2. Create user\n3. login to user\n4. Logout\n");
             int ans = scan.nextInt();
             if (ans == 1) { // view users
-                for (RegisteredUser user : account.getUsers()) {
-                    System.out.println("Name: " + user.getFirstName() + " " + user.getLastName());
+                if (account.getUsers().size() == 0) System.out.println("You currently have no users on this account."); // replace this with JSON
+                for (RegisteredUser user : account.getUsers()) { 
+                    System.out.println("User's name: " + user.getFirstName() + " " + user.getLastName());
                 }
             }
             else if (ans == 2) { // create users
@@ -116,22 +132,23 @@ public class SystemUI {
                 System.out.println("What is the DOB of your new user? Use format (MM/DD/YYYY)");
                 String DOB = scan.next();
                 System.out.println("What is the address of your new user?");
-                String address = scan.nextLine();
+                String address = scan.nextLine(); // for some reason this gets skipped
                 RegisteredUser user = new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<Ticket>(), new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
+                account.addUser(firstName, lastName, DOB, address); // add json to this
                 while (true) {
                     System.out.println("Do you want to add any pets to this user? 1 = yes, 0 = no");
                     int temp = scan.nextInt();
                     if (temp == 1) {
-                        System.out.println("What pet do you want to add?");
+                        System.out.println("What pet do you want to add? (dog, cat, lizzard, bird, fish, or rodent)");
                         String tempPet = scan.next();
                         boolean found = false;
                         while (!found) {
-                            if (tempPet.equals("Dog")
-                            || tempPet.equals("Cat")
-                            || tempPet.equals("Lizzard")
-                            || tempPet.equals("Bird")
-                            || tempPet.equals("Fish")
-                            || tempPet.equals("Rodent")) {
+                            if (tempPet.equals("dog")
+                            || tempPet.equals("cat")
+                            || tempPet.equals("lizzard")
+                            || tempPet.equals("bird")
+                            || tempPet.equals("fish")
+                            || tempPet.equals("rodent")) {
                                 found = true;
                             }
                             if (found) {
@@ -182,13 +199,13 @@ public class SystemUI {
      * @param user the user that will be modified by the UI
      */
     public void userUI(RegisteredUser user) {
-        System.out.println("Hello " + user.getFirstName() + "  " + user.getLastName() + "!");
-        System.out.println(WELCOME_MESSAGE_USER);
-        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change name\n7. Add pet\n8. View pets\n9. Logout\n");
-        Scanner scan = new Scanner(System.in);
-        int ans = scan.nextInt();
         boolean cont = true;
         while (cont) {
+            System.out.println("\nHello " + user.getFirstName() + "  " + user.getLastName() + "!");
+            System.out.println(WELCOME_MESSAGE_USER + "\n");
+            System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change name\n7. Add pet\n8. View pets\n9. Logout\n");
+            Scanner scan = new Scanner(System.in);
+            int ans = scan.nextInt();
             switch(ans) {
                 case 1: // book flight
 
@@ -232,7 +249,7 @@ public class SystemUI {
                     int temps = scan.nextInt();
                     if (temps == -1) break;
                     cnt = 1;
-                    for (int i = 0; i < user.getPastFlights().size(); i++) { // really inefficent way of retrieving the flight that the user wants
+                    for (int i = 0; i < user.getPastFlights().size(); i++) { // really inefficent way of retrieving the flight that the user wants, but it works
                         Ticket ticket = user.getPastFlights().get(i);
                         if (ticket.isFlight()) {
                             if (cnt == temps) {
