@@ -161,7 +161,7 @@ public class SystemUI {
     public void userUI(RegisteredUser user) {
         System.out.println("Hello " + user.getFirstName() + "  " + user.getLastName() + "!");
         System.out.println(WELCOME_MESSAGE_USER);
-        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change name\n7. Logout\n");
+        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change name\n7. Add pet\n8. View pets\n9. Logout\n");
         Scanner scan = new Scanner(System.in);
         int ans = scan.nextInt();
         boolean cont = true;
@@ -191,7 +191,12 @@ public class SystemUI {
                 case 4: // blacklist an airport
                     break;
                 case 5: // cancel flight
-                    // fill in later
+                    System.out.println("These are your future flights: ");
+                    for (Ticket ticket : user.getPastFlights()) {
+                        System.out.prin
+                    }
+                    System.out.print("Enter the number of the fligh that you want to cancel. (Enter -1 to exit without canceling a flight.)");
+                    int temp = scan.nextInt();
                     break;
                 case 6: // change name
                     String temp;
@@ -202,7 +207,35 @@ public class SystemUI {
                     temp = scan.next();
                     user.setlastName(temp);
                     break;
-                case 7:
+                case 7: // add pet
+                    System.out.println("What pet do you want to add?");
+                    String tempPet = scan.next();
+                    boolean found = false;
+                    while (!found) {
+                        if (tempPet.equals("Dog")
+                        || tempPet.equals("Cat")
+                        || tempPet.equals("Lizzard")
+                        || tempPet.equals("Bird")
+                        || tempPet.equals("Fish")
+                        || tempPet.equals("Rodent")) {
+                            found = true;
+                        }
+                        if (found) {
+                            user.addPet(Pet.valueOf("tempPet"));
+                        }
+                        else {
+                            System.out.println("That is not a valid pet, if you want to retry typing your pet type, enter \"1\", enter any other key to continue without entering your pet");
+                            int tempInt = scan.nextInt();
+                            if (tempInt != 1) {
+                                found = true;
+                            }
+                        }
+                    }  
+                    break;
+                case 8: // view pets
+                    user.printPets();
+                    break;
+                case 9: // logout
                     cont = false;
                     break;
                 default:
