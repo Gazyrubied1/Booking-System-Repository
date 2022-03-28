@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Flight {
     private ArrayList<String> locations = new ArrayList<String>();
@@ -75,9 +76,15 @@ public class Flight {
     }
 
     /**
-     * prints out if the flight is Flight is canceld or not
+     * generates if the flight is cancled or not 0.1% chance it is 
+     * @return a boolean value of true or false where true is flight canceled
      */
     public boolean isFlightCanceled() {
+        Random random = new Random();
+        int isCanceled = random.nextInt(1000);
+        if(isCanceled == 38) {
+            return true;
+        }
         return false;
     }
 

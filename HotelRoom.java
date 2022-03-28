@@ -29,7 +29,7 @@ public class HotelRoom {
         return roomType;
     }
 
-    public ArrayList<DaysBooked> getDaysBook () {
+    public ArrayList<DaysBooked> getDaysBook() {
         return DaysBook;
     }
 

@@ -74,7 +74,6 @@ public class Account extends User {
     }
 
     public String getUserID() {
-        //TODO Return UUID instead of String
         return UserID;
     }
 
@@ -99,6 +98,6 @@ public class Account extends User {
      * to string method
      */
     public String toString(){
-        return ;
+        return "id: " + this.getUserID() + " email: " + this.getEmail() + " password: " + this.getPassword() + " users: " + this.getUsers();
     }
 }

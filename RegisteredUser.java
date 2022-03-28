@@ -170,7 +170,33 @@ public class RegisteredUser {
     }
 
     public void printTicket() {
+    
+    }
 
+    /**
+     * adds a plane trip to the ticket class
+     * @param departDate
+     * @param arriveDate
+     * @param locations
+     * @param flight
+     */
+    public void addPlaneTicket(String departDate, String arriveDate, ArrayList<String> locations, BookFlight flight, seat mySeat){
+       Ticket toAdd = new Ticket();
+       toAdd.flight(locations,departDate, arriveDate, flight);
+       PastReservation.add(toAdd);
+    }
+
+    /**
+     * Adds ahotel ticket to the ticket array
+     * @param startDay the first day that the room is booked
+     * @param endDay the last day the room is booked
+     * @param hotelLocation the State the hotel is in/ 
+     * @param hotel the type of booking 
+     */
+    public void addHotelTicket(ArrayList<String> hotelLocation, BookHotel hotel) {
+        Ticket toAdd = new Ticket();
+        
+        toAdd.flight(hotelLocation, endDay, startDay, hotel);
     }
 
 }

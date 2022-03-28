@@ -3,18 +3,22 @@ import java.util.*;
 
 public class Ticket {
     
-    private String departDate;
-    private String arriveDate;
+    private String departDate;  //  
+    private String arriveDate;  //  for end date of hotel
     private ArrayList<String> locations;
     private Book reservation;
 
     public Ticket() {}
 
-    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book resrvation) {
+    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book reservation) {
         this.locations = locations;
         this.departDate = departDate;
         this.arriveDate = arriveDate;
-        this.reservation = resrvation;
+        this.reservation = reservation;
+    }
+
+    public void hotel() {
+
     }
 
     public String getDepartDate() {
