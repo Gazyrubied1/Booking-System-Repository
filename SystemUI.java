@@ -13,14 +13,16 @@ public class SystemUI {
         System.out.println(WELCOME_MESSAGE_SYSTEM);
 
         while (true) {
-            System.out.println("1. Login to an existing account\n2. Create an account\n3. Search Flights\n4. Search hotels\n5. Logout\n");
+            System.out.println("1. Login to an Existing Account\n2. Create an Account\n3. Search Flights\n4. Search Hotels\n5. Logout\n");
 
             Scanner scan = new Scanner(System.in);
             int answer = scan.nextInt();
             if (answer == 5) break;
             else if (answer == 4) { // search hotels
+                //TODO Make sure that the four brands are the only choices the user can choose from
+                //TODO Make sure that the user can input only a two letter State Abbreviation
                 BookHotel hotels = new BookHotel();
-                System.out.println("Do you want to search hotels by:\n1) Name of hotel\n2) State the hotel is in\n3)Both");
+                System.out.println("Would you like to search hotels by:\n1) Name of the Hotel\n2) State where the Hotel is at\n3) Both");
                 int ans = scan.nextInt();
                 switch(ans) {
                     case 1: // search hotels by brand
@@ -29,15 +31,15 @@ public class SystemUI {
                         hotels.SearchHotel(brand);
                         break;
                     case 2: // seach hotels by state
-                        System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
+                        System.out.println("What state do you want to search for hotels in? (Use the two-letter state abbreviation)");
                         String state = scan.next();
                         System.out.println("Below are all hotels in " + state + ": ");
                         hotels.SearchHotel(state);
                         break;
                     case 3: // search hotels by state and brand
-                        System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
+                        System.out.println("What state do you want to search for hotels in? (Use the two-letter state abbreviation)");
                         state = scan.next();
-                        System.out.println("What hotel brand do you want to search for? (brands: )");
+                        System.out.println("What hotel brand do you want to search for? (Choose from Marriott, Hilton, Wyndham, Hyatt)");
                         brand = scan.next();
                         System.out.println("Below are all " + brand + " hotels in " + state);
                         hotels.SearchHotel(state, brand);
@@ -54,7 +56,7 @@ public class SystemUI {
                 System.out.println("Password");
                 String password = scan.next();
                 accounts.add(new Account(UUID.randomUUID().toString(), email, password, new ArrayList<RegisteredUser>(), new HashMap<Flight, ArrayList<RegisteredUser>>()));
-                System.out.println("Congratulations!! You have created an account with email " + email + " and password " + password);
+                System.out.println("\nCongratulations!! You have created an account with email " + email + " and password " + password + "\n");
             }
             else if (answer == 1) { // login to account
                 System.out.println("Enter email: ");
@@ -77,13 +79,15 @@ public class SystemUI {
     }
 
     void accountUI(Account account) {
-        System.out.println("Welcome to your profile " + account.getEmail() + "!");
+        System.out.println("\nWelcome to your profile " + account.getEmail() + "!");
         System.out.println(WELCOME_MESSAGE_ACCOUNT);
         while (true) {
             Scanner scan = new Scanner(System.in);
-            System.out.println("1. View this account's users\n2. Create user\n3. login to user\n4. Logout\n");
+            System.out.println("1. View this Account's Users\n2. Create New User\n3. Login to User\n4. Logout\n");
             int ans = scan.nextInt();
             if (ans == 1) { // view users
+                // TODO Return "No other users are registered on this account" if the list is null
+                // TODO This method does not return the list of users
                 for (RegisteredUser user : account.getUsers()) {
                     System.out.println("Name: " + user.getFirstName() + " " + user.getLastName());
                 }
@@ -94,7 +98,7 @@ public class SystemUI {
                 String firstName = scan.next();
                 System.out.println("What is the last name of your new user?");
                 String lastName = scan.next();
-                System.out.println("What is the DOB of your new user? Use format (MM/DD/YYYY)");
+                System.out.println("What is the DOB of your new user? Use format (MM/DD/YYYY)"); //TODO make sure that the user inputs the DOB in this format (maybe a helper method)
                 String DOB = scan.next();
                 System.out.println("What is the address of your new user?");
                 String address = scan.nextLine();
@@ -103,13 +107,15 @@ public class SystemUI {
                     System.out.println("Do you want to add any pets to this user? 1 = yes, 0 = no");
                     int temp = scan.nextInt();
                     if (temp == 1) {
-                        System.out.println("What pet do you want to add?");
+                        System.out.println("What pet would you like to add?");
+                        // TODO display the list of pets for the user to pick from
+                        // TODO Implement adding pets to the user's account
                         String tempPet = scan.next();
                         boolean found = false;
                         while (!found) {
                             if (tempPet.equals("Dog")
                             || tempPet.equals("Cat")
-                            || tempPet.equals("Lizzard")
+                            || tempPet.equals("Lizard")
                             || tempPet.equals("Bird")
                             || tempPet.equals("Fish")
                             || tempPet.equals("Rodent")) {
@@ -161,7 +167,7 @@ public class SystemUI {
     public void userUI(RegisteredUser user) {
         System.out.println("Hello " + user.getFirstName() + "  " + user.getLastName() + "!");
         System.out.println(WELCOME_MESSAGE_USER);
-        System.out.println("1. Book Flight\n2. Book Hotel\n3. View previous flights\n4. Blacklist an airport\n5. Cancel flight\n6. Change name\n7. Logout\n");
+        System.out.println("1. Book Flight\n2. Book Hotel\n3. View Previous flights\n4. Blacklist an Airport\n5. Cancel Flight\n6. Change Name\n7. Logout\n");
         Scanner scan = new Scanner(System.in);
         int ans = scan.nextInt();
         boolean cont = true;
@@ -188,9 +194,9 @@ public class SystemUI {
                         }
                     }
                     break;
-                case 4: // blacklist an airport
+                case 4: // TODO blacklist an airport
                     break;
-                case 5: // cancel flight
+                case 5: // TODO cancel flight
                     // fill in later
                     break;
                 case 6: // change name
