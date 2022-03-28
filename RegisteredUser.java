@@ -169,6 +169,11 @@ public class RegisteredUser {
         pets.add(pet);
     }
 
+    public void printPets() {
+        for (Pet pet : pets) {
+            System.out.println("Pet: " + pet.toString());
+        }
+    }
     public void printTicket() {
 
     }
