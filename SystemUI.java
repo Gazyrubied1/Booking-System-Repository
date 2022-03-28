@@ -81,7 +81,7 @@ public class SystemUI {
         System.out.println(WELCOME_MESSAGE_ACCOUNT);
         while (true) {
             Scanner scan = new Scanner(System.in);
-            System.out.println("1. View this account's users\n2. Create user\n3. login to user\n4. Logout\n");
+            System.out.println("1. View this account's users\n2. Create user\n3. login to user\n4. Book a Hotel\n5. Logout\n");
             int ans = scan.nextInt();
             if (ans == 1) { // view users
                 for (RegisteredUser user : account.getUsers()) {
@@ -149,7 +149,33 @@ public class SystemUI {
                     }
                 }
             }
-            else if (ans == 4) {
+            else if (ans == 4){ // Book a Hotel
+                BookHotel hotels = new BookHotel();
+                System.out.println("Do you want to search hotels by:\n1) Name of hotel\n2) State the hotel is in\n3)Both");
+                int input = scan.nextInt();
+                switch(input) {
+                    case 1: // search hotels by brand
+                        System.out.println("What hotel brand do you want to search for? (Choose from Marriott, Hilton, Wyndham, Hyatt)");
+                        String brand = scan.next();
+                        hotels.SearchHotel(brand);
+                        break;
+                    case 2: // seach hotels by state
+                        System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
+                        String state = scan.next();
+                        System.out.println("Below are all hotels in " + state + ": ");
+                        hotels.SearchHotel(state);
+                        break;
+                    case 3: // search hotels by state and brand
+                        System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
+                        state = scan.next();
+                        System.out.println("What hotel brand do you want to search for? (brands: )");
+                        brand = scan.next();
+                        System.out.println("Below are all " + brand + " hotels in " + state);
+                        hotels.SearchHotel(state, brand);
+                        break;
+                }
+            }
+            else if (ans == 5) {
                 break;
             }
             else {
