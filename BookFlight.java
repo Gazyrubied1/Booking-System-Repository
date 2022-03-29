@@ -90,7 +90,7 @@ public class BookFlight extends Book{
 
 
     private boolean checkBlackList(ArrayList<String> blacklist, int index) {
-
+        // TODO fix to split the string of flights
         for (int i = 0; i < blacklist.size(); ++i) {
             if(blacklist.get(i).equalsIgnoreCase(Flights.get(index).getlocations().get(i))){
                 return false;
@@ -126,7 +126,7 @@ public class BookFlight extends Book{
     * @param Tikets the number of tickets to be booked
     * @return the flight to be booked
     */
-    public Flight bookFlight(Flight input, ArrayList<RegisteredUser> passengers, int Tikets) {
+    public void bookFlight(Flight input, ArrayList<RegisteredUser> passengers, int Tikets) {
         Scanner keyBoard = new Scanner(System.in);
         seats use = input.getSeatAvalable();
         System.out.println("The avalable seats are:");
@@ -139,7 +139,7 @@ public class BookFlight extends Book{
         }
 
         for(int i = 0; i < Tikets; ++i){
-            System.out.println("Please enter the colom and then the row");
+            System.out.println("Please enter the colom and then the row you would like");
             int colom = keyBoard.nextInt();
             String Crow = keyBoard.nextLine();
             char Cuse = Crow.charAt(0);
@@ -147,13 +147,9 @@ public class BookFlight extends Book{
             for(int ii = 0; ii < use.getSize(); ii++){
                 if(use.getseat(ii).getRow() == Cuse && use.getseat(ii).getCol() == colom) {
                     passengers.get(i).addPlaneTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations(), this, use.getseat(ii));
+                    }
                 }
-            }
-            }
-            
-            //passengers.get(i).addTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations());
-        
-        return null;  // add proper fix to this tomorrow 
+            } 
     }
 
 }

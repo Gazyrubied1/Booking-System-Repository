@@ -198,10 +198,11 @@ public class RegisteredUser {
      * @param hotelLocation the State the hotel is in/ 
      * @param hotel the type of booking 
      */
-    public void addHotelTicket(ArrayList<String> hotelLocation, BookHotel hotel) {
+    
+    
+     public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel hotel) {
         Ticket toAdd = new Ticket();
-        
-        toAdd.flight(hotelLocation, endDay, startDay, hotel);
+        toAdd.flight(Location, Strat, end, hotel);
     }
 
 }

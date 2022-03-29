@@ -4,10 +4,9 @@ public class DaysBooked {
     private String id;
 
 
-    public DaysBooked(int year, int[] dayRange, String id) {
+    public DaysBooked(int year, int[] dayRange) {
         this.year = year;
         this.dayRange = dayRange;
-        this.id = id;
     }
 
     public void setYear(int year) {
