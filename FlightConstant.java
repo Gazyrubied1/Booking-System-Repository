@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class FlightConstant {
     protected static final String Flight_File_name = "PLACE_HOLDER";
 
