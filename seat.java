@@ -1,12 +1,12 @@
 public class seat {
     private char row;
     private int col;
-    private String id;
+    //private String id;
 
-    public seat(char row, int col, String id) {
+    public seat(char row, int col) {
         this.row = row;
         this.col = col;
-        this.id = id;
+        //this.id = id;
     }
     public void setRow(char row) {
         this.row = row;
@@ -25,6 +25,7 @@ public class seat {
     }
 
     public String getId() {
-        return id;
+        //return id;
+        return null;
     }
 }

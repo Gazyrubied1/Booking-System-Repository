@@ -23,7 +23,7 @@ public class seats {
         return seatList.get(index);
     }
     public void addSeat(char row, int col, String Id) {
-        seatList.add(new seat(row, col, Id));
+        seatList.add(new seat(row, col));
     }
 
     public seat removeSeat(char row, int col, String Id) {
