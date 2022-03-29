@@ -6,6 +6,7 @@ public class RegisteredUser {
     private String lastName;
     private String DateOfBirth;
     private String BillingAddress;
+    private String id;
     private boolean Discount;
     private boolean RewardMember;
     private int NumFlights;
@@ -13,9 +14,6 @@ public class RegisteredUser {
     private ArrayList<Ticket> PastReservation = new ArrayList<Ticket>();
     private ArrayList<String> blacklisted = new ArrayList<String>();
     private ArrayList<Pet> pets = new ArrayList<Pet>();
-    private String id;
-    public int getFirstName;
-    public int getLastName;
 
     public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember,
                           int NumFlights, double Review, ArrayList<Ticket> PastReservation, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) {

@@ -9,6 +9,7 @@ public class Ticket {
     private Book reservation;
     private HotelBrands brand;
     private String hotelDate;
+    private boolean isHotel;
 
 
     public Ticket() {}
@@ -21,6 +22,7 @@ public class Ticket {
      * @param reservation
      */
     public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book reservation) {
+        this.isHotel = false;
         this.locations = locations;
         this.departDate = departDate;
         this.arriveDate = arriveDate;
@@ -33,6 +35,7 @@ public class Ticket {
      * @param hotelDate the date that the hotel stay will occur on
      */
     public void hotel(HotelBrands brand, String hotelDate) {
+        this.isHotel = true;
         this.brand = brand;
         this.hotelDate = hotelDate;
     }
@@ -42,7 +45,7 @@ public class Ticket {
      * @return a boolean that is true if the Ticket holds a flight, false if it does not
      */
     public boolean isFlight() {
-        return locations != null;
+        return !isHotel;
     }
 
     /**
@@ -50,7 +53,7 @@ public class Ticket {
      * @return a boolean that is true if the Ticket holds a hotel stay, false if it does not
      */
     public boolean isHotel() {
-        return locations == null;
+        return isHotel;
     }
 
     /**
