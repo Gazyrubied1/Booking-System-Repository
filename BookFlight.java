@@ -127,7 +127,7 @@ public class BookFlight extends Book{
     */
     public void bookFlight(Flight input, ArrayList<RegisteredUser> passengers, int Tikets) {
         Scanner keyBoard = new Scanner(System.in);
-        seats use = input.getSeatAvalable();
+        seats use = input.getSeatAvailable();
         System.out.println("The available seats are: ");
        
         for(int i = 0; i < use.getSize(); ++i) {

@@ -4,6 +4,7 @@ public class SystemUI {
     private static final String WELCOME_MESSAGE_SYSTEM = "Welcome to our flight booking system!\n\n*********** Main Menu **************";
     private static final String WELCOME_MESSAGE_ACCOUNT = "********* Account Menu ************";
     private static final String WELCOME_MESSAGE_USER = "********** User's Menu *************";
+    String[] states = {"AL", "MT", "AK", "NE", "AZ", "NV", "AR", "NH", "CA", "NJ", "CO", "NM", "CT", "NY", "DE", "NC", "FL", "ND", "GA", "OH", "HI", "OK", "ID", "OR", "IL", "PA", "IN", "RI", "IA", "SC", "KS", "SD", "KY", "TN", "LA", "TX", "ME", "UT", "MD", "VT", "MA", "VA", "MI", "WA", "MN", "WV", "MS", "WI", "MO", "WY"};
     ArrayList<Account> accounts;
 
     /**
@@ -230,7 +231,24 @@ public class SystemUI {
                     break;
                 case 2: // book hotel
                     BookHotel hotels = new BookHotel();
-                    
+                    cont = true;
+                    while (cont) {
+                        System.out.println("What state do you want to book a hotel in?");
+                        String state = scan.next();
+                        boolean contains = false;
+                        for (int i = 0; i < states.length; i++) {
+                            if (states[i].equals(state)) contains = true;
+                        }
+                        if (contains) { // state is valid
+                            hotels.BookHotelRoom(hotels.SearchHotel(state), user);
+                            cont = false;
+                        }
+                        else {
+                            System.out.println("Invalid input. Do you want to retry? ( 1 == yes, any other key == no)");
+                            int reponse = scan.nextInt();
+                            if (reponse != 1) cont = false;
+                        }
+                    }
                     break;
                 case 3: // view previous flights
                     System.out.println("Previous flights: "); // add date parameter so this only views flights in past. Could add another option to view all flights
