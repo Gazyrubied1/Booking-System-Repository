@@ -19,7 +19,7 @@ public class GenerateHotel extends HotelConstants {
             FileReader reader = new FileReader(Hotel_Room_File);
             JSONParser parser = new JSONParser();
 			JSONArray HotelsJSON = (JSONArray)new JSONParser().parse(reader);
-
+            //
             for(int i  = 0; i < HotelsJSON.size(); ++i) {
                 JSONObject HotelJSON = (JSObject) RoomsJSON.get(i);
                 String state = HotelJSON.get(Const_State);  //1  state

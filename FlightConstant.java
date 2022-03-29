@@ -1,5 +1,5 @@
 public class FlightConstant {
-    protected static final String Flight_File_name = "PLACE_HOLDER";
+    protected static final String Flight_File_name = "Flights.json";
 
     protected static final String[] Locations = {"London","la"};
     protected static final int Flight_Duration = 4;

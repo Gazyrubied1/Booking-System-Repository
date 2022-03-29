@@ -7,8 +7,8 @@ public class BookHotel extends Book {
 
     private String location;
     private ArrayList<Hotels> HotelList = new ArrayList<Hotels>();
-    public BookHotel() {
-        HotelList = GenerateHotel // finish writng
+    public BookHotel(ArrayList<Hotels> HotelList) {
+        this.HotelList = HotelList;
     }
 
 

@@ -17,7 +17,7 @@ public class Account extends User {
      * @param users the users that will be in the Account
      * @param currentFlights 
      */
-    public Account (String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
+    public Account (String UserID, String Email, String Password, ArrayList<RegisteredUser> users) {
         super();
         this.UserID = UserID;
         this.Email = Email;
@@ -135,7 +135,7 @@ public class Account extends User {
      * Gets a list of users in the accout
      * @return the ArrayList of RegisteredUsers in the account
      */
-    public ArrayList<RegisteredUser> getUser() {
+    public ArrayList<RegisteredUser> getUsers() {
         return Users;
     }
 
