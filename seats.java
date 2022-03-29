@@ -6,7 +6,7 @@ public class seats {
     /**
      * Constructor for the seats class
      */
-    private seats() {
+    public seats() {
         seatList = GenerateSeats.generateSeats();
     }
 

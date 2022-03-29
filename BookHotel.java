@@ -11,17 +11,46 @@ public class BookHotel extends Book {
         this.HotelList = HotelList;
     }
 
+<<<<<<< HEAD
+    /**
+     * Sets the name of the hotel to an inputted String
+     * 
+     * @param HotelName the hotel's new name
+     */
+    public void setHotelName(String HotelName) {
+        this.HotelName = HotelName;
+    }
+=======
+>>>>>>> e131b73dfcf04a2c0bf8c2f71796d3a9ee1b7e56
 
     /**
      * Sets the location of the hotel to an inputted String
+     * 
      * @param Location the hotel's new location
      */
     public void setLocation(String Location) {
         this.location = Location;
     }
 
+<<<<<<< HEAD
+    public void setGuest(String guest) {
+        this.guest = guest;
+    }
+
+    /**
+     * Gets the name of the hotel
+     * 
+     * @return a String representing the name of the hotel
+     */
+    public String getHotelName() {
+        return HotelName;
+    }
+
+=======
+>>>>>>> e131b73dfcf04a2c0bf8c2f71796d3a9ee1b7e56
     /**
      * Gets the location of the hotel
+     * 
      * @return a String that holds the location of the hotel
      */
     public String getLocation() {
@@ -31,6 +60,7 @@ public class BookHotel extends Book {
 
     /**
      * Gets the list of hotels
+     * 
      * @return an ArrayList that holds all of the available hotels
      */
 
@@ -164,7 +194,8 @@ public class BookHotel extends Book {
      * Searches through the list of hotels by state and returns the hotels from that
      * state
      * 
-     * @param State A String that holds the value of a state's two letter abbreviation
+     * @param State A String that holds the value of a state's two letter
+     *              abbreviation
      * @return an ArrayList of hotels from that state
      */
     public ArrayList<Hotels> SearchHotel(String State) {
@@ -181,7 +212,8 @@ public class BookHotel extends Book {
     /**
      * Searches through the list of hotels by state and brand
      * 
-     * @param State a String that holds the state in form of its two letter abbreviation
+     * @param State a String that holds the state in form of its two letter
+     *              abbreviation
      * @param brand the hotel brand as a String
      * @return An ArrayList of found Hotels
      */
