@@ -13,10 +13,18 @@ public class BookHotel extends Book {
     public BookHotel() {
     }
 
+    /**
+     * Sets the name of the hotel to an inputted String
+     * @param HotelName the hotel's new name
+     */
     public void setHotelName(String HotelName) {
         this.HotelName = HotelName;
     }
 
+    /**
+     * Sets the location of the hotel to an inputted String
+     * @param Location the hotel's new location
+     */
     public void setLocation(String Location) {
         this.location = Location;
     }
@@ -25,10 +33,18 @@ public class BookHotel extends Book {
         this.guest = guest;
     }
 
+    /**
+     * Gets the name of the hotel
+     * @return a String representing the name of the hotel
+     */ 
     public String getHotelName() {
         return HotelName;
     }
 
+    /**
+     * Gets the location of the hotel
+     * @return a String that holds the location of the hotel
+     */
     public String getLocation() {
         return location;
     }
@@ -37,6 +53,10 @@ public class BookHotel extends Book {
         return guest;
     }
 
+    /**
+     * Gets the list of hotels
+     * @return an ArrayList that holds all of the available hotels
+     */
     public ArrayList<Hotels> getHotelList() {
         return HotelList;
     }
@@ -167,8 +187,8 @@ public class BookHotel extends Book {
      * Searches through the list of hotels by state and returns the hotels from that
      * state
      * 
-     * @param State A string value of the two letter state abreviation
-     * @return an array list of hotels from that state
+     * @param State A String that holds the value of a state's two letter abbreviation
+     * @return an ArrayList of hotels from that state
      */
     public ArrayList<Hotels> SearchHotel(String State) {
         ArrayList<Hotels> toReturn = new ArrayList<Hotels>();
@@ -182,11 +202,11 @@ public class BookHotel extends Book {
     }
 
     /**
-     * Searches throught the list of hotels by state an brand
+     * Searches through the list of hotels by state and brand
      * 
-     * @param State a string state in form of two letter abreviation
-     * @param brand the hotel brand as a string
-     * @return An arrayList of found Hotels
+     * @param State a String that holds the state in form of its two letter abbreviation
+     * @param brand the hotel brand as a String
+     * @return An ArrayList of found Hotels
      */
     public ArrayList<Hotels> SearchHotel(String State, String brand) {
         ArrayList<Hotels> toReturn = new ArrayList<Hotels>();
@@ -204,9 +224,9 @@ public class BookHotel extends Book {
     }
 
     /**
-     * Searches throught the list of hotels by brand
+     * Searches through the list of hotels by brand
      * 
-     * @param brand the hotel brand as a string
+     * @param brand the hotel brand as a String
      * @return an ArrayList of found hotels
      */
     public ArrayList<Hotels> SearchHotel(HotelBrands brand) {
