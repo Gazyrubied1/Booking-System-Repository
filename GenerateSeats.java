@@ -15,13 +15,13 @@ public class GenerateSeats extends SeatsConstants {
             JSONParser parser = new JSONParser();
 			JSONArray seatsJSON = (JSONArray)new JSONParser().parse(reader);
 
-            for(int i = 0; i < seatJSON.size(); ++i) {
+            for(int i = 0; i < seatsJSON.size(); ++i) {
                 JSONObject seatJSON = (JSONObject)seatsJSON.get(i);
 
-                char row = (char)seatJSON.get(row);
-                int col = (int)seatJSON.get(col);
+                char Row = (char)seatJSON.get(row);
+                int Col = (int)seatJSON.get(col);
 
-                Seats.add(new seat(row, col));
+                Seats.add(new seat(Row, Col));
             }
             return Seats;
         }catch(Exception e) {
