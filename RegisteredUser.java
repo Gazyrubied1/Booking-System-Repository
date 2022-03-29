@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.io.*;
+import java.security.PrivilegedExceptionAction;
 
 public class RegisteredUser {
     private String firstName;
@@ -166,9 +167,12 @@ public class RegisteredUser {
     public void setDiscount(boolean Discount) {
         this.Discount = Discount;
     }
-
-    public void setRewardMember(boolean RewardMember) { // update
+    public void setRewardMember(boolean RewardMember) {
+        if(PastReservation.size() > 3){
+            this.RewardMember = true;
+        }else{
         this.RewardMember = RewardMember;
+        }
     }
 
     public void setNumFlights(int NumFlights) {
@@ -276,10 +280,15 @@ public class RegisteredUser {
      * @param locations
      * @param flight
      */
-    public void addPlaneTicket(String departDate, String arriveDate, ArrayList<String> locations, BookFlight flight, seat mySeat){
+    public void addPlaneTicket(String departDate, String arriveDate, ArrayList<String> locations, BookFlight flight, seat mySeat, Flight ToBook){
        Ticket toAdd = new Ticket();
-       toAdd.flight(locations,departDate, arriveDate, flight);
+       int price = ToBook.getCost();
+       if(Discount) {
+          price = (int)(price * 0.15);
+       }
+       toAdd.flight(locations,departDate, arriveDate, flight, price);
        PastReservation.add(toAdd);
+       setRewardMember(RewardMember);
     }
 
     /**
@@ -290,9 +299,19 @@ public class RegisteredUser {
      * @param hotel the type of booking 
      */
 
-     public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel hotel) {
+     public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel Booktype, RoomType type) {
         Ticket toAdd = new Ticket();
-        toAdd.flight(Location, Strat, end, hotel);
+        // make cost here baised on room type 
+        
+        RoomType Twin = RoomType.Twin_Beds;
+        RoomType Queens = RoomType.Queen_twin_beds;
+        int price = 0;
+        if(type == Twin || type == Queens){
+              price = 150;
+        }else{
+            price = 250;
+        }
+        toAdd.flight(Location, Strat, end, Booktype, price);
     }
 
 }

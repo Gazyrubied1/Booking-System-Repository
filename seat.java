@@ -46,12 +46,8 @@ public class seat {
         return col;
     }
 
-    /**
-     * Gets the id of the seat
-     * @return the id of the seat
-     */
-    public String getId() {
-        //return id;
+    public String getId(){
         return null;
     }
+
 }

@@ -6,6 +6,8 @@ public class SystemUI {
     private static final String WELCOME_MESSAGE_USER = "********** User's Menu *************";
     String[] states = {"AL", "MT", "AK", "NE", "AZ", "NV", "AR", "NH", "CA", "NJ", "CO", "NM", "CT", "NY", "DE", "NC", "FL", "ND", "GA", "OH", "HI", "OK", "ID", "OR", "IL", "PA", "IN", "RI", "IA", "SC", "KS", "SD", "KY", "TN", "LA", "TX", "ME", "UT", "MD", "VT", "MA", "VA", "MI", "WA", "MN", "WV", "MS", "WI", "MO", "WY"};
     ArrayList<Account> accounts;
+    BookHotel bookhotel;  // holds the hotels & rooms
+    BookFlight bookFlight;  // holds the flighs
 
     /**
      * Constructor for the UI class

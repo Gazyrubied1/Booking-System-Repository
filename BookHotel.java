@@ -5,14 +5,13 @@ import javax.lang.model.type.ReferenceType;
 
 public class BookHotel extends Book {
 
-    private String HotelName;
     private String location;
-    private String guest;
     private ArrayList<Hotels> HotelList = new ArrayList<Hotels>();
-
     public BookHotel() {
+        HotelList = GenerateHotel // finish writng
     }
 
+<<<<<<< HEAD
     /**
      * Sets the name of the hotel to an inputted String
      * 
@@ -21,6 +20,8 @@ public class BookHotel extends Book {
     public void setHotelName(String HotelName) {
         this.HotelName = HotelName;
     }
+=======
+>>>>>>> e131b73dfcf04a2c0bf8c2f71796d3a9ee1b7e56
 
     /**
      * Sets the location of the hotel to an inputted String
@@ -31,6 +32,7 @@ public class BookHotel extends Book {
         this.location = Location;
     }
 
+<<<<<<< HEAD
     public void setGuest(String guest) {
         this.guest = guest;
     }
@@ -44,6 +46,8 @@ public class BookHotel extends Book {
         return HotelName;
     }
 
+=======
+>>>>>>> e131b73dfcf04a2c0bf8c2f71796d3a9ee1b7e56
     /**
      * Gets the location of the hotel
      * 
@@ -53,15 +57,13 @@ public class BookHotel extends Book {
         return location;
     }
 
-    public String getGuest() {
-        return guest;
-    }
 
     /**
      * Gets the list of hotels
      * 
      * @return an ArrayList that holds all of the available hotels
      */
+
     public ArrayList<Hotels> getHotelList() {
         return HotelList;
     }
@@ -109,13 +111,13 @@ public class BookHotel extends Book {
         if (conflix == 0) {
             room.addDays(toAddDays, timeFrame[3]);
 
-        }
-        ArrayList<String> locations = new ArrayList<String>();
-        locations.add(toAddLoc);
-        user.addHotelTicket(locations, StartD, endD, this);
-        KeyBoard.close();
-        // TODO fix up to work with loop
     }
+    ArrayList<String> locations = new ArrayList<String>();
+    locations.add(toAddLoc); 
+    user.addHotelTicket(locations,StartD,endD, this,room.getRoomType() );   
+    KeyBoard.close();
+    // TODO fix up to work with loop 
+}
 
     private int[] CalcTime(int[] time, int[] last) {
         if (time[0] < 1 || time[0] > 12 || time[4] < 0 || time[4] > 12) {
@@ -230,22 +232,5 @@ public class BookHotel extends Book {
         return toReturn;
     }
 
-    /**
-     * Searches through the list of hotels by brand
-     * 
-     * @param brand the hotel brand as a String
-     * @return an ArrayList of found hotels
-     */
-    public ArrayList<Hotels> SearchHotel(HotelBrands brand) {
-        ArrayList<Hotels> toReturn = new ArrayList<Hotels>();
-        String UseBrand = brand.toString();
-        for (int i = 0; i < HotelList.size(); ++i) {
-            if (UseBrand.equalsIgnoreCase(HotelList.get(i).getBrands().toString())) {
-                System.out.println(i + ". " + HotelList.get(i).toString() + " ");
-                toReturn.add(HotelList.get(i));
-            }
-        }
-        return toReturn;
-    }
 
 }

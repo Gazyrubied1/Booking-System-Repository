@@ -7,7 +7,6 @@ public class Account extends User {
     private String Email;
     private String Password;
     private ArrayList<RegisteredUser> Users = new ArrayList<RegisteredUser>();
-    public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights = new HashMap<Flight, ArrayList<RegisteredUser>>(); 
 
 
     /**
@@ -24,7 +23,6 @@ public class Account extends User {
         this.Email = Email;
         this.Password = Password;
         this.Users = users;
-        this.currentFlights = currentFlights;
     }
     
     /**
@@ -108,14 +106,6 @@ public class Account extends User {
     public void setUsers(ArrayList<RegisteredUser> Users) {
         this. Users = Users;
     }
-    
-    /**
-     * pribaly needs to be fixed
-     * @param currentFlights
-     */
-    public void setCurrentFlights(HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
-        this.currentFlights = currentFlights;
-    }
 
     /**
      * Gets the id of the user
@@ -145,22 +135,14 @@ public class Account extends User {
      * Gets a list of users in the accout
      * @return the ArrayList of RegisteredUsers in the account
      */
-    public ArrayList<RegisteredUser> getUsers() {
+    public ArrayList<RegisteredUser> getUser() {
         return Users;
-    }
-    
-    /**
-     * Returns all current flights of the users in the account
-     * @return the hashmap that maps Flights to RegisteredUsers
-     */
-    public HashMap<Flight, ArrayList<RegisteredUser>> getCurrentFlights() {
-
-        return currentFlights;
     }
 
     /**
      * to string method
      */
+
     public String toString(){
         return "id: " + this.getUserID() + " email: " + this.getEmail() + " password: " + this.getPassword() + " users: " + this.getUsers();
     }

@@ -32,15 +32,13 @@
         ],
 		"pets": [
 			{
-				"type": Dog,
-				"Name": "Sparky"
+				"Pets": "Dog"
 			},
 			{
-				"type": Cat,
-				"Name": "Mr. Mittens"
+				"type": "Cat"
 			}
 		]
-	}
+	},
 	{
 		"id": 2,
 		"firstName": "Dorothy",
@@ -66,8 +64,7 @@
         ],
 		"pets": [
 			{
-				"type": Fish,
-				"Name": "Nemo"
+				"type": "Fish"
 			}
 		]
 	}
