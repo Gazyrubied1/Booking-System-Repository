@@ -4,7 +4,7 @@ public class DaysBooked {
     private String id;
 
 
-    public DaysBooked(int year, int[] dayRange, String id) {
+    public DaysBooked(int year, int[] dayRange, String id) { // TODO Possibly remove the id parameter from the constructor
         this.year = year;
         this.dayRange = dayRange;
         this.id = id;
