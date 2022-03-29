@@ -53,10 +53,9 @@ public class GenerateHotel extends HotelConstants {
             }
             return hotel;
 
-        }catch(Exception e) {
+        } catch(Exception e) {
             e.printStackTrace();
         }
         return null;
-
     }
 }
