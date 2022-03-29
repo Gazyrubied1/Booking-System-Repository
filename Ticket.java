@@ -9,15 +9,17 @@ public class Ticket {
     private Book reservation;
     private HotelBrands brand;
     private String hotelDate;
+    private int cost; 
 
 
     public Ticket() {}
 
-    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book reservation) {
+    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book reservation, int cost) {
         this.locations = locations;
         this.departDate = departDate;
         this.arriveDate = arriveDate;
         this.reservation = reservation;
+        this.cost = cost;
     }
 
     public void hotel(HotelBrands brand, String hotelDate) {

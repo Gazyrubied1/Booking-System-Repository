@@ -7,7 +7,6 @@ public class Account extends User {
     private String Email;
     private String Password;
     private ArrayList<RegisteredUser> Users = new ArrayList<RegisteredUser>();
-    public HashMap<Flight, ArrayList<RegisteredUser>> currentFlights = new HashMap<Flight, ArrayList<RegisteredUser>>(); 
 
 
     public Account (String UserID, String Email, String Password, ArrayList<RegisteredUser> users, HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
@@ -16,7 +15,6 @@ public class Account extends User {
         this.Email = Email;
         this.Password = Password;
         this.Users = users;
-        this.currentFlights = currentFlights;
     }
     
     public boolean hasUser(String name) {
@@ -67,14 +65,6 @@ public class Account extends User {
     public void setUsers(ArrayList<RegisteredUser> Users) {
         this. Users = Users;
     }
-    
-    /**
-     * pribaly needs to be fixed
-     * @param currentFlights
-     */
-    public void setCurrentFlights(HashMap<Flight, ArrayList<RegisteredUser>> currentFlights) {
-        this.currentFlights = currentFlights;
-    }
 
     public String getUserID() {
         return UserID;
@@ -90,11 +80,6 @@ public class Account extends User {
 
     public ArrayList<RegisteredUser> getUsers() {
         return Users;
-    }
-    
-    public HashMap<Flight, ArrayList<RegisteredUser>> getCurrentFlights() {
-
-        return currentFlights;
     }
 
     /**

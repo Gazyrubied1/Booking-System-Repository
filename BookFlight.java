@@ -146,7 +146,7 @@ public class BookFlight extends Book{
             keyBoard.close();
             for(int ii = 0; ii < use.getSize(); ii++){
                 if(use.getseat(ii).getRow() == Cuse && use.getseat(ii).getCol() == colom) {
-                    passengers.get(i).addPlaneTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations(), this, use.getseat(ii));
+                    passengers.get(i).addPlaneTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations(), this, use.getseat(ii), input);
                     }
                 }
             } 

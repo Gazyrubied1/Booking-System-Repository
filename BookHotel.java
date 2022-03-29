@@ -5,39 +5,13 @@ import javax.lang.model.type.ReferenceType;
 
 public class BookHotel extends Book {
     
-    private String HotelName;
-    private String location;
-    private String guest;
     private ArrayList<Hotels> HotelList = new ArrayList<Hotels>();
     
-    public BookHotel() {
-
+    public BookHotel(String name) {
+       HotelList = GenerateHotel.GenerateHotels; // still needs to be made 
+       //
     }
 
-
-    public void setHotelName(String HotelName) {
-        this.HotelName = HotelName;
-    }
-
-    public void setLocation(String Location) {
-        this.location = Location;
-    }
-
-    public void setGuest(String guest) {
-        this.guest = guest;
-    }
-
-
-    public String getHotelName() {
-        return HotelName;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-    public String getGuest() {
-        return guest;
-    }
 
     public ArrayList<Hotels> getHotelList() {
         return HotelList;
@@ -90,7 +64,7 @@ public void BookHotelRoom(ArrayList<Hotels> Hotels, RegisteredUser user) {
     }
     ArrayList<String> locations = new ArrayList<String>();
     locations.add(toAddLoc); 
-    user.addHotelTicket(locations,StartD,endD, this);   
+    user.addHotelTicket(locations,StartD,endD, this,room.getRoomType() );   
     KeyBoard.close();
     // TODO fix up to work with loop 
 }

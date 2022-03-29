@@ -5,6 +5,8 @@ public class SystemUI {
     private static final String WELCOME_MESSAGE_ACCOUNT = "********* Account Menu ************";
     private static final String WELCOME_MESSAGE_USER = "********** User's Menu *************";
     ArrayList<Account> accounts;
+    BookHotel bookhotel;  // holds the hotels & rooms
+    BookFlight bookFlight;  // holds the flighs
 
     /**
      * Constructor for the UI class

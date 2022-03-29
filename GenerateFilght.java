@@ -21,19 +21,34 @@ public class GenerateFilght extends FlightConstant {
 
             JSONObject flightJSON = (JSONObjct)flightsJSON.get(i);
 
-            String[] depatureLocation = (String[])flightJSON.get(Locations);
-            ArrayList<String> location;
+            String[] depatureLocation = (String[])flightJSON.get(Locations);  
+            ArrayList<String> location;  // 1 
+           
             for(int ii = 0; ii < depatureLocation.length; ++ii) {
                 location.add(depatureLocation[i]);
             }
-            int Flight_Duration = (int)flightJSON.get(Flight_Duration);
-            String depatureDate = (String)flightJSON.get(DepatureDate);
-            ArrayList<seat>SeatsAvalable = (ArrayList<seat>)flightJSON.get(SeatsAvalable);
-            int cost = (int)flightJSON.get(cost);
-            int trans = (int)flightJSON.get(transfers);
-            String id = (String)flightJSON.get(id);
 
-            flights.add(new Flight(location, Flight_Duration, depatureDate, SeatsAvalable,cost,trans,id));
+            int Flight_Duration = (int)flightJSON.get(Flight_Duration);  // 2
+            String depatureDate = (String)flightJSON.get(DepatureDate);  // 3
+            JSONArray seatsAvalableJSON = (JSONArray)flightJSON.get(SeatsAvalable);
+            ArrayList<seat> seatsAvailable = new ArrayList<>();  // 4
+
+            for(int j = 0; j < seatsAvalableJSON.size(); ++j) {
+                JSONObject seatJson = (JSONObjct)seatsAvalableJSON.get(j);
+
+                
+                char colToAdd = (char)seatJson.get(col);
+                int rowToAdd =(int)seatJson.get(row);
+                String idToAdd = (String)seatJson.get(id);
+                seat ToAdd = new seat(colToAdd,rowToAdd,idToAdd);
+                seatsAvailable.add(ToAdd);
+            }
+            seats seats = new seats(seatsAvailable);
+            int cost = (int)flightJSON.get(cost);  // 5
+            int trans = (int)flightJSON.get(transfers);  // 6
+            String id = (String)flightJSON.get(id);  //7
+            flights.add(new Flight(location, Flight_Duration, depatureDate, seats,cost,trans,id));
+            // ArrayList<String> locations, int FlightDuration, String DepartureDate, seats SeatAvailable, int cost, int transfers, String id)
         }
         return flights;
     }catch(Exception e) {

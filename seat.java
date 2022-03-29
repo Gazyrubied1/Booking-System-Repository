@@ -24,7 +24,8 @@ public class seat {
         return col;
     }
 
-    public String getId() {
+    public String getId(){
         return id;
     }
+
 }

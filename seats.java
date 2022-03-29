@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class seats {
     private ArrayList<seat> seatList = new ArrayList<seat>();
 
-    private seats() {
-        seatList = GenerateSeats.generateSeats();
+    public seats(ArrayList<seat> seats) {
+        this.seatList = seats;
     }
 
     public ArrayList<seat> getRowSeat(int index){
