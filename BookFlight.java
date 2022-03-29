@@ -5,10 +5,9 @@ public class BookFlight extends Book{
     private boolean hasPets;
     private ArrayList<Flight> Flights = new ArrayList<Flight>();
 
-    public BookFlight (String date, String location,boolean hasPets, ArrayList<Flight> Flights) {
+    public BookFlight () {
         super();
-        this.hasPets =hasPets;
-        this.Flights = Flights;
+
     }
     public void setHasPets(boolean hasPets) {
         this.hasPets =hasPets;
@@ -100,7 +99,7 @@ public class BookFlight extends Book{
     }
 
     private void Printout(int i, int ii){
-        System.out.print(Flights.get(i).getlocations().get(i) + "to" + Flights.get(i).getlocations().get(ii));
+        System.out.print(Flights.get(i).getlocations().get(i) + " to " + Flights.get(i).getlocations().get(ii));
     }
 
     /**
@@ -129,7 +128,7 @@ public class BookFlight extends Book{
     public void bookFlight(Flight input, ArrayList<RegisteredUser> passengers, int Tikets) {
         Scanner keyBoard = new Scanner(System.in);
         seats use = input.getSeatAvalable();
-        System.out.println("The avalable seats are:");
+        System.out.println("The available seats are: ");
        
         for(int i = 0; i < use.getSize(); ++i) {
             ArrayList<seat> toPrint = new ArrayList<seat>();
@@ -140,6 +139,7 @@ public class BookFlight extends Book{
 
         for(int i = 0; i < Tikets; ++i){
             System.out.println("Please enter the colom and then the row you would like");
+
             int colom = keyBoard.nextInt();
             String Crow = keyBoard.nextLine();
             char Cuse = Crow.charAt(0);

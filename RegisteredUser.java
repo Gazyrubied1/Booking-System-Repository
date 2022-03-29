@@ -91,7 +91,7 @@ public class RegisteredUser {
     public String getID() {
         return id;
     }
-// setters
+    // setters
 
     public void setfirstName (String firstName) {
         this.firstName = firstName;
@@ -133,9 +133,9 @@ public class RegisteredUser {
      *
      * @param flight
      */
-    public void cancelFlight(Flight flight){
-        return;
-     }
+    public void cancelFlight(Ticket flight){
+        PastReservation.remove(flight);
+    }
      /**
       *
       */
@@ -153,8 +153,8 @@ public class RegisteredUser {
     /**
      * possible change to have string input
      */
-    public void blacklistAirport() { // will take parameter Airport
-        return;
+    public void blacklistAirport(String airport) { // will take parameter Airport
+        blacklisted.add(airport);
     }
 
     /**
@@ -170,6 +170,7 @@ public class RegisteredUser {
     }
 
     public void printPets() {
+        if (pets.size() == 0) System.out.println("This user has no pets.");
         for (Pet pet : pets) {
             System.out.println("Pet: " + pet.toString());
         }
@@ -198,8 +199,7 @@ public class RegisteredUser {
      * @param hotelLocation the State the hotel is in/ 
      * @param hotel the type of booking 
      */
-    
-    
+
      public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel hotel) {
         Ticket toAdd = new Ticket();
         toAdd.flight(Location, Strat, end, hotel);

@@ -88,15 +88,11 @@ public void BookHotelRoom(ArrayList<Hotels> Hotels, RegisteredUser user) {
         room.addDays(toAddDays, timeFrame[3]);
 
     }
-    ArrayList<String> locations = new ArrayList<String>()
+    ArrayList<String> locations = new ArrayList<String>();
     locations.add(toAddLoc); 
-    user.addHotelTicket(location ,StartD,EndD, this);
-    
-
-    
-
-    
-      
+    user.addHotelTicket(locations,StartD,endD, this);   
+    KeyBoard.close();
+    // TODO fix up to work with loop 
 }
 
 private int [] CalcTime(int [] time, int [] last) {
