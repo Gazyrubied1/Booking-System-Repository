@@ -208,10 +208,29 @@ public class SystemUI {
             int ans = scan.nextInt();
             switch(ans) {
                 case 1: // book flight
-
+                    BookFlight flights = new BookFlight();
+                    boolean conts = true;
+                    ArrayList<Flight> usersFlights = new ArrayList();
+                    while (conts) {
+                        System.out.println("What is your starting location? (Please enter only the state's abbreviation)");
+                        String startLoc = scan.next();
+                        System.out.println("What is your destination? (Please enter only the state's abbreviation)");
+                        String endLoc = scan.next();
+                        System.out.println("What is your preffered arrival date? "); // idk how im going to check this
+                        String date = scan.next();
+                        System.out.println("These are the flights that match your specifications: ");
+                        usersFlights = flights.searchLocation(startLoc, endLoc, user.getBlackList());
+                        for (int i = 0; i < usersFlights.size(); i++) {
+                            System.out.println((i+1) + ". "); usersFlights.get(i).print();
+                        }
+                        System.out.println("Do you want to change any of your specifications? 1 == yes, 0 == no");
+                        String temp = scan.next();
+                        if (!temp.equals("1")) cont = false;
+                    }
                     break;
                 case 2: // book hotel
-                
+                    BookHotel hotels = new BookHotel();
+                    
                     break;
                 case 3: // view previous flights
                     System.out.println("Previous flights: "); // add date parameter so this only views flights in past. Could add another option to view all flights

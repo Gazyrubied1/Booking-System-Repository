@@ -99,6 +99,6 @@ public class Flight {
                 System.out.println();
             }
         }
-        System.out.println("cost: " + cost + "\ndate: " + DepartureDate);
+        System.out.println("cost: " + cost + "\ndate: " + DepartureDate + " transfers: " + (locations.size()-1));
     }
 }
