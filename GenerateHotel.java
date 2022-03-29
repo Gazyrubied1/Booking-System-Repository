@@ -4,8 +4,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import UUID.id;
-import netscape.javascript.JSObject;
+//import UUID.id;
+//import netscape.javascript.JSObject;
 
 public class GenerateHotel extends HotelConstants {
     
@@ -18,22 +18,17 @@ public class GenerateHotel extends HotelConstants {
 			JSONArray RoomsJSON = (JSONArray)new JSONParser().parse(reader);
 
             for(int i  = 0; i < RoomsJSON.size(); ++i) {
-
-                JSONObject roomJSON = (JSObject) RoomsJSON.get(i);
-                
-                
+                JSONObject roomJSON = (JSONObject) RoomsJSON.get(i);
                 RoomType roomType = (RoomType)roomJSON.get(rooms);
                 ArrayList<DaysBooked> daysBooked = (ArrayList<DaysBooked>)roomJSON.get(rooms);
-                String ID = (String)roomJSON.get(ID);
-
-                rooms.add(new HotelRoom(roomType, daysBooked,ID));
+                String ID = (String)roomJSON.get(i);
+                rooms.add(new HotelRoom(roomType, daysBooked, ID));
             }
             return rooms;
 
-        }catch(Exception e) {
+        } catch(Exception e) {
             e.printStackTrace();
         }
         return null;
-
     }
 }
