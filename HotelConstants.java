@@ -1,15 +1,15 @@
 public class HotelConstants {
-    protected static final String Hotel_Room_File = "PLACE_HOLDER";
+    protected static final String Hotel_Room_File = "BookHotel.json";
     //  hotels
-    protected static final String Const_State = "SC";
-    protected static final String Const_Brand = "Marriot";
-    protected static final  HotelRoom [] Const_rooms = {};
+    protected static final String Const_State = "State";
+    protected static final String Const_Brand = "Brand";
+    protected static final String Const_rooms = "HotelRoom";
     // rooms
-    protected static final String Const_ROOM_TYPE = "King_Bed";
-    protected static final String Const_ID = "UUID";
-    protected static final  DaysBooked [] Const_bookedDays = {};
+    protected static final String Const_ROOM_TYPE = "RoomType";
+    protected static final String Const_ID = "id";
+    protected static final String Const_bookedDays = "DaysBooked";
     // DaysBooked
-    protected static final int Const_Year = 2022;
-    protected static final int[] Const_days = {1,2,3,4,5};
+    protected static final String Const_Year = "Year";
+    protected static final String Const_days = "dayRange";
 
 }

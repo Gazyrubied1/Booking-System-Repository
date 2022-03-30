@@ -69,7 +69,7 @@
 		]
 	},{
 		"State": "SC",
-		"RoomType" : "HotelBrands.Marriot",
+		"Brand" : "HotelBrands.Marriot",
 		"HoteRoom": 
 		[ 
 			{
