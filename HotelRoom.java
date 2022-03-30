@@ -47,4 +47,7 @@ public class HotelRoom {
         }
     }
 
+    public void print(){ 
+        System.out.println("Booked " + this.getRoomType() + "for days: " + this.getDaysBook());
+    }
 }

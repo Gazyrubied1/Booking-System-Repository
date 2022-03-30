@@ -56,7 +56,7 @@ public class BookHotel extends Book {
         HotelRoom room = current.getRooms().get(type);
 
         System.out.println("What days and year would you like to book for? Enter");
-        System.out.print("as Month then first day then year. Then Month last day and year");
+        System.out.print("as Month then first day then year. Then month last day and year");
         int[] timeFrame = new int[3];
         int[] endDays = new int[3];
         for (int i = 0; i < 3; ++i) {
@@ -73,7 +73,7 @@ public class BookHotel extends Book {
             int size = temp.length;
             for (int ii = 0; ii < size && ii < toAddDays.length; ++ii) {
                 if (temp[ii] == toAddDays[ii]) {
-                    System.out.println(toAddDays[ii] + "is already booked");
+                    System.out.println(toAddDays[ii] + " is already booked");
                     conflix++;
                     break;
                 }
