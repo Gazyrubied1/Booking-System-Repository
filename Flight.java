@@ -131,6 +131,14 @@ public class Flight {
     }
 
     /**
+     * gets the Number of transfers as an in
+     * @return int transfers
+     */
+    public int getTransfers() {
+        return transfers;
+    }
+
+    /**
      * generates if the flight is cancled or not 0.1% chance it is 
      * @return a boolean value of true or false where true is flight canceled
      */

@@ -9,7 +9,7 @@ public class FlightConstant {
     protected static final int cost = 136;
     protected static final int transfers = 0;
     // seats
-    protected static final int row = 0;
-    protected static final char col = 'z';
+    protected static final int col = 0;
+    protected static final char row = 'z';
     protected static final String id = "Place_Hold";
 }
