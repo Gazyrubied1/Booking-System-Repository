@@ -5,18 +5,20 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import java.io.*;
 
+// TODO Make getUsers() return a result of type ArrayList<Account>
+
 public class UserLoader extends UserAttributes {
 	public static ArrayList<Account> getUsers() {
 		ArrayList<Account> users = new ArrayList<>();
 
 		try {
-			FileReader reader = new FileReader();
+			FileReader reader = new FileReader(USER_FILE_NAME);
 			JSONParser parser = new JSONParser();
 			JSONArray peopleJSON = (JSONArray)new JSONParser().parse(reader);
 			
 			// Account 
 			for (int i = 0; i < peopleJSON.size(); i++) {
-				JSONObject personJSON = (JSONObject)peopleJSON\.get(i);
+				JSONObject personJSON = (JSONObject)peopleJSON.get(i);
 				String AccountID = (String)personJSON.get(Const_AccID);
 				String Email = (String)personJSON.get(Const_email);
 				String Password = (String)personJSON.get(Const_Password);
