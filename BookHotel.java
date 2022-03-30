@@ -87,7 +87,7 @@ public class BookHotel extends Book {
     }
     ArrayList<String> locations = new ArrayList<String>();
     locations.add(toAddLoc); 
-    user.addHotelTicket(locations,StartD,endD, this,room.getRoomType() );   
+    user.addHotelTicket(locations,StartD,endD, this,room.getRoomType(), current.getBrands());   
     KeyBoard.close();
     // TODO fix up to work with loop 
 }

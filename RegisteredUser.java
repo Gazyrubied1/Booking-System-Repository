@@ -17,7 +17,7 @@ public class RegisteredUser {
     private ArrayList<Pet> pets = new ArrayList<Pet>();
 
     public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember,
-                          int NumFlights, double Review, ArrayList<Ticket> PastReservation, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) {
+                          int NumFlights, double Review, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.DateOfBirth =DOB;
@@ -26,7 +26,7 @@ public class RegisteredUser {
         this.RewardMember = RewardMember;
         this.NumFlights = NumFlights;
         this.Review = Review;
-        this.PastReservation = PastReservation;
+        //this.PastReservation = PastReservation;
         this. blacklisted = Blacklisted;
         this.pets = pets;
         this.id = id;
@@ -35,7 +35,8 @@ public class RegisteredUser {
 
     // existing account loaded from JSON
 
-    public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember, int NumFlights, double Review, ArrayList<Ticket> PastFlight, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
+    public RegisteredUser(String id, String firstName, String lastName, String DOB,String BillingAddress, boolean Discount,
+     boolean RewardMember, int NumFlights, double Review, ArrayList<String> Blacklisted, ArrayList<Pet> pets) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -47,7 +48,6 @@ public class RegisteredUser {
         this.Review = Review;
         this.blacklisted = Blacklisted;
         this.pets = pets;
-        this.PastReservation = PastFlight;
     }
 
     /**
@@ -295,7 +295,7 @@ public class RegisteredUser {
      * @param hotel the type of booking 
      */
 
-     public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel Booktype, RoomType type) {
+     public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel Booktype, RoomType type, HotelBrands brand) {
         Ticket toAdd = new Ticket();
         // make cost here based on room type 
         
@@ -308,6 +308,7 @@ public class RegisteredUser {
             price = 250;
         }
         toAdd.flight(Location, Strat, end, Booktype, price);
+        toAdd.hotel(brand, "03/30/2022");
     }
 
 }

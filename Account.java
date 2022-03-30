@@ -70,7 +70,7 @@ public class Account extends User {
      */
     public boolean addUser(String firstName, String lastName, String DOB, String address) {
         if (hasUser(firstName + lastName)) return false;
-        Users.add(new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<Ticket>(), new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString()));
+        Users.add(new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString()));
         return true;
     }
 

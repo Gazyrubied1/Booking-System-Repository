@@ -37,27 +37,36 @@ public class UserLoader extends UserAttributes {
 					int numflights = (int)RegisteredUser.get(Const_NUM_FLIGHTS);
 					double review =(double)RegisteredUser.get(const_REVIEW);
 
-					// ticket
-					JSONArray TicketJSON = (JSONArray)RegisteredUser.get(Const_Ticket);
-					ArrayList<Ticket> TicketToAdd = new ArrayList<>();
-					for(int iii = 0; iii < TicketJSON.size(); ++iii ) {
-						
-
-					}
 					String [] BlackList = (String [])RegisteredUser.get(Const_BlackList);
 					ArrayList<String> BlackListToAdd = new ArrayList<>();
 					for(int iii = 0; iii < BlackList.length; ++iii) {
 						BlackListToAdd.add(BlackList[iii]);
 					}
-					Pet[] pets = (Pet [])RegisteredUser.get(Const_Pets);
+					String [] pets = (String [])RegisteredUser.get(Const_Pets);
 					ArrayList<Pet> PetsAdd = new ArrayList<>();
+					
 					for(int iii = 0; iii <pets.length; ++iii) {
-						PetsAdd.add(pets[iii]);
+						if(pets[iii].equalsIgnoreCase("dog")){
+							PetsAdd.add(Pet.dog);
+						}else if(pets[iii].equalsIgnoreCase("cat")){
+							PetsAdd.add(Pet.cat);
+						} else if(pets[iii].equalsIgnoreCase("lizzard")) {
+							PetsAdd.add(Pet.lizzard);
+						} else if( pets[iii].equalsIgnoreCase("bird")) {
+							PetsAdd.add(Pet.bird);
+						}else if(pets[iii].equalsIgnoreCase("Fish")){
+							PetsAdd.add(Pet.fish);
+						}else if(pets[iii].equalsIgnoreCase("rodent")){
+							PetsAdd.add(Pet.rodent);
+						}
+
+						
 					}
-					RegisteredUser UserToAdd = new RegisteredUser(First_Name, Last_name, Date_of_birth, Bill_Adress, Discount, RewardMember, numflights, review, TicketToAdd, BlackListToAdd, PetsAdd, RegisteredID);
+
+					RegisteredUser UserToAdd = new RegisteredUser(First_Name, Last_name, Date_of_birth, Bill_Adress, Discount, RewardMember, numflights, review, BlackListToAdd, PetsAdd, RegisteredID);
 					AddToend.add(UserToAdd);
 				}
-				Account temp = new Account(AccountID, Email, Password, AddToend)
+				Account temp = new Account(AccountID, Email, Password, AddToend);
 				users.add(temp);
 				
 			}
