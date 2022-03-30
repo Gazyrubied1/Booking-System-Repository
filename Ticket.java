@@ -77,11 +77,16 @@ public class Ticket {
     public void print() {
         
         try {
-            File myObj = new File("filename.txt");
-            myObj.createNewFile(); // creates file
+            File file = new File("Flight and Hotel Itinerary.txt");
+            file.createNewFile();
+            FileWriter writer = new FileWriter("Flight and Hotel Itinerary.txt");
+            writer.write("***Flight Information***\n\nDeparture Date: " 
+                + departDate + "\nArrival Date: " + arriveDate + "\n\n***Hotel Information***\n\n" + "Brand: " + brand + "\nHotel Date: " + hotelDate);
+            writer.close();
+            System.out.println("Successfully wrote to the file.");
         } 
         catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred while trying to print the Itinerary.");
             e.printStackTrace();
         }
     }
