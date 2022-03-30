@@ -269,10 +269,6 @@ public class RegisteredUser {
         }
     }
 
-    public void printTicket() {
-    
-    }
-
     /**
      * adds a plane trip to the ticket class
      * @param departDate

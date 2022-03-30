@@ -154,7 +154,7 @@ public class Flight {
      * Prints details of individuals flights
      */
     public void print() {
-        System.out.println("Flight details:\nYour trip has " + transfers + "transfers.");
+        System.out.println("Flight details:\nYour trip has " + transfers + " transfers.");
         for (int i = 0; i < locations.size(); i++) { // prints travel path
             System.out.print(locations.get(i) + " ");
             if (i != locations.size()) {
