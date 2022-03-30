@@ -18,7 +18,7 @@ public class RegisteredUser {
     public int getLastName;
 
     public RegisteredUser(String firstName, String lastName, String DOB,String BillingAddress, boolean Discount, boolean RewardMember,
-                          int NumFlights, double Review, ArrayList<Ticket> PastReservation, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) {
+                          int NumFlights, double Review, ArrayList<String> Blacklisted, ArrayList<Pet> pets, String id) { // removed ArrayList<Ticket>
         this.firstName = firstName;
         this.lastName = lastName;
         this.DateOfBirth =DOB;
