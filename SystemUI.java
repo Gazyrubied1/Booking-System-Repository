@@ -273,6 +273,7 @@ public class SystemUI {
                             }
                         }
                     }
+                    if user(in)
                     break;
                 case 4: // blacklist an airport
                     System.out.println("To blacklist airports, enter the state abbreviation of the state that you want to blacklist. (Enter \'-1\' to exit without blacklisting an airport)");
