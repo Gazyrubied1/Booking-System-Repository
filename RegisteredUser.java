@@ -297,7 +297,7 @@ public class RegisteredUser {
 
      public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel Booktype, RoomType type) {
         Ticket toAdd = new Ticket();
-        // make cost here baised on room type 
+        // make cost here based on room type 
         
         RoomType Twin = RoomType.Twin_Beds;
         RoomType Queens = RoomType.Queen_twin_beds;

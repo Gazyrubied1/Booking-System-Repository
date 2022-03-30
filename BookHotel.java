@@ -117,45 +117,57 @@ public class BookHotel extends Book {
     }
 
     private int dayNum(int[] time) {
-
         int first = -1;
-        if (time[0] == 1) {
-            first = 0; // 31
-            first += time[1];
-        } else if (time[0] == 2) {
-            first = 31; // 28
-            first += time[1];
-        } else if (time[0] == 3) {
-            first = 59; // 31
-            first += time[1];
-        } else if (time[0] == 4) {
-            first = 90; // 30
-            first += time[1];
-        } else if (time[0] == 5) {
-            first = 120; // 31
-            first += time[1];
-        } else if (time[0] == 6) {
-            first = 151; // 30
-        } else if (time[0] == 7) {
-            first = 181; // 31
-            first += time[1];
-        } else if (time[0] == 8) {
-            first = 212;
-            first += time[1]; // 31
-        } else if (time[0] == 9) {
-            first = 242;
-            first += time[1]; // 30
-        } else if (time[0] == 10) {
-            first = 272;
-            first += time[1]; // 31
-        } else if (time[0] == 11) {
-            first = 303; // 30
-            first += time[1];
-        } else if (time[0] == 12) {
-            first = 333;
-            first += time[1];// 31
-        } else {
-            // invalid
+        switch(time[0]) {
+            case 1:
+                first = 0; // 31
+                first += time[1];
+                break;
+            case 2:
+                first = 31; // 28
+                first += time[1];
+                break;
+            case 3:
+                first = 59; // 31
+                first += time[1];
+                break;
+            case 4:
+                first = 90; // 30
+                first += time[1];
+                break;
+            case 5:
+                first = 120; // 31
+                first += time[1];
+                break;
+            case 6:
+                first = 151; // 30
+                break;
+            case 7:
+                first = 181; // 31
+                first += time[1];
+                break;
+            case 8:
+                first = 212;
+                first += time[1]; // 31
+                break;
+            case 9:
+                first = 242;
+                first += time[1]; // 30
+                break;
+            case 10:
+                first = 272;
+                first += time[1]; // 31
+                break;
+            case 11:
+                first = 303; // 30
+                first += time[1];
+                break;
+            case 12:
+                first = 333;
+                first += time[1];// 31
+                break;  
+            default:
+                break;
         }
         if (first > 365 || first < 0) { // check year
             first = -1;
