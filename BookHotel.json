@@ -1,17 +1,59 @@
 [
     {
-		"nameHotel": "Courtyard by Marriott",
-		"location": "ATL",
-		"guest": ,
-		"RoomType": King_Bed,
-		"Brand": Marriott,
+		"State": "MD",
+		"RoomType" : "HotelBrands.Marriot",
+		"HoteRoom": 
+		[ 
+			{
+			"roomType" : "RoomType.King_Bed",
+			 "id" : "UUID", 
+			"DaysBooked" : 
+				[ 
+					{
+						"year" : 2022, 
+						"dayRange" :[2,3,4]} 
+				] 
+			},
+			{
+				"roomType" : "RoomType.Queen_Bed", 
+				"id" : "UUID",
+				"DaysBooked" :
+				[
+					{
+						"year":2022, 
+						"dayRange":[234,235]
+					} 
+				]
+			}
+		]
+	},{
+		"State": "SC",
+		"RoomType" : "HotelBrands.Marriot",
+		"HoteRoom": 
+		[ 
+			{
+			"roomType" : "RoomType.Twin_Bed",
+			 "id" : "UUID", 
+			"DaysBooked" : 
+				[ 
+					{
+						"year" : 2022, 
+						"dayRange" :[345,346]} 
+				] 
+			},
+			{
+				"roomType" : "RoomType.Queen_Bed", 
+				"id" : "UUID",
+				"DaysBooked" :
+				[
+					{
+						"year":2022, 
+						"dayRange":[174, 175,176]
+					} 
+				]
+			}
+		]
 	}
-
-	{
-		"nameHotel": "DoubleTree by Hilton",
-		"location": "LAS",
-		"guest": ,
-		"RoomType": Twin_Beds,
-		"Brand": Hilton
-	}
+		 
 ]
+	

@@ -22,7 +22,7 @@ public class Ticket {
      * @param arriveDate the arrival date of the flight
      * @param reservation
      */
-    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book reservation) {
+    public void flight(ArrayList<String> locations, String departDate, String arriveDate, Book reservation, int cost) {
         this.isHotel = false;
         this.locations = locations;
         this.departDate = departDate;
