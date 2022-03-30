@@ -29,7 +29,6 @@ public class Flight {
         this.cost = cost;
         this.transfers = transfers;
         this.id = id;
-
 }
 
     /**
