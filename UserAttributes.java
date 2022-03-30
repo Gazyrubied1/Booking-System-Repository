@@ -17,7 +17,10 @@ public abstract class UserAttributes {
 	protected static final boolean Const_REWARD_MEMBER = false;
 	protected static final int Const_NUM_FLIGHTS = 0;
 	protected static final Double const_REVIEW = 0.0;
+	
 	protected static final Ticket[] Const_Ticket = {};
+	protected static final 
+
 	protected static final String[] Const_BlackList = {" ", "b"};
 	protected static final Pet [] Const_Pets = {Pet.dog};
 

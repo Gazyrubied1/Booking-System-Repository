@@ -6,8 +6,9 @@ public class seats {
     /**
      * Constructor for the seats class
      */
-    public seats() {
-        seatList = GenerateSeats.generateSeats();
+    public seats(ArrayList<seat> seats) {
+        seatList = seats;
+        //TODO check if this is right
     }
 
     public ArrayList<seat> getRowSeat(int index){

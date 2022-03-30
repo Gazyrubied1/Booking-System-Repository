@@ -26,6 +26,7 @@ public class UserLoader extends UserAttributes {
 				ArrayList<RegisteredUser> AddToend = new ArrayList<>();
 				for(int ii = 0; ii < RegisteredUsersJSON.size(); ++i) {
 					JSONObject RegisteredUser = (JSONObject)RegisteredUsersJSON.get(ii);
+					
 					String First_Name = (String)RegisteredUser.get(Const_FIRST_NAME);
 					String Last_name = (String)RegisteredUser.get(Const_LAST_NAME);
 					String Date_of_birth = (String)RegisteredUser.get(Const_DATE_OF_BIRTH);
@@ -40,7 +41,7 @@ public class UserLoader extends UserAttributes {
 					JSONArray TicketJSON = (JSONArray)RegisteredUser.get(Const_Ticket);
 					ArrayList<Ticket> TicketToAdd = new ArrayList<>();
 					for(int iii = 0; iii < TicketJSON.size(); ++iii ) {
-						// TODO finish when ticket is set
+						
 
 					}
 					String [] BlackList = (String [])RegisteredUser.get(Const_BlackList);

@@ -10,8 +10,6 @@ public class Ticket {
     private HotelBrands brand;
     private String hotelDate;
     private boolean isHotel;
-    private int cost; 
-
 
     public Ticket() {}
 
@@ -28,7 +26,6 @@ public class Ticket {
         this.departDate = departDate;
         this.arriveDate = arriveDate;
         this.reservation = reservation;
-        this.cost = cost;
     }
 
     /**

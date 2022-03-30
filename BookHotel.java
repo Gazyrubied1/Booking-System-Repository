@@ -5,57 +5,31 @@ import javax.lang.model.type.ReferenceType;
 
 public class BookHotel extends Book {
 
-    private String location;
+    //private String location;
     private ArrayList<Hotels> HotelList = new ArrayList<Hotels>();
     public BookHotel(ArrayList<Hotels> HotelList) {
         this.HotelList = HotelList;
     }
 
-<<<<<<< HEAD
-    /**
-     * Sets the name of the hotel to an inputted String
-     * 
-     * @param HotelName the hotel's new name
-     */
-    public void setHotelName(String HotelName) {
-        this.HotelName = HotelName;
-    }
-=======
->>>>>>> e131b73dfcf04a2c0bf8c2f71796d3a9ee1b7e56
 
     /**
      * Sets the location of the hotel to an inputted String
      * 
      * @param Location the hotel's new location
      */
-    public void setLocation(String Location) {
-        this.location = Location;
-    }
+    
+    // public void setLocation(String Location) {
+    //    this.location = Location;
+    //}
 
-<<<<<<< HEAD
-    public void setGuest(String guest) {
-        this.guest = guest;
-    }
-
-    /**
-     * Gets the name of the hotel
-     * 
-     * @return a String representing the name of the hotel
-     */
-    public String getHotelName() {
-        return HotelName;
-    }
-
-=======
->>>>>>> e131b73dfcf04a2c0bf8c2f71796d3a9ee1b7e56
     /**
      * Gets the location of the hotel
      * 
      * @return a String that holds the location of the hotel
      */
-    public String getLocation() {
-        return location;
-    }
+   // public String getLocation() {
+    //    return location;
+    //}
 
 
     /**
