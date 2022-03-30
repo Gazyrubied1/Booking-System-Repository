@@ -136,155 +136,6 @@
             }],
     "cost": 300,
     "id": "0b9e4cf5-6dc4-4385-9b20-d6953bf992cc"
-<<<<<<< HEAD
-  },{
-
-  
-  "departureLocation": "Will_Rogers_World_Airport_OK",
-    "arrivalLocation": "Stillwater_Regional_Airport_OK",
-    "FlightDuration": 2,
-    "DepartureDate":"03/19/2022",
-    "SeatAvalable":[
-        {
-            "col":"a",
-            "row":"1",
-            "id":"eb1310a8-cb06-4b47-948b-a0a4abab8a06"
-            },{
-            "col":"a",
-            "row":"2",
-            "id":"d397d7ea-c228-4b30-b381-157187e3591d"
-            },{
-            "col":"a",
-            "row":"3",
-            "id":"e60c9dfd-3c88-478d-afee-30c8ebc4dd91"
-            },{
-            "col":"a",
-            "row":"4",
-            "id":"05f76702-b2df-4fdc-99e9-925008ac1c2b"
-            },{
-            "col":"b",
-            "row":"1",
-            "id":"443f3dbf-fc29-440e-b65b-50984946d87f"
-            },{
-            "col":"b",
-            "row":"2",
-            "id":"76bc2a27-b412-49ff-a187-92a64518394f"
-            },{
-            "col":"b",
-            "row":"3",
-            "id":"44be5a20-cdc9-42af-aea5-31edc434abda"
-            },{
-            "col":"b",
-            "row":"4",
-            "id":"c8e2e16a-c5d0-423f-908e-6ea3c48139a4"
-            },{
-            "col":"b",
-            "row":"5",
-            "id":"e5b4c96e-f22d-42e1-874f-38d6f0ac2ba5"
-            },{
-            "col":"c",
-            "row":"1",
-            "id":"06956c77-b1e2-4fbb-8b9e-681c6ad64643"
-            },{
-            "col":"c",
-            "row":"2",
-            "id":"40facf01-74ca-403c-8ac5-c80893da30c1"
-            },{
-            "col":"c",
-            "row":"3",
-            "id":"815ddb03-fe07-466e-b999-8e498d0be571"
-            },{
-            "col":"c",
-            "row":"4",
-            "id":"eb57f50e-0b09-46a4-ac50-f1d8fe37350b"
-            },{
-            "col":"c",
-            "row":"5",
-            "id":"00316af3-7f7d-4add-aa84-e45b295fc220"
-            },{
-            "col":"d",
-            "row":"1",
-            "id":"2bddff39-51cf-4e69-bfba-d6001a9c0566"
-            },{
-            "col":"d",
-            "row":"2",
-            "id":"84fd2ac4-ebb9-4bf0-b623-fe700f1fbcdf"
-            },{
-            "col":"d",
-            "row":"3",
-            "id":"7ff862e0-bb6b-4a06-957b-6170c9b37b78"
-            },{
-            "col":"d",
-            "row":"4",
-            "id":"635af1eb-158c-4f7d-869e-c440ae927faf"
-            },{
-            "col":"d",
-            "row":"5",
-            "id":"8d23ed32-2793-418c-a4d7-ad050244eb5e"
-            },{
-            "col":"e",
-            "row":"1",
-            "id":"25e50879-dae8-4df7-b7e6-0205706d0b85"
-            },{
-            "col":"e",
-            "row":"2",
-            "id":"973d3403-6411-4b6d-a07f-c8dddfedc7ca"
-            },{
-            "col":"e",
-            "row":"3",
-            "id":"977f517b-bec6-4c0d-9eac-b0648a915ecb"
-            },{
-            "col":"e",
-            "row":"4",
-            "id":"94369671-656b-4e40-b462-06e7fc9c4a3c"
-            },{
-            "col":"e",
-            "row":"5",
-            "id":"9626f22f-a11a-4c63-b762-bfcaa498cb71"
-            },{
-            "col":"f",
-            "row":"1",
-            "id":"1e4d79b4-c2f6-458f-ba64-67399f789b94"
-            },{
-            "col":"f",
-            "row":"2",
-            "id":"5af34e01-5154-49a2-ae30-4a899c2a707a"
-            },{
-            "col":"f",
-            "row":"3",
-            "id":"400e4f68-d1a8-4849-90ca-d461ceaae858"
-            },{
-            "col":"f",
-            "row":"4",
-            "id":"5f7265b2-a56d-42f1-b438-4cca3043bea3"
-            },{
-            "col":"f",
-            "row":"5",
-            "id":"98861257-6abc-44eb-a1da-113b198feb0e"
-            },{
-            "col":"g",
-            "row":"1",
-            "id":"d19c6c30-6ae0-49fa-8709-3bd7981efad6"
-            },{
-            "col":"g",
-            "row":"2",
-            "id":"699f5ec2-d765-4e9f-9b94-413f059529e2"
-            },{
-            "col":"g",
-            "row":"3",
-            "id":"57abe424-16c1-4d8f-b391-37cf6fa652ca"
-            },{
-            "col":"g",
-            "row":"4",
-            "id":"f2bcdb9a-08fa-4e4f-8827-714388f7da99"
-            },{
-            "col":"g",
-            "row":"5",
-            "id":"dca8d8c5-9965-4c99-af40-5fec1b90b6d2"
-            }],
-    "cost": 300,
-    "id": "0b9e4cf5-6dc4-4385-9b20-d6953bf992cc"
-=======
   }, {
     "departureLocation": ["Louis_Armstrong_New_Orleans_International_Airport_LA","Denver_International_Airport_CO","Juneau_International_Airport_AK"],
     "FlightDuration": 10,
@@ -714,9 +565,1172 @@
             "row":"5"
             }],
     "cost": 1000,
-    "id": "3573a1f6-87a8-4689-ad61-2bcb93097d47"
->>>>>>> 5180d8d3c3f07c948a4ab8210a31f6381d66389a
-  }
+    "id": "c3b069d2-b06f-11ec-b909-0242ac120002"
+  },{
+    "departureLocation": ["Birmingham–Shuttlesworth_International_Airport_AL,","Juneau_International_Airport_AK_"],
+    "FlightDuration": "7",
+    "DepartureDate":"4/20/22",
+    "SeatAvalable":[
+        {
+            "col":"a",
+            "row":"1"
+            },{
+            "col":"a",
+            "row":"2"
+            },{
+            "col":"a",
+            "row":"3"
+            },{
+            "col":"a",
+            "row":"4"
+            },{
+            "col":"b",
+            "row":"1"
+            },{
+            "col":"b",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"2"
+            },{
+            "col":"c",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"4"
+            },{
+            "col":"c",
+            "row":"5"
+            },{
+            "col":"d",
+            "row":"1"
+            },{
+            "col":"d",
+            "row":"3"
+            },{
+            "col":"d",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"3"
+            },{
+            "col":"e",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"5"
+            },{
+            "col":"f",
+            "row":"1"
+            },{
+            "col":"f",
+            "row":"3"
+            },{
+            "col":"f",
+            "row":"4"
+            },{
+            "col":"f",
+            "row":"5"
+            },{
+            "col":"g",
+            "row":"1"
+            },{
+            "col":"g",
+            "row":"2"
+            },{
+            "col":"g",
+            "row":"3"
+            },{
+            "col":"g",
+            "row":"4"
+            },{
+            "col":"g",
+            "row":"5"
+            }],
+    "cost": 850,
+    "id": "c3b06af4-b06f-11ec-b909-0242ac120002"
+            },{
+              "departureLocation": ["Flagstaff_Pulliam_Airport_AZ,","Fort_Smith_Regional_Airport_AR,"],
+              "FlightDuration": "13",
+              "DepartureDate":"4/16/22",
+              "SeatAvalable":[
+{
+    "col":"a",
+    "row":"1"
+    },{
+    "col":"a",
+    "row":"2"
+    },{
+    "col":"a",
+    "row":"3"
+    },{
+    "col":"a",
+    "row":"4"
+    },{
+    "col":"b",
+    "row":"1"
+    },{
+    "col":"b",
+    "row":"3"
+    },{
+    "col":"c",
+    "row":"2"
+    },{
+    "col":"c",
+    "row":"3"
+    },{
+    "col":"c",
+    "row":"4"
+    },{
+    "col":"c",
+    "row":"5"
+    },{
+    "col":"d",
+    "row":"1"
+    },{
+    "col":"d",
+    "row":"3"
+    },{
+    "col":"d",
+    "row":"4"
+    },{
+    "col":"e",
+    "row":"3"
+    },{
+    "col":"e",
+    "row":"4"
+    },{
+    "col":"e",
+    "row":"5"
+    },{
+    "col":"f",
+    "row":"1"
+    },{
+    "col":"f",
+    "row":"3"
+    },{
+    "col":"f",
+    "row":"4"
+    },{
+    "col":"f",
+    "row":"5"
+    },{
+    "col":"g",
+    "row":"1"
+    },{
+    "col":"g",
+    "row":"2"
+    },{
+    "col":"g",
+    "row":"3"
+    },{
+    "col":"g",
+    "row":"4"
+    },{
+    "col":"g",
+    "row":"5"
+    }],
+"cost": 150,
+"id": "c3b06e32-b06f-11ec-b909-0242ac120002"
+    },{
+      "departureLocation": ["Oakland_International_Airport_CA,","Bradley_International_Airport_CT"],
+      "FlightDuration": "7",
+      "DepartureDate":"4/5/22",
+      "SeatAvalable":[
+  {
+      "col":"a",
+      "row":"1"
+      },{
+      "col":"a",
+      "row":"2"
+      },{
+      "col":"a",
+      "row":"3"
+      },{
+      "col":"a",
+      "row":"4"
+      },{
+      "col":"b",
+      "row":"1"
+      },{
+      "col":"b",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"2"
+      },{
+      "col":"c",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"4"
+      },{
+      "col":"c",
+      "row":"5"
+      },{
+      "col":"d",
+      "row":"1"
+      },{
+      "col":"d",
+      "row":"3"
+      },{
+      "col":"d",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"3"
+      },{
+      "col":"e",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"5"
+      },{
+      "col":"f",
+      "row":"1"
+      },{
+      "col":"f",
+      "row":"3"
+      },{
+      "col":"f",
+      "row":"4"
+      },{
+      "col":"f",
+      "row":"5"
+      },{
+      "col":"g",
+      "row":"1"
+      },{
+      "col":"g",
+      "row":"2"
+      },{
+      "col":"g",
+      "row":"3"
+      },{
+      "col":"g",
+      "row":"4"
+      },{
+      "col":"g",
+      "row":"5"
+      }],
+"cost": 500,
+"id": "c3b0689c-b06f-11ec-b909-0242ac120002"
+      },{                        
+        "departureLocation": ["Fort_Lauderdale–Hollywood_International_Airport_FL","Savannah/Hilton_Head_International_Airport_GA"],
+        "FlightDuration": "9",
+        "DepartureDate":"3/29/22",
+        "SeatAvalable":[
+  {
+      "col":"a",
+      "row":"1"
+      },{
+      "col":"a",
+      "row":"2"
+      },{
+      "col":"a",
+      "row":"3"
+      },{
+      "col":"a",
+      "row":"4"
+      },{
+      "col":"b",
+      "row":"1"
+      },{
+      "col":"b",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"2"
+      },{
+      "col":"c",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"4"
+      },{
+      "col":"c",
+      "row":"5"
+      },{
+      "col":"d",
+      "row":"1"
+      },{
+      "col":"d",
+      "row":"3"
+      },{
+      "col":"d",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"3"
+      },{
+      "col":"e",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"5"
+      },{
+      "col":"f",
+      "row":"1"
+      },{
+      "col":"f",
+      "row":"3"
+      },{
+      "col":"f",
+      "row":"4"
+      },{
+      "col":"f",
+      "row":"5"
+      },{
+      "col":"g",
+      "row":"1"
+      },{
+      "col":"g",
+      "row":"2"
+      },{
+      "col":"g",
+      "row":"3"
+      },{
+      "col":"g",
+      "row":"4"
+      },{
+      "col":"g",
+      "row":"5"
+      }],
+"cost": 300,
+"id": "c3b066ee-b06f-11ec-b909-0242ac120002"
+},{
+  "departureLocation": ["Lihue_Airport_HI","The_Eastern_Iowa_Airport_IA"],
+  "FlightDuration": "6",
+  "DepartureDate":"4/10/22",
+  "SeatAvalable":[
+      {
+          "col":"a",
+          "row":"1"
+          },{
+          "col":"a",
+          "row":"2"
+          },{
+          "col":"a",
+          "row":"3"
+          },{
+          "col":"a",
+          "row":"4"
+          },{
+          "col":"b",
+          "row":"1"
+          },{
+          "col":"b",
+          "row":"3"
+          },{
+          "col":"c",
+          "row":"2"
+          },{
+          "col":"c",
+          "row":"3"
+          },{
+          "col":"c",
+          "row":"4"
+          },{
+          "col":"c",
+          "row":"5"
+          },{
+          "col":"d",
+          "row":"1"
+          },{
+          "col":"d",
+          "row":"3"
+          },{
+          "col":"d",
+          "row":"4"
+          },{
+          "col":"e",
+          "row":"3"
+          },{
+          "col":"e",
+          "row":"4"
+          },{
+          "col":"e",
+          "row":"5"
+          },{
+          "col":"f",
+          "row":"1"
+          },{
+          "col":"f",
+          "row":"3"
+          },{
+          "col":"f",
+          "row":"4"
+          },{
+          "col":"f",
+          "row":"5"
+          },{
+          "col":"g",
+          "row":"1"
+          },{
+          "col":"g",
+          "row":"2"
+          },{
+          "col":"g",
+          "row":"3"
+          },{
+          "col":"g",
+          "row":"4"
+          },{
+          "col":"g",
+          "row":"5"
+          }],
+  "cost": 200,
+  "id": "c3b062e8-b06f-11ec-b909-0242ac120002"
+  },{    
+    "departureLocation": ["Manhattan_Regional_Airport_KS","Baltimore/Washington_International_Airport_MD"],
+    "FlightDuration": "10",
+    "DepartureDate":"4/10/22",
+    "SeatAvalable":[
+        {
+            "col":"a",
+            "row":"1"
+            },{
+            "col":"a",
+            "row":"2"
+            },{
+            "col":"a",
+            "row":"3"
+            },{
+            "col":"a",
+            "row":"4"
+            },{
+            "col":"b",
+            "row":"1"
+            },{
+            "col":"b",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"2"
+            },{
+            "col":"c",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"4"
+            },{
+            "col":"c",
+            "row":"5"
+            },{
+            "col":"d",
+            "row":"1"
+            },{
+            "col":"d",
+            "row":"3"
+            },{
+            "col":"d",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"3"
+            },{
+            "col":"e",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"5"
+            },{
+            "col":"f",
+            "row":"1"
+            },{
+            "col":"f",
+            "row":"3"
+            },{
+            "col":"f",
+            "row":"4"
+            },{
+            "col":"f",
+            "row":"5"
+            },{
+            "col":"g",
+            "row":"1"
+            },{
+            "col":"g",
+            "row":"2"
+            },{
+            "col":"g",
+            "row":"3"
+            },{
+            "col":"g",
+            "row":"4"
+            },{
+            "col":"g",
+            "row":"5"
+            }],
+    "cost": 250,
+    "id": "c3b060ea-b06f-11ec-b909-0242ac120002"
+            },{
+"departureLocation": ["Gerald_R._Ford_International_Airport_MI","Buffalo_Niagara_International_Airport_NY"],
+"FlightDuration": "2",
+"DepartureDate":"4/18/22",
+"SeatAvalable":[
+    {
+        "col":"a",
+        "row":"1"
+        },{
+        "col":"a",
+        "row":"2"
+        },{
+        "col":"a",
+        "row":"3"
+        },{
+        "col":"a",
+        "row":"4"
+        },{
+        "col":"b",
+        "row":"1"
+        },{
+        "col":"b",
+        "row":"3"
+        },{
+        "col":"c",
+        "row":"2"
+        },{
+        "col":"c",
+        "row":"3"
+        },{
+        "col":"c",
+        "row":"4"
+        },{
+        "col":"c",
+        "row":"5"
+        },{
+        "col":"d",
+        "row":"1"
+        },{
+        "col":"d",
+        "row":"3"
+        },{
+        "col":"d",
+        "row":"4"
+        },{
+        "col":"e",
+        "row":"3"
+        },{
+        "col":"e",
+        "row":"4"
+        },{
+        "col":"e",
+        "row":"5"
+        },{
+        "col":"f",
+        "row":"1"
+        },{
+        "col":"f",
+        "row":"3"
+        },{
+        "col":"f",
+        "row":"4"
+        },{
+        "col":"f",
+        "row":"5"
+        },{
+        "col":"g",
+        "row":"1"
+        },{
+        "col":"g",
+        "row":"2"
+        },{
+        "col":"g",
+        "row":"3"
+        },{
+        "col":"g",
+        "row":"4"
+        },{
+        "col":"g",
+        "row":"5"
+        }],
+"cost": 150,
+"id": "c3b05d66-b06f-11ec-b909-0242ac120002"
+},{    
+  "departureLocation": ["Wilmington_International_Airport_NC","Tulsa_International_Airport_OK,"],
+  "FlightDuration": "4",
+  "DepartureDate":"4/25/22",
+  "SeatAvalable":[
+      {
+          "col":"a",
+          "row":"1"
+          },{
+          "col":"a",
+          "row":"2"
+          },{
+          "col":"a",
+          "row":"3"
+          },{
+          "col":"a",
+          "row":"4"
+          },{
+          "col":"b",
+          "row":"1"
+          },{
+          "col":"b",
+          "row":"3"
+          },{
+          "col":"c",
+          "row":"2"
+          },{
+          "col":"c",
+          "row":"3"
+          },{
+          "col":"c",
+          "row":"4"
+          },{
+          "col":"c",
+          "row":"5"
+          },{
+          "col":"d",
+          "row":"1"
+          },{
+          "col":"d",
+          "row":"3"
+          },{
+          "col":"d",
+          "row":"4"
+          },{
+          "col":"e",
+          "row":"3"
+          },{
+          "col":"e",
+          "row":"4"
+          },{
+          "col":"e",
+          "row":"5"
+          },{
+          "col":"f",
+          "row":"1"
+          },{
+          "col":"f",
+          "row":"3"
+          },{
+          "col":"f",
+          "row":"4"
+          },{
+          "col":"f",
+          "row":"5"
+          },{
+          "col":"g",
+          "row":"1"
+          },{
+          "col":"g",
+          "row":"2"
+          },{
+          "col":"g",
+          "row":"3"
+          },{
+          "col":"g",
+          "row":"4"
+          },{
+          "col":"g",
+          "row":"5"
+          }],
+  "cost": 400,
+  "id": "c3b05b72-b06f-11ec-b909-0242ac120002"
+          },{    
+            "departureLocation": ["Portland_International_Airport_OR","Harry_Reid_International_Airport_NV"],
+            "FlightDuration": "3",
+            "DepartureDate":"4/30/22",
+            "SeatAvalable":[
+            {
+            "col":"a",
+            "row":"1"
+            },{
+            "col":"a",
+            "row":"2"
+            },{
+            "col":"a",
+            "row":"3"
+            },{
+            "col":"a",
+            "row":"4"
+            },{
+            "col":"b",
+            "row":"1"
+            },{
+            "col":"b",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"2"
+            },{
+            "col":"c",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"4"
+            },{
+            "col":"c",
+            "row":"5"
+            },{
+            "col":"d",
+            "row":"1"
+            },{
+            "col":"d",
+            "row":"3"
+            },{
+            "col":"d",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"3"
+            },{
+            "col":"e",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"5"
+            },{
+            "col":"f",
+            "row":"1"
+            },{
+            "col":"f",
+            "row":"3"
+            },{
+            "col":"f",
+            "row":"4"
+            },{
+            "col":"f",
+            "row":"5"
+            },{
+            "col":"g",
+            "row":"1"
+            },{
+            "col":"g",
+            "row":"2"
+            },{
+            "col":"g",
+            "row":"3"
+            },{
+            "col":"g",
+            "row":"4"
+            },{
+            "col":"g",
+            "row":"5"
+            }],
+            "cost": 150,
+            "id": "c3b0573a-b06f-11ec-b909-0242ac120002"
+            },{    
+            "departureLocation": ["Golden_Triangle_Regional_Airport_MS","Portsmouth_International_Airport_at_Pease_NH,"],
+            "FlightDuration": "7",
+            "DepartureDate":"4/21/22",
+            "SeatAvalable":[
+            {
+            "col":"a",
+            "row":"1"
+            },{
+            "col":"a",
+            "row":"2"
+            },{
+            "col":"a",
+            "row":"3"
+            },{
+            "col":"a",
+            "row":"4"
+            },{
+            "col":"b",
+            "row":"1"
+            },{
+            "col":"b",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"2"
+            },{
+            "col":"c",
+            "row":"3"
+            },{
+            "col":"c",
+            "row":"4"
+            },{
+            "col":"c",
+            "row":"5"
+            },{
+            "col":"d",
+            "row":"1"
+            },{
+            "col":"d",
+            "row":"3"
+            },{
+            "col":"d",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"3"
+            },{
+            "col":"e",
+            "row":"4"
+            },{
+            "col":"e",
+            "row":"5"
+            },{
+            "col":"f",
+            "row":"1"
+            },{
+            "col":"f",
+            "row":"3"
+            },{
+            "col":"f",
+            "row":"4"
+            },{
+            "col":"f",
+            "row":"5"
+            },{
+            "col":"g",
+            "row":"1"
+            },{
+            "col":"g",
+            "row":"2"
+            },{
+            "col":"g",
+            "row":"3"
+            },{
+            "col":"g",
+            "row":"4"
+            },{
+            "col":"g",
+            "row":"5"
+            }],
+            "cost": 170,
+            "id": "c3b0549c-b06f-11ec-b909-0242ac120002"
+        },{     
+      "departureLocation": ["LaGuardia_Airport_NY","James_M._Cox_Dayton_International_Airport_OH"],
+      "FlightDuration": "4",
+      "DepartureDate":"4/26/22",
+      "SeatAvalable":[
+      {
+      "col":"a",
+      "row":"1"
+      },{
+      "col":"a",
+      "row":"2"
+      },{
+      "col":"a",
+      "row":"3"
+      },{
+      "col":"a",
+      "row":"4"
+      },{
+      "col":"b",
+      "row":"1"
+      },{
+      "col":"b",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"2"
+      },{
+      "col":"c",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"4"
+      },{
+      "col":"c",
+      "row":"5"
+      },{
+      "col":"d",
+      "row":"1"
+      },{
+      "col":"d",
+      "row":"3"
+      },{
+      "col":"d",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"3"
+      },{
+      "col":"e",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"5"
+      },{
+      "col":"f",
+      "row":"1"
+      },{
+      "col":"f",
+      "row":"3"
+      },{
+      "col":"f",
+      "row":"4"
+      },{
+      "col":"f",
+      "row":"5"
+      },{
+      "col":"g",
+      "row":"1"
+      },{
+      "col":"g",
+      "row":"2"
+      },{
+      "col":"g",
+      "row":"3"
+      },{
+      "col":"g",
+      "row":"4"
+      },{
+      "col":"g",
+      "row":"5"
+      }],
+      "cost": 250,
+      "id": "c3b06ff4-b06f-11ec-b909-0242ac120002"
+      },{    
+      "departureLocation": ["Stillwater_Regional_Airport_OK","Louisville_International_Airport_KY,"],
+      "FlightDuration": "4",
+      "DepartureDate":"4/13/22",
+      "SeatAvalable":[
+      {
+      "col":"a",
+      "row":"1"
+      },{
+      "col":"a",
+      "row":"2"
+      },{
+      "col":"a",
+      "row":"3"
+      },{
+      "col":"a",
+      "row":"4"
+      },{
+      "col":"b",
+      "row":"1"
+      },{
+      "col":"b",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"2"
+      },{
+      "col":"c",
+      "row":"3"
+      },{
+      "col":"c",
+      "row":"4"
+      },{
+      "col":"c",
+      "row":"5"
+      },{
+      "col":"d",
+      "row":"1"
+      },{
+      "col":"d",
+      "row":"3"
+      },{
+      "col":"d",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"3"
+      },{
+      "col":"e",
+      "row":"4"
+      },{
+      "col":"e",
+      "row":"5"
+      },{
+      "col":"f",
+      "row":"1"
+      },{
+      "col":"f",
+      "row":"3"
+      },{
+      "col":"f",
+      "row":"4"
+      },{
+      "col":"f",
+      "row":"5"
+      },{
+      "col":"g",
+      "row":"1"
+      },{
+      "col":"g",
+      "row":"2"
+      },{
+      "col":"g",
+      "row":"3"
+      },{
+      "col":"g",
+      "row":"4"
+      },{
+      "col":"g",
+      "row":"5"
+      }],
+      "cost": 400,
+      "id": "c3b07166-b06f-11ec-b909-0242ac120002"
+      },{                  
+        "departureLocation": ["Owensboro–Daviess_County_Regional_Airport_KY","Louis_Armstrong_New_Orleans_International_Airport_LA"],
+"FlightDuration": "8",
+"DepartureDate":"4/21/22",
+"SeatAvalable":[
+{
+"col":"a",
+"row":"1"
+},{
+"col":"a",
+"row":"2"
+},{
+"col":"a",
+"row":"3"
+},{
+"col":"a",
+"row":"4"
+},{
+"col":"b",
+"row":"1"
+},{
+"col":"b",
+"row":"3"
+},{
+"col":"c",
+"row":"2"
+},{
+"col":"c",
+"row":"3"
+},{
+"col":"c",
+"row":"4"
+},{
+"col":"c",
+"row":"5"
+},{
+"col":"d",
+"row":"1"
+},{
+"col":"d",
+"row":"3"
+},{
+"col":"d",
+"row":"4"
+},{
+"col":"e",
+"row":"3"
+},{
+"col":"e",
+"row":"4"
+},{
+"col":"e",
+"row":"5"
+},{
+"col":"f",
+"row":"1"
+},{
+"col":"f",
+"row":"3"
+},{
+"col":"f",
+"row":"4"
+},{
+"col":"f",
+"row":"5"
+},{
+"col":"g",
+"row":"1"
+},{
+"col":"g",
+"row":"2"
+},{
+"col":"g",
+"row":"3"
+},{
+"col":"g",
+"row":"4"
+},{
+"col":"g",
+"row":"5"
+}],
+"cost": 350,
+"id": "c3b072d8-b06f-11ec-b909-0242ac120002"
+},{    
+"departureLocation": ["Salisbury–Ocean_City–Wicomico_Regional_Airport_MD","Quincy_Regional_Airport_IL,"],
+"FlightDuration": "7",
+"DepartureDate":"4/29/22",
+"SeatAvalable":[
+{
+"col":"a",
+"row":"1"
+},{
+"col":"a",
+"row":"2"
+},{
+"col":"a",
+"row":"3"
+},{
+"col":"a",
+"row":"4"
+},{
+"col":"b",
+"row":"1"
+},{
+"col":"b",
+"row":"3"
+},{
+"col":"c",
+"row":"2"
+},{
+"col":"c",
+"row":"3"
+},{
+"col":"c",
+"row":"4"
+},{
+"col":"c",
+"row":"5"
+},{
+"col":"d",
+"row":"1"
+},{
+"col":"d",
+"row":"3"
+},{
+"col":"d",
+"row":"4"
+},{
+"col":"e",
+"row":"3"
+},{
+"col":"e",
+"row":"4"
+},{
+"col":"e",
+"row":"5"
+},{
+"col":"f",
+"row":"1"
+},{
+"col":"f",
+"row":"3"
+},{
+"col":"f",
+"row":"4"
+},{
+"col":"f",
+"row":"5"
+},{
+"col":"g",
+"row":"1"
+},{
+"col":"g",
+"row":"2"
+},{
+"col":"g",
+"row":"3"
+},{
+"col":"g",
+"row":"4"
+},{
+"col":"g",
+"row":"5"
+}],
+"cost": 550,
+"id": "c3b073fa-b06f-11ec-b909-0242ac120002"
+},{  
 
+}
+                                                                                                                                                                        
 
 ]
