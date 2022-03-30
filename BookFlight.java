@@ -136,10 +136,11 @@ public class BookFlight extends Book{
            for(int ii = 0; ii < toPrint.size(); ++ii)
             System.out.print(toPrint.get(ii).getCol()+" "+toPrint.get(ii).getRow());
         }
-        System.out.println("The cost of the flight is:"+input.getCost())+"\n Would you Like to book (1) yes (2) no");
+        System.out.println("The cost of the flight is:"+input.getCost()+"\n Would you Like to book (1) yes (2) no");
         int anwser =keyBoard.nextInt();
         if(anwser != 1){
-           break;
+            keyBoard.close();
+            return;
         }
         for(int i = 0; i < Tikets; ++i){
             System.out.println("Please enter the colom and then the row you would like");

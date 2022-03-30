@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.lang.model.type.ReferenceType;
 
 public class BookHotel extends Book {
 
