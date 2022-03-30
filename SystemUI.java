@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.UUID;
+import java.io.*;
 
 public class SystemUI {
     private static final String WELCOME_MESSAGE_SYSTEM = "Welcome to our flight booking system!\n\n*********** Main Menu **************";
@@ -287,7 +289,6 @@ public class SystemUI {
                             }
                         }
                     }
-                    if user(in)
                     break;
                 case 4: // blacklist an airport
                     System.out.println("To blacklist airports, enter the state abbreviation of the state that you want to blacklist. (Enter \'-1\' to exit without blacklisting an airport)");
