@@ -48,6 +48,14 @@ public class Flight {
     }
 
     /**
+     * Gets the number of available seats on the flight
+     * @return the number of available seats
+     */
+    public int getNumOfSeats() {
+        return this.SeatAvailable.getSize();
+    }
+
+    /**
      * Sets the departure date of the flight
      * @param DepartureDate the departure date of the flight
      */

@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.UUID;
+import java.io.*;
 
 public class SystemUI {
     private static final String WELCOME_MESSAGE_SYSTEM = "Welcome to our flight booking system!\n\n*********** Main Menu **************";
@@ -231,11 +233,25 @@ public class SystemUI {
                         System.out.println("These are the flights that match your specifications: ");
                         usersFlights = bookFlight.searchLocation(startLoc, endLoc, user.getBlackList());
                         for (int i = 0; i < usersFlights.size(); i++) {
-                            System.out.println((i+1) + ". "); usersFlights.get(i).print();
+                            System.out.print((i+1) + ". "); 
+                            usersFlights.get(i).print();
+                            System.out.println();
                         }
                         System.out.println("Do you want to change any of your specifications? 1 == yes, 0 == no");
                         String temp = scan.next();
-                        if (!temp.equals("1")) cont = false;
+                        System.out.println("Which flight do you want to book? ");
+                        int answer = scan.nextInt();
+                        if (!temp.equals("1")) {
+                            if (usersFlights.get(answer-1).getNumOfSeats() > 0) { // if the flight is not full
+                                ArrayList<RegisteredUser> tempUser = new ArrayList();
+                                tempUser.add(user); 
+                                bookFlight.bookFlight(usersFlights.get(answer-1), tempUser);
+                                cont = false;
+                            }
+                            else {
+                                System.out.println("Sorry, this flight is full, please book another one.");
+                            }
+                        }
                     }
                     break;
                 case 2: // book hotel
@@ -273,7 +289,6 @@ public class SystemUI {
                             }
                         }
                     }
-                    if user(in)
                     break;
                 case 4: // blacklist an airport
                     System.out.println("To blacklist airports, enter the state abbreviation of the state that you want to blacklist. (Enter \'-1\' to exit without blacklisting an airport)");
