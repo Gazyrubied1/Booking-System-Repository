@@ -1,5 +1,5 @@
 public abstract class UserAttributes {
-	protected static final String USER_FILE_NAME = "";//fill in later
+	protected static final String USER_FILE_NAME = "RegisteredUser.json";//fill in later
 	
 	// Account 
 	protected static final String Const_AccID = "UUID";
@@ -18,10 +18,11 @@ public abstract class UserAttributes {
 	protected static final int Const_NUM_FLIGHTS = 0;
 	protected static final Double const_REVIEW = 0.0;
 	
-	protected static final Ticket[] Const_Ticket = {};
-	protected static final 
 
 	protected static final String[] Const_BlackList = {" ", "b"};
-	protected static final Pet [] Const_Pets = {Pet.dog};
+	protected static final String [] Const_Pets = {"DOG","CAT"};
 
 }
+
+
+

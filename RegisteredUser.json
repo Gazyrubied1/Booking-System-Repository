@@ -27,18 +27,20 @@
 				"cost": 250
 			}
 		],
-		"blacklistedAirports": [
-            "SLC", "LAS"
-        ],
+		"blacklistedAirports": 
+            ["SLC", "LAS"]
+        ,
 		"pets": [
 			{
-				"Pets": "Dog"
+				"type": Dog,
+				"Name": "Sparky"
 			},
 			{
-				"type": "Cat"
+				"type": Cat,
+				"Name": "Mr. Mittens"
 			}
 		]
-	},
+	}
 	{
 		"id": 2,
 		"firstName": "Dorothy",
@@ -59,12 +61,13 @@
 				"cost": 150
 			}
 		],
-		"blacklistedAirports": [
-            "JFK", "ATL"
-        ],
+		"blacklistedAirports": 
+            ["JFK", "ATL"]
+        ,
 		"pets": [
 			{
-				"type": "Fish"
+				"type": 
+			
 			}
 		]
 	}

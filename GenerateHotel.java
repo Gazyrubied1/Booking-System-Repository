@@ -23,13 +23,36 @@ public class GenerateHotel extends HotelConstants {
             for(int i  = 0; i < HotelsJSON.size(); ++i) {
                 JSONObject HotelJSON = (JSObject) RoomsJSON.get(i);
                 String state = HotelJSON.get(Const_State);  //1  state
-                HotelBrands brand = HotelJSON.get(Const_Brand);  //2 Brand
-
+                String brand = HotelJSON.get(Const_Brand);  //2 Brand
+                HotelBrands BrandToAdd;
+                if(brand.equalsIgnoreCase("Marriot")){
+                    BrandToAdd = HotelBrands.Marriot;
+                } else if(brand.equalsIgnoreCase("Hiltion")){
+                    BrandToAdd = HotelBrands.Hiltion;
+                } else if(brand.equalsIgnoreCase("Wyndham")) {
+                    BrandToAdd = HotelBrands.Wyndham;
+                } else if(brand.equalsIgnoreCase("Hayatt")) {
+                    BrandToAdd = HotelBrands.Hayatt;
+                } else {
+                    BrandToAdd = HotelBrands.Hayatt;
+                }
 
                 JSONArray RoomsJSON = (JSONArray)HotelJSON.get(Const_rooms);  // 3 arraylist hotelroom
                 ArrayList<HotelRoom> RoomsToAdd = new ArrayList<>();
                 for(int ii = 0; ii < RoomsJSON.size();++ii) {
-                    RoomType type = RoomsJSON.get(Const_ROOM_TYPE);  //  4 room type
+                    String type = RoomsJSON.get(Const_ROOM_TYPE); 
+                    RoomType RtypeToAdd;  //  4 room type
+                    if(type.equalsIgnoreCase("King_Bed")){
+                        RtypeToAdd = RoomType.King_Bed;
+                    } else if(type.equalsIgnoreCase("Queen_bed")){
+                        RtypeToAdd = RoomType.Queen_Bed;
+                    } else if (type.equalsIgnoreCase("Twin_beds")) {
+                        RtypeToAdd = RoomType.Twin_Beds;
+                    } else if (type.equalsIgnoreCase("Queen_Twin")){
+                        RtypeToAdd = RoomType.Queen_twin_beds;
+                    }else {
+                        RtypeToAdd = RoomType.Twin_Beds;
+                    }
                     String RoomID = RoomsJSON.get(Const_ID);  // 5  room id
 
                     ArrayList<DaysBooked> DaysBookToAddRoom = new ArrayList<>();
@@ -42,12 +65,12 @@ public class GenerateHotel extends HotelConstants {
                         DaysBooked bookedDaysToAddList = new DaysBooked(AddYear, Days);
                         DaysBookToAddRoom.add(bookedDaysToAddList);
                     }
-                    HotelRoom RoomToaddList = new HotelRoom(type, DaysBookToAddRoom, RoomID);
+                    HotelRoom RoomToaddList = new HotelRoom(RtypeToAdd, DaysBookToAddRoom, RoomID);
                     RoomsToAdd.add(RoomToaddList);
                 }
 
                 // daybook 
-                Hotels toAdd = new Hotels(RoomsToAdd, state, brand);
+                Hotels toAdd = new Hotels(RoomsToAdd, state, BrandToAdd);
                 hotel.add(toAdd);
                // ArrayList<HotelRoom> rooms, String state, HotelBrands brand
             }

@@ -5,7 +5,7 @@
 		"HoteRoom": 
 		[ 
 			{
-			"roomType" : "RoomType.King_Bed",
+			"roomType" : "King_Bed",
 			 "id" : "329cf7a2-e10b-4617-87f9-5410980edab0", 
 			"DaysBooked" : 
 				[ 
@@ -113,16 +113,18 @@
 			{
 				"roomType" : "RoomType.Queen_Bed", 
 				"id" : "UUID",
-				"DaysBooked" :
-				[
+				"DaysBooked" :[
 					{
 						"year":2022, 
 						"dayRange":[234,235]
-					} 
+					}
+					
 				]
 			}
 		]
-	},
-		 
+	}
+		
 ]
+		 
+
 	
