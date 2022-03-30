@@ -2,10 +2,10 @@ public class HotelConstants {
     protected static final String Hotel_Room_File = "PLACE_HOLDER";
     //  hotels
     protected static final String Const_State = "SC";
-    protected static final HotelBrands Const_Brand = HotelBrands.Marriot;
+    protected static final String Const_Brand = "Marriot";
     protected static final  HotelRoom [] Const_rooms = {};
     // rooms
-    protected static final RoomType Const_ROOM_TYPE = RoomType.King_Bed;
+    protected static final String Const_ROOM_TYPE = "King_Bed";
     protected static final String Const_ID = "UUID";
     protected static final  DaysBooked [] Const_bookedDays = {};
     // DaysBooked

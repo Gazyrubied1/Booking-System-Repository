@@ -100,7 +100,7 @@ public class Ticket {
      */
     public void printInfo() {
         if (this.isFlight()) {
-            System.out.print("Flight depart date: " + departDate + " arrival date: " + arriveDate + " # of transfers: " + (locations.size()-1) + " locations: ");
+            System.out.print("Flight depart date: " + departDate + " # of transfers: " + (locations.size()-1) + " locations: ");
             for (int i = 0; i < locations.size(); i++) {
                 System.out.print(locations.get(i));
                 if (i < locations.size()-1) {
@@ -112,7 +112,7 @@ public class Ticket {
             }
         }
         else {
-            System.out.println("Hotel brand: " + brand.toString() + " Date of reservation: " + hotelDate);
+            System.out.println("Hotel brand: " + brand.toString() + " Date of reservation: " +departDate +"-"+arriveDate);
         }
     }
 
