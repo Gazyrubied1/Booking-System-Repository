@@ -1,10 +1,10 @@
 
 
 public enum Pet {
-Dog,
-Cat,
-Lizzard, 
-Bird,
-Fish, 
-Rodent
+dog,
+cat,
+lizzard, 
+bird,
+fish, 
+rodent
 }

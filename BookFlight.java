@@ -5,8 +5,8 @@ public class BookFlight extends Book{
     private boolean hasPets;
     private ArrayList<Flight> Flights = new ArrayList<Flight>();
 
-    public BookFlight () {
-        super();
+    public BookFlight (ArrayList<Flight> flight) {
+        this.Flights = flight;
 
     }
     public void setHasPets(boolean hasPets) {
@@ -22,7 +22,7 @@ public class BookFlight extends Book{
     }
 
     public ArrayList<Flight> getFlights() {
-        return null;
+        return Flights;
     }
     
     /**
@@ -87,9 +87,9 @@ public class BookFlight extends Book{
         
     }
 
-
+    
     private boolean checkBlackList(ArrayList<String> blacklist, int index) {
-
+        //  fix to split the string of flights
         for (int i = 0; i < blacklist.size(); ++i) {
             if(blacklist.get(i).equalsIgnoreCase(Flights.get(index).getlocations().get(i))){
                 return false;
@@ -125,9 +125,9 @@ public class BookFlight extends Book{
     * @param Tikets the number of tickets to be booked
     * @return the flight to be booked
     */
-    public Flight bookFlight(Flight input, ArrayList<RegisteredUser> passengers, int Tikets) {
+    public void bookFlight(Flight input, ArrayList<RegisteredUser> passengers, int Tikets) {
         Scanner keyBoard = new Scanner(System.in);
-        seats use = input.getSeatAvalable();
+        seats use = input.getSeatAvailable();
         System.out.println("The available seats are: ");
        
         for(int i = 0; i < use.getSize(); ++i) {
@@ -136,23 +136,26 @@ public class BookFlight extends Book{
            for(int ii = 0; ii < toPrint.size(); ++ii)
             System.out.print(toPrint.get(ii).getCol()+" "+toPrint.get(ii).getRow());
         }
-
+        System.out.println("The cost of the flight is: "+input.getCost()+"\n Would you Like to book? (1) yes (2) no");
+        int anwser =keyBoard.nextInt();
+        if(anwser != 1){
+            keyBoard.close();
+            return;
+        }
         for(int i = 0; i < Tikets; ++i){
-            System.out.println("Please enter the column and then the row: ");
+            System.out.println("Please enter the colomn and then the row you would like");
+
             int colom = keyBoard.nextInt();
             String Crow = keyBoard.nextLine();
             char Cuse = Crow.charAt(0);
             keyBoard.close();
             for(int ii = 0; ii < use.getSize(); ii++){
                 if(use.getseat(ii).getRow() == Cuse && use.getseat(ii).getCol() == colom) {
-                    passengers.get(i).addPlaneTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations(), this, use.getseat(ii));
+                    passengers.get(i).addPlaneTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations(), this, use.getseat(ii), input);
+                    }
                 }
-            }
-            }
-            
-            //passengers.get(i).addTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations());
-        
-        return null;  // add proper fix to this tomorrow 
+            } 
+            input.print();
     }
 
 }
