@@ -122,10 +122,9 @@ public class BookFlight extends Book{
     * Bookes a flight for the passengers 
     * @param input the flight that the users wants to book
     * @param passengers the arraylist of Registed user that are going on the flight
-    * @param Tikets the number of tickets to be booked
     * @return the flight to be booked
     */
-    public void bookFlight(Flight input, ArrayList<RegisteredUser> passengers, int Tikets) {
+    public void bookFlight(Flight input, ArrayList<RegisteredUser> passengers) {
         Scanner keyBoard = new Scanner(System.in);
         seats use = input.getSeatAvailable();
         System.out.println("The available seats are: ");
@@ -136,14 +135,14 @@ public class BookFlight extends Book{
            for(int ii = 0; ii < toPrint.size(); ++ii)
             System.out.print(toPrint.get(ii).getCol()+" "+toPrint.get(ii).getRow());
         }
-        System.out.println("The cost of the flight is:"+input.getCost()+"\n Would you Like to book (1) yes (2) no");
+        System.out.println("The cost of the flight is: "+input.getCost()+"\n Would you Like to book? (1) yes (2) no");
         int anwser =keyBoard.nextInt();
         if(anwser != 1){
             keyBoard.close();
             return;
         }
-        for(int i = 0; i < Tikets; ++i){
-            System.out.println("Please enter the colom and then the row you would like");
+        for(int i = 0; i < passengers.size(); ++i){
+            System.out.println("Please enter the colomn and then the row you would like");
 
             int colom = keyBoard.nextInt();
             String Crow = keyBoard.nextLine();

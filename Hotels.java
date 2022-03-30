@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Hotels {
@@ -66,4 +67,8 @@ public class Hotels {
     public ArrayList<HotelRoom> getRooms(){
         return Rooms;
     } 
+
+    public void print() {
+        System.out.println("Hotel brand: " + this.getBrands().toString() + " location: " + this.getState());
+    }
 }

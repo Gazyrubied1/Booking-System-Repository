@@ -29,7 +29,6 @@ public class Flight {
         this.cost = cost;
         this.transfers = transfers;
         this.id = id;
-
 }
 
     /**
@@ -46,6 +45,14 @@ public class Flight {
      */
     public void setFlightDuration(int time) {
         this.FlightDuration = time;
+    }
+
+    /**
+     * Gets the number of available seats on the flight
+     * @return the number of available seats
+     */
+    public int getNumOfSeats() {
+        return this.SeatAvailable.getSize();
     }
 
     /**
@@ -155,7 +162,7 @@ public class Flight {
      * Prints details of individuals flights
      */
     public void print() {
-        System.out.println("Flight details:\nYour trip has " + transfers + "transfers.");
+        System.out.println("Flight details:\nYour trip has " + transfers + " transfers.");
         for (int i = 0; i < locations.size(); i++) { // prints travel path
             System.out.print(locations.get(i) + " ");
             if (i != locations.size()) {
