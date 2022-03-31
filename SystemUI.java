@@ -17,13 +17,12 @@ public class SystemUI {
     SystemUI() {
         accounts = new ArrayList(); // this should be loaded from the JSON here
         
-        
-        // ArrayList<Flight> flight= new ArrayList<>();
-        // flight = GenerateFilght.Generateflight();
-        // bookFlight = new BookFlight(flight);
-        // ArrayList<Hotels> hotel = new ArrayList<>();
-        // hotel = GenerateHotel.GenerateRooms();
-        // bookHotel = new BookHotel(hotel);
+        ArrayList<Flight> flight= new ArrayList<>();
+        flight = GenerateFilght.Generateflight();
+        bookFlight = new BookFlight(flight);
+        ArrayList<Hotels> hotel = new ArrayList<>();
+        hotel = GenerateHotel.GenerateRooms();
+        bookHotel = new BookHotel(hotel);
     }
 
     /**
@@ -133,7 +132,7 @@ public class SystemUI {
             if (ans == 1) { // view users
                 if (account.getUsers().size() == 0) System.out.println("You currently have no users on this account."); // replace this with JSON
                 for (RegisteredUser user : account.getUsers()) { 
-                    System.out.println("User's name: " + user.getFirstName() + " " + user.getLastName() + " Date of Birth: " + user.getDateOfBirth());
+                    System.out.println("User's name: " + user.getFirstName() + " " + user.getLastName());
                 }
             }
             else if (ans == 2) { // create users
@@ -146,7 +145,7 @@ public class SystemUI {
                 String DOB = scan.next();
                 System.out.println("What is the address of your new user?");
                 String address = scan.nextLine(); // for some reason this gets skipped
-                RegisteredUser user = new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
+                RegisteredUser user = new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<Ticket>(), new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
                 account.addUser(firstName, lastName, DOB, address); // add json to this
                 while (true) {
                     System.out.println("Do you want to add any pets to this user? 1 = yes, 0 = no");
@@ -229,7 +228,7 @@ public class SystemUI {
                         String startLoc = scan.next();
                         System.out.println("What is your destination? (Please enter only the state's abbreviation)");
                         String endLoc = scan.next();
-                        System.out.println("What is your preffered arrival date? format (MM/DD/YYYY)"); // idk how im going to check this
+                        System.out.println("What is your preffered arrival date? "); // idk how im going to check this
                         String date = scan.next();
                         System.out.println("These are the flights that match your specifications: ");
                         usersFlights = bookFlight.searchLocation(startLoc, endLoc, user.getBlackList());
@@ -296,13 +295,9 @@ public class SystemUI {
                     String state = scan.next();
                     if (state.equals("-1")) break;
                     user.blacklistAirport(state);
-                    System.out.println("You blacklisted " + state);
                     break;
                 case 5:
                     System.out.println("These are your blacklisted flights: " + user.getBlackList());
-                    System.out.println("What state do you want to blacklist? ");
-                    state = scan.next();
-                    user.removeBlackList(state);
                     break;
                 case 6: // cancel flight
                     System.out.println("These are your future flights: ");
@@ -340,16 +335,16 @@ public class SystemUI {
                     user.setlastName(temp);
                     break;
                 case 8: // add pet
-                    System.out.println("What pet do you want to add? You can add a dog, cat, lizzard, bird, fish, or rodent.");
+                    System.out.println("What pet do you want to add?");
                     String tempPet = scan.next();
                     boolean found = false;
                     while (!found) {
-                        if (tempPet.equals("dog")
-                        || tempPet.equals("cat")
-                        || tempPet.equals("lizzard")
-                        || tempPet.equals("bird")
-                        || tempPet.equals("fish")
-                        || tempPet.equals("rodent")) {
+                        if (tempPet.equals("Dog")
+                        || tempPet.equals("Cat")
+                        || tempPet.equals("Lizzard")
+                        || tempPet.equals("Bird")
+                        || tempPet.equals("Fish")
+                        || tempPet.equals("Rodent")) {
                             found = true;
                         }
                         if (found) {

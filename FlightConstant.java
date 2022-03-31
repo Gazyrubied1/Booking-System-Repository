@@ -6,9 +6,9 @@ public class FlightConstant {
     protected static final String DepatureDate = "DepartureDate";
     protected static final String SeatsAvalable = "SeatAvalable";
     protected static final String cost = "cost";
-    protected static final String transfers = "";
+    protected static final String transfers = "Transfer";
     // seats
-    protected static final int col = 0;
-    protected static final char row = 'z';
-    protected static final String id = "Place_Hold";
+    protected static final String col = "col";
+    protected static final String row = "row";
+    protected static final String id = "id";
 }
