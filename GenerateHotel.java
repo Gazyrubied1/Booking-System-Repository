@@ -21,7 +21,7 @@ public class GenerateHotel extends HotelConstants {
 			JSONArray HotelsJSON = (JSONArray)new JSONParser().parse(reader);
             //
             for(int i  = 0; i < HotelsJSON.size(); ++i) {
-                JSONObject HotelJSON = (JSObject) RoomsJSON.get(i);
+                JSONObject HotelJSON = (JSObject) HotelsJSON.get(i);
                 String state = HotelJSON.get(Const_State);  //1  state
                 String brand = HotelJSON.get(Const_Brand);  //2 Brand
                 HotelBrands BrandToAdd;
@@ -40,6 +40,7 @@ public class GenerateHotel extends HotelConstants {
                 JSONArray RoomsJSON = (JSONArray)HotelJSON.get(Const_rooms);  // 3 arraylist hotelroom
                 ArrayList<HotelRoom> RoomsToAdd = new ArrayList<>();
                 for(int ii = 0; ii < RoomsJSON.size();++ii) {
+                    JSONObject RoomJSON = new JSObject() ;
                     String type = RoomsJSON.get(Const_ROOM_TYPE); 
                     RoomType RtypeToAdd;  //  4 room type
                     if(type.equalsIgnoreCase("King_Bed")){

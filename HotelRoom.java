@@ -42,7 +42,7 @@ public class HotelRoom {
         for (int i = 0; i < days.length; ++i) {
             if(days[i] > 0 && days[i] <=365 ) {
             DaysBooked toAdd = new DaysBooked(year, days);
-            DaysBook.add(toAdd);
+            DaysBook.add(toAdd);Ho
             }
         }
     }
