@@ -86,11 +86,13 @@ public class BookHotel extends Book {
         if (conflix == 0) {
             room.addDays(toAddDays, timeFrame[2]);
 
-    }
+        }
     ArrayList<String> locations = new ArrayList<String>();
     locations.add(toAddLoc); 
-    user.addHotelTicket(locations,StartD,endD, this,room.getRoomType(), current.getBrands());   
+    Ticket temp = user.addHotelTicket(locations,StartD,endD, this,room.getRoomType(), current.getBrands());  
+    temp.printInfo(); 
     KeyBoard.close();
+    
     // TODO fix up to work with loop 
 }
 
@@ -190,7 +192,7 @@ public class BookHotel extends Book {
         ArrayList<Hotels> toReturn = new ArrayList<Hotels>();
         for (int i = 0; i < HotelList.size(); ++i) {
             if (State.equalsIgnoreCase(HotelList.get(i).getState())) {
-                System.out.println(i + ". " + HotelList.get(i).getRooms().get(i).getRoomType() + " ");
+                System.out.println(i + ". " + HotelList.get(i).getBrands().toString() + " ");
                 toReturn.add(HotelList.get(i));
             }
         }

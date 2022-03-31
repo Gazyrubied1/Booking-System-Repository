@@ -17,7 +17,16 @@ public class SystemUI {
      * Constructor for the UI class
      */
     SystemUI() {
-        accounts = new ArrayList(); // this should be loaded from the JSON here
+        accounts = new ArrayList();
+        // ArrayList<Flight> flights = new ArrayList<>();
+        // flights = GenerateFlights.GenerateFlights();
+        // bookFlight(Flights);
+
+        // ArrayList<Hotels> Hotels = new ArrayList<>();
+        // Hotels = GenerateHotel.GenerateeHotel();
+        // bookHotel(Hotels);
+
+        // accounts = loadUser.LoadUsers();
         RegisteredUser user01 = new RegisteredUser("Bob", "Jones", "02/19/1990", "123 Waycross St", false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
         RegisteredUser user02 = new RegisteredUser("Sarah", "James", "05/29/1985", "456 Main Rd", false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
         Account acc = new Account(UUID.randomUUID().toString(), "user@gmail.com", "aGoodPassword", new ArrayList<RegisteredUser>());
@@ -332,11 +341,12 @@ public class SystemUI {
                             //bookHotel = new BookHotel(HotelList) fix this
                             bookHotel.BookHotelRoom(bookHotel.SearchHotel(state), user);
                             cont01 = false;
+                            System.exit(0);
                         }
                         else {
                             System.out.println("Invalid input. Do you want to retry? ( 1 == yes, any other key == no)");
                             int reponse = scan.nextInt();
-                            if (reponse != 1) cont = false;
+                            if (reponse != 1) cont01 = false;
                         }
                     }
                     break;
