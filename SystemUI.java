@@ -12,12 +12,36 @@ public class SystemUI {
     BookFlight bookFlight;  // holds the flights
     Account currAccount;
 
+
     /**
      * Constructor for the UI class
      */
     SystemUI() {
         accounts = new ArrayList(); // this should be loaded from the JSON here
-        
+        RegisteredUser user01 = new RegisteredUser("Bob", "Jones", "02/19/1990", "123 Waycross St", false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
+        RegisteredUser user02 = new RegisteredUser("Sarah", "James", "05/29/1985", "456 Main Rd", false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
+        Account acc = new Account(UUID.randomUUID().toString(), "user@gmail.com", "aGoodPassword", new ArrayList<RegisteredUser>());
+        acc.addUser(user01);
+        acc.addUser(user02);
+        accounts.add(acc);
+        ArrayList<Hotels> HotelTOadd = new ArrayList<>();
+        ArrayList<DaysBooked> DaysBookAdd = new ArrayList<>();
+        int [] days = {3,4,5,10,48,50};
+        DaysBooked Adday = new DaysBooked(2022, days);
+        DaysBookAdd.add(Adday);
+        ArrayList<HotelRoom> rooms1= new ArrayList<>();
+        HotelRoom room = new HotelRoom(RoomType.King_Bed, DaysBookAdd, "UUID!");
+        HotelRoom room2 = new HotelRoom(RoomType.Queen_Bed, DaysBookAdd, "UUDD@");
+        HotelRoom room3 = new HotelRoom(RoomType.Twin_Beds, DaysBookAdd, "UUDD$");
+        ArrayList<HotelRoom> toAdd = new ArrayList<>();
+        toAdd.add(room);
+        toAdd.add(room2);
+        toAdd.add(room3);
+        Hotels hotel = new Hotels(toAdd, "NC", HotelBrands.Hayatt);
+        Hotels hotel2 = new Hotels(toAdd, "NC", HotelBrands.Marriot);
+        HotelTOadd.add(hotel);
+        HotelTOadd.add(hotel2);
+         bookHotel = new BookHotel(HotelTOadd);
         // 
     }
 
@@ -281,7 +305,7 @@ public class SystemUI {
                                 BookFlight flights = new BookFlight(idkBro);
                                 Ticket tik = flights.bookFlight(new Flight(airports, 60, "03/30/2022", new seats(CurrSeats), 100, UUID.randomUUID().toString()), tempUser); 
                                 conts = false;
-                                System.out.println("Do you want to print an iternary of your flight in a .txt file? (1 == yes, 0 == no)");
+                                //System.out.println("Do you want to print an iternary of your flight in a .txt file? (1 == yes, 0 == no)");
                                 int tempAns = scan.nextInt();
                                 if (tempAns == 1) {
                                     tik.print();
@@ -295,8 +319,8 @@ public class SystemUI {
                     break;
                 case 2: // book hotel
                     // BookHotel hotels = new BookHotel(); old code
-                    cont = true;
-                    while (cont) {
+                    boolean cont01 = true;
+                    while (cont01) {
                         System.out.println("What state do you want to book a hotel in?");
                         String state = scan.next();
                         boolean contains = true; // temporary
@@ -307,7 +331,7 @@ public class SystemUI {
                         if (contains) { // state is valid
                             //bookHotel = new BookHotel(HotelList) fix this
                             bookHotel.BookHotelRoom(bookHotel.SearchHotel(state), user);
-                            cont = false;
+                            cont01 = false;
                         }
                         else {
                             System.out.println("Invalid input. Do you want to retry? ( 1 == yes, any other key == no)");
