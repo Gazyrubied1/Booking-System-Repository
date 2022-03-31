@@ -1,13 +1,46 @@
 [
    {
-	   "UserID" : "UUID",
-	   "Email" : "",
-	   "Password" : "Password",
+	   "UserID" : "f452f448-68c7-44aa-a9e6-5c8d8e31a562",
+	   "Email" : "BobSmith@gmail.com",
+	   "Password" : "12345",
 	   "Users" : 
 	   [
 		{
-			"FirstName":
+			"firstName": "Bob",
+			"lastName" : "Smith",
+			"DateOfBirth" : "03/18/1998",
+			"BillingAddress" : "123 i dont give a fuck Ave",
+			"id" : "UUID",
+			"Discount" : "false",
+			"rewardMember" : "false",
+			"NumFlights" : "1",
+			"Review" : "1",
+			"blacklistedAirports" : ["IL"],
+			"pets" : []
 		}
 	   ]
+   },
+
+   {
+	"UserID" : "033ec374-de6f-4037-9d03-a7a58b54ad3c",
+	   "Email" : "email@email.com",
+	   "Password" : "123456",
+	   "Users" : 
+	   [
+		{
+			"firstName": "Robert",
+			"lastName" : "Willams",
+			"DateOfBirth" : "05/11/1972",
+			"BillingAddress" : "123 i dont give a fuck Ave",
+			"id" : "033ec374-de6f-4037-9d03-a7a58b54ad3c",
+			"Discount" : "false",
+			"rewardMember" : "true",
+			"NumFlights" : "5",
+			"Review" : "5",
+			"blacklistedAirports" : [],
+			"pets" : ["dog"]
+		}
+	   ]
+   
    }
 ]
