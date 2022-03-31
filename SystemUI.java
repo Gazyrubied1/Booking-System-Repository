@@ -9,7 +9,8 @@ public class SystemUI {
     public String[] states = {"AL", "MT", "AK", "NE", "AZ", "NV", "AR", "NH", "CA", "NJ", "CO", "NM", "CT", "NY", "DE", "NC", "FL", "ND", "GA", "OH", "HI", "OK", "ID", "OR", "IL", "PA", "IN", "RI", "IA", "SC", "KS", "SD", "KY", "TN", "LA", "TX", "ME", "UT", "MD", "VT", "MA", "VA", "MI", "WA", "MN", "WV", "MS", "WI", "MO", "WY"};
     ArrayList<Account> accounts;
     BookHotel bookHotel;  // holds the hotels & rooms
-    BookFlight bookFlight;  // holds the flighs
+    BookFlight bookFlight;  // holds the flights
+    Account currAccount;
 
     /**
      * Constructor for the UI class
@@ -118,6 +119,7 @@ public class SystemUI {
      * @param account the account that the UI is accessing
      */
     void accountUI(Account account) {
+        currAccount = account;
         System.out.println("\nWelcome to your profile " + account.getEmail() + "!");
         System.out.println(WELCOME_MESSAGE_ACCOUNT);
         while (true) {
@@ -248,14 +250,36 @@ public class SystemUI {
                             if (true) {
                                 ArrayList<RegisteredUser> tempUser = new ArrayList();
                                 tempUser.add(user); 
+                                boolean friend = true;
+                                while (friend) {
+                                    System.out.println("Do you want to add a friend to this trip? (1 == yes, 0 == no)");
+                                    int answerFr = scan.nextInt();
+                                    if (answerFr == 1) {
+                                        System.out.println("What is the first name of your friend?");
+                                        String friendFirst = scan.next();
+                                        System.out.println("What is the last name of your friend?");
+                                        String friendLast = scan.next();
+                                        boolean foundFr = false;
+                                        for (int i = 0; i < currAccount.getUsers().size(); i++) {
+                                            if ((currAccount.getUsers().get(i).getFirstName() + currAccount.getUsers().get(i).getLastName()).equals(friendFirst + friendLast)) {
+                                                friend = false;
+                                                tempUser.add(currAccount.getUsers().get(i));
+                                                System.out.println("You successfully added " + friendFirst + " " + friendLast);
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        friend = false;
+                                    }
+                                }
                                 //bookFlight.bookFlight(usersFlights.get(answer-1), tempUser); requires JSON bookFlight is never instantiated
                                 ArrayList<seat> CurrSeats = new ArrayList();
                                 CurrSeats.add(new seat('a',1));
                                 CurrSeats.add(new seat('b', 1));
                                 ArrayList<Flight> idkBro = new ArrayList<>();
-                                idkBro.add(new Flight(airports, 60, "some random date", new seats(CurrSeats), 100, UUID.randomUUID().toString()));
+                                idkBro.add(new Flight(airports, 60, "03/30/2022", new seats(CurrSeats), 100, UUID.randomUUID().toString()));
                                 BookFlight flights = new BookFlight(idkBro);
-                                Ticket tik = flights.bookFlight(new Flight(airports, 60, "some random date", new seats(CurrSeats), 100, UUID.randomUUID().toString()), tempUser); 
+                                Ticket tik = flights.bookFlight(new Flight(airports, 60, "03/30/2022", new seats(CurrSeats), 100, UUID.randomUUID().toString()), tempUser); 
                                 conts = false;
                                 System.out.println("Do you want to print an iternary of your flight in a .txt file? (1 == yes, 0 == no)");
                                 int tempAns = scan.nextInt();
@@ -281,7 +305,7 @@ public class SystemUI {
                         //     if (states[i].equals(state)) contains = true;
                         // }
                         if (contains) { // state is valid
-                            bookHotel = new BookHotel(HotelList)
+                            //bookHotel = new BookHotel(HotelList) fix this
                             bookHotel.BookHotelRoom(bookHotel.SearchHotel(state), user);
                             cont = false;
                         }

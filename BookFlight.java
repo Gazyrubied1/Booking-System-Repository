@@ -143,7 +143,7 @@ public class BookFlight extends Book{
             return tik;
         }
         for(int i = 0; i < passengers.size(); ++i){
-            System.out.println("Please enter the column and then the row you would like");
+            System.out.println("Please enter the column and then the row you would like for " + passengers.get(i).getFirstName() + " " + passengers.get(i).getLastName());
             System.out.println("Column: ");
             int colom = keyBoard.nextInt();
             System.out.println("Row: ");
