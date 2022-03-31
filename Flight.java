@@ -7,7 +7,6 @@ public class Flight {
     private String DepartureDate;
     private seats SeatAvailable;
     private int cost; 
-    private int transfers;
     private String id;
 
 
@@ -18,16 +17,14 @@ public class Flight {
      * @param DepartureDate the date at which the flight leaves
      * @param SeatAvailable a list that holds all of the available seats of the flight
      * @param cost the cost of the flight
-     * @param transfers the number of transfers of the flight // not needed because it can be represented as locations.size()-1
      * @param id the id that identifies a specific flight
      */
-    public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, seats SeatAvailable, int cost, int transfers, String id) {
+    public Flight(ArrayList<String> locations, int FlightDuration, String DepartureDate, seats SeatAvailable, int cost, String id) {
         this.locations = locations;
         this.FlightDuration = FlightDuration;
         this.DepartureDate = DepartureDate;
         this.SeatAvailable = SeatAvailable;
         this.cost = cost;
-        this.transfers = transfers;
         this.id = id;
 }
 
@@ -142,7 +139,7 @@ public class Flight {
      * @return int transfers
      */
     public int getTransfers() {
-        return transfers;
+        return locations.size()-1;
     }
 
     /**
@@ -162,16 +159,16 @@ public class Flight {
      * Prints details of individuals flights
      */
     public void print() {
-        System.out.println("Flight details:\nYour trip has " + transfers + " transfers.");
+        System.out.println("Flight details:\nYour trip has " + (locations.size()-2) + " transfers.");
         for (int i = 0; i < locations.size(); i++) { // prints travel path
             System.out.print(locations.get(i) + " ");
-            if (i != locations.size()) {
+            if (i != locations.size()-1) {
                 System.out.print("-> ");
             }
             else {
                 System.out.println();
             }
         }
-        System.out.println("cost: $" + cost + "\ndate: " + DepartureDate + " transfers: " + (locations.size()-1));
+        System.out.println("\ncost: $" + cost + "\ndate: " + DepartureDate + "\ntransfers: " + (locations.size()-1));
     }
 }

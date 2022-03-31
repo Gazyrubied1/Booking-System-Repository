@@ -124,7 +124,8 @@ public class BookFlight extends Book{
     * @param passengers the arraylist of Registed user that are going on the flight
     * @return the flight to be booked
     */
-    public void bookFlight(Flight input, ArrayList<RegisteredUser> passengers) {
+    public Ticket bookFlight(Flight input, ArrayList<RegisteredUser> passengers) {
+        Ticket tik = new Ticket();
         Scanner keyBoard = new Scanner(System.in);
         seats use = input.getSeatAvailable();
         System.out.println("The available seats are: ");
@@ -133,28 +134,29 @@ public class BookFlight extends Book{
             ArrayList<seat> toPrint = new ArrayList<seat>();
             toPrint = use.getRowSeat(i);
            for(int ii = 0; ii < toPrint.size(); ++ii)
-            System.out.print(toPrint.get(ii).getCol()+" "+toPrint.get(ii).getRow());
+            System.out.print("row: " + toPrint.get(ii).getRow()+" col: "+toPrint.get(ii).getCol() + "\n");
         }
         System.out.println("The cost of the flight is: "+input.getCost()+"\n Would you Like to book? (1) yes (2) no");
         int anwser =keyBoard.nextInt();
         if(anwser != 1){
             keyBoard.close();
-            return;
+            return tik;
         }
         for(int i = 0; i < passengers.size(); ++i){
-            System.out.println("Please enter the colomn and then the row you would like");
-
+            System.out.println("Please enter the column and then the row you would like");
+            System.out.println("Column: ");
             int colom = keyBoard.nextInt();
-            String Crow = keyBoard.nextLine();
-            char Cuse = Crow.charAt(0);
-            keyBoard.close();
+            System.out.println("Row: ");
+            String CrowTemp = keyBoard.next();
+            char Crow = CrowTemp.charAt(0);
             for(int ii = 0; ii < use.getSize(); ii++){
-                if(use.getseat(ii).getRow() == Cuse && use.getseat(ii).getCol() == colom) {
-                    passengers.get(i).addPlaneTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations(), this, use.getseat(ii), input);
+                if(use.getseat(ii).getRow() == Crow && use.getseat(ii).getCol() == colom) {
+                    tik = passengers.get(i).addPlaneTicket(input.getDepartureDate(), input.getDepartureDate(), input.getlocations(), this, use.getseat(ii), input);
                     }
                 }
             } 
             input.print();
+            return tik;
     }
 
 }

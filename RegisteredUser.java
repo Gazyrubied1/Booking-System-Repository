@@ -279,7 +279,7 @@ public class RegisteredUser {
      * @param locations
      * @param flight
      */
-    public void addPlaneTicket(String departDate, String arriveDate, ArrayList<String> locations, BookFlight flight, seat mySeat, Flight ToBook){
+    public Ticket addPlaneTicket(String departDate, String arriveDate, ArrayList<String> locations, BookFlight flight, seat mySeat, Flight ToBook){
        Ticket toAdd = new Ticket();
        int price = ToBook.getCost();
        if(Discount) {
@@ -288,6 +288,7 @@ public class RegisteredUser {
        toAdd.flight(locations,departDate, arriveDate, flight, price);
        PastReservation.add(toAdd);
        setRewardMember(RewardMember);
+       return toAdd;
     }
 
     /**

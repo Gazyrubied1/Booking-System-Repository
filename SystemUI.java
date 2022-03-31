@@ -6,7 +6,7 @@ public class SystemUI {
     private static final String WELCOME_MESSAGE_SYSTEM = "Welcome to our flight booking system!\n\n*********** Main Menu **************";
     private static final String WELCOME_MESSAGE_ACCOUNT = "********* Account Menu ************";
     private static final String WELCOME_MESSAGE_USER = "********** User's Menu *************";
-    String[] states = {"AL", "MT", "AK", "NE", "AZ", "NV", "AR", "NH", "CA", "NJ", "CO", "NM", "CT", "NY", "DE", "NC", "FL", "ND", "GA", "OH", "HI", "OK", "ID", "OR", "IL", "PA", "IN", "RI", "IA", "SC", "KS", "SD", "KY", "TN", "LA", "TX", "ME", "UT", "MD", "VT", "MA", "VA", "MI", "WA", "MN", "WV", "MS", "WI", "MO", "WY"};
+    public String[] states = {"AL", "MT", "AK", "NE", "AZ", "NV", "AR", "NH", "CA", "NJ", "CO", "NM", "CT", "NY", "DE", "NC", "FL", "ND", "GA", "OH", "HI", "OK", "ID", "OR", "IL", "PA", "IN", "RI", "IA", "SC", "KS", "SD", "KY", "TN", "LA", "TX", "ME", "UT", "MD", "VT", "MA", "VA", "MI", "WA", "MN", "WV", "MS", "WI", "MO", "WY"};
     ArrayList<Account> accounts;
     BookHotel bookHotel;  // holds the hotels & rooms
     BookFlight bookFlight;  // holds the flighs
@@ -17,12 +17,7 @@ public class SystemUI {
     SystemUI() {
         accounts = new ArrayList(); // this should be loaded from the JSON here
         
-        ArrayList<Flight> flight= new ArrayList<>();
-        flight = GenerateFilght.Generateflight();
-        bookFlight = new BookFlight(flight);
-        ArrayList<Hotels> hotel = new ArrayList<>();
-        hotel = GenerateHotel.GenerateRooms();
-        bookHotel = new BookHotel(hotel);
+        // 
     }
 
     /**
@@ -220,7 +215,7 @@ public class SystemUI {
             int ans = scan.nextInt();
             switch(ans) {
                 case 1: // book flight
-                    // BookFlight flights = new BookFlight(); old code
+                    // BookFlight flights = new BookFlight(); //old code
                     boolean conts = true;
                     ArrayList<Flight> usersFlights = new ArrayList();
                     while (conts) {
@@ -231,22 +226,42 @@ public class SystemUI {
                         // System.out.println("What is your preffered arrival date? "); // idk how im going to check this
                         // String date = scan.next();
                         System.out.println("These are the flights that match your specifications: ");
-                        usersFlights = bookFlight.searchLocation(startLoc, endLoc, user.getBlackList());
-                        for (int i = 0; i < usersFlights.size(); i++) {
-                            System.out.print((i+1) + ". "); 
-                            usersFlights.get(i).print();
-                            System.out.println();
+                        //usersFlights = bookFlight.searchLocation(startLoc, endLoc, user.getBlackList());
+                        ArrayList<String> airports = new ArrayList();
+                        airports.add("Columbia Metro Airport");
+                        airports.add("Charlotte Douglas International Airport"); 
+                        for (int i = 0; i < airports.size(); i++) {
+                            System.out.print((i+1) + ". ");
+                            System.out.println(airports.get(i));
                         }
+                        // for (int i = 0; i < usersFlights.size(); i++) { works with JSON only
+                        //     System.out.print((i+1) + ". "); 
+                        //     usersFlights.get(i).print();
+                        //     System.out.println();
+                        // }
                         System.out.println("Do you want to change any of your specifications? 1 == yes, 0 == no");
                         String temp = scan.next();
                         System.out.println("Which flight do you want to book? ");
                         int answer = scan.nextInt();
                         if (!temp.equals("1")) {
-                            if (usersFlights.get(answer-1).getNumOfSeats() > 0) { // if the flight is not full
+                            //if (answer < usersFlights.size() && usersFlights.get(answer-1).getNumOfSeats() > 0) { // if the flight is not full needs JSON
+                            if (true) {
                                 ArrayList<RegisteredUser> tempUser = new ArrayList();
                                 tempUser.add(user); 
-                                bookFlight.bookFlight(usersFlights.get(answer-1), tempUser);
-                                cont = false;
+                                //bookFlight.bookFlight(usersFlights.get(answer-1), tempUser); requires JSON bookFlight is never instantiated
+                                ArrayList<seat> CurrSeats = new ArrayList();
+                                CurrSeats.add(new seat('a',1));
+                                CurrSeats.add(new seat('b', 1));
+                                ArrayList<Flight> idkBro = new ArrayList<>();
+                                idkBro.add(new Flight(airports, 60, "some random date", new seats(CurrSeats), 100, UUID.randomUUID().toString()));
+                                BookFlight flights = new BookFlight(idkBro);
+                                Ticket tik = flights.bookFlight(new Flight(airports, 60, "some random date", new seats(CurrSeats), 100, UUID.randomUUID().toString()), tempUser); 
+                                conts = false;
+                                System.out.println("Do you want to print an iternary of your flight in a .txt file? (1 == yes, 0 == no)");
+                                int tempAns = scan.nextInt();
+                                if (tempAns == 1) {
+                                    tik.print();
+                                }
                             }
                             else {
                                 System.out.println("Sorry, this flight is full, please book another one.");
@@ -260,11 +275,13 @@ public class SystemUI {
                     while (cont) {
                         System.out.println("What state do you want to book a hotel in?");
                         String state = scan.next();
-                        boolean contains = false;
-                        for (int i = 0; i < states.length; i++) {
-                            if (states[i].equals(state)) contains = true;
-                        }
+                        boolean contains = true; // temporary
+                        //boolean contains = false;
+                        // for (int i = 0; i < states.length; i++) { // idk if this runs an error
+                        //     if (states[i].equals(state)) contains = true;
+                        // }
                         if (contains) { // state is valid
+                            bookHotel = new BookHotel(HotelList)
                             bookHotel.BookHotelRoom(bookHotel.SearchHotel(state), user);
                             cont = false;
                         }
@@ -276,12 +293,12 @@ public class SystemUI {
                     }
                     break;
                 case 3: // view previous flights
-                    System.out.println("Previous flights: "); // add date parameter so this only views flights in past. Could add another option to view all flights
+                    System.out.println("Previous flights: ");
                     for (Ticket flight : user.getPastReservation()) {
-                        System.out.print(" Date: " + flight.getDepartDate() + " --- ");
+                        System.out.print("Date: " + flight.getDepartDate() + " --- ");
                         for (int i = 0; i < flight.getLocations().size(); i++) {
                             System.out.print(flight.getLocations().get(i));
-                            if (i < flight.getLocations().size()) {
+                            if (i < flight.getLocations().size()-1) {
                                 System.out.print(" -> ");
                             }
                             else {
