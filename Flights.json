@@ -135,6 +135,7 @@
             "row":"5"
             }],
     "cost": 300,
+
     "id": "0b9e4cf5-6dc4-4385-9b20-d6953bf992cc"
   }, {
     "departureLocation": ["Louis_Armstrong_New_Orleans_International_Airport_LA","Denver_International_Airport_CO","Juneau_International_Airport_AK"],

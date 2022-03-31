@@ -236,6 +236,9 @@ public class RegisteredUser {
         return;
     }
 
+    public void removeBlackList(String airport) {
+        blacklisted.remove(airport);
+    }
     /**
      * possible change to have string input
      */

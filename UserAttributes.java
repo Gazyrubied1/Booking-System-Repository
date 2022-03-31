@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 public abstract class UserAttributes {
 <<<<<<< HEAD
 	protected static final String USER_FILE_NAME = ""; //fill in later
@@ -39,6 +40,8 @@ public abstract class UserAttributes {
 
 
 =======
+=======
+>>>>>>> 22e045544cec07479acc43d1388e51b62e6a6941
 public abstract class UserAttributes {
 	protected static final String USER_FILE_NAME = "RegisteredUser.json";//fill in later
 	
@@ -67,4 +70,7 @@ public abstract class UserAttributes {
 
 
 
+<<<<<<< HEAD
 >>>>>>> d077ec2f0bd5245483c72a75e1223b62a079b9d1
+=======
+>>>>>>> 22e045544cec07479acc43d1388e51b62e6a6941

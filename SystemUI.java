@@ -132,7 +132,7 @@ public class SystemUI {
             if (ans == 1) { // view users
                 if (account.getUsers().size() == 0) System.out.println("You currently have no users on this account."); // replace this with JSON
                 for (RegisteredUser user : account.getUsers()) { 
-                    System.out.println("User's name: " + user.getFirstName() + " " + user.getLastName());
+                    System.out.println("User's name: " + user.getFirstName() + " " + user.getLastName() + " date of birth: " + user.getDateOfBirth());
                 }
             }
             else if (ans == 2) { // create users
@@ -145,7 +145,7 @@ public class SystemUI {
                 String DOB = scan.next();
                 System.out.println("What is the address of your new user?");
                 String address = scan.nextLine(); // for some reason this gets skipped
-                RegisteredUser user = new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0, new ArrayList<Ticket>(), new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
+                RegisteredUser user = new RegisteredUser(firstName, lastName, DOB, address, false, false, 0, 0.0 , new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
                 account.addUser(firstName, lastName, DOB, address); // add json to this
                 while (true) {
                     System.out.println("Do you want to add any pets to this user? 1 = yes, 0 = no");
@@ -228,8 +228,8 @@ public class SystemUI {
                         String startLoc = scan.next();
                         System.out.println("What is your destination? (Please enter only the state's abbreviation)");
                         String endLoc = scan.next();
-                        System.out.println("What is your preffered arrival date? "); // idk how im going to check this
-                        String date = scan.next();
+                        // System.out.println("What is your preffered arrival date? "); // idk how im going to check this
+                        // String date = scan.next();
                         System.out.println("These are the flights that match your specifications: ");
                         usersFlights = bookFlight.searchLocation(startLoc, endLoc, user.getBlackList());
                         for (int i = 0; i < usersFlights.size(); i++) {
@@ -335,16 +335,16 @@ public class SystemUI {
                     user.setlastName(temp);
                     break;
                 case 8: // add pet
-                    System.out.println("What pet do you want to add?");
+                    System.out.println("What pet do you want to add? You can add a dog, cat, lizzard, bird, fish, or rodent");
                     String tempPet = scan.next();
                     boolean found = false;
                     while (!found) {
-                        if (tempPet.equals("Dog")
-                        || tempPet.equals("Cat")
-                        || tempPet.equals("Lizzard")
-                        || tempPet.equals("Bird")
-                        || tempPet.equals("Fish")
-                        || tempPet.equals("Rodent")) {
+                        if (tempPet.equals("dog")
+                        || tempPet.equals("cat")
+                        || tempPet.equals("lizzard")
+                        || tempPet.equals("bird")
+                        || tempPet.equals("fish")
+                        || tempPet.equals("rodent")) {
                             found = true;
                         }
                         if (found) {
