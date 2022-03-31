@@ -229,7 +229,7 @@ public class SystemUI {
                         String startLoc = scan.next();
                         System.out.println("What is your destination? (Please enter only the state's abbreviation)");
                         String endLoc = scan.next();
-                        System.out.println("What is your preffered arrival date? "); // idk how im going to check this
+                        System.out.println("What is your preffered arrival date? format (MM/DD/YYYY)"); // idk how im going to check this
                         String date = scan.next();
                         System.out.println("These are the flights that match your specifications: ");
                         usersFlights = bookFlight.searchLocation(startLoc, endLoc, user.getBlackList());
