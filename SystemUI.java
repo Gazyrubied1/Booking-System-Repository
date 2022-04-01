@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.UUID;
 import java.io.*;
 
 public class SystemUI {
@@ -16,7 +15,10 @@ public class SystemUI {
      */
     SystemUI() {
         accounts = new ArrayList(); // this should be loaded from the JSON here
-        
+        ArrayList<Flight> flights = new ArrayList<>();
+        flights = GenerateFilght.Generateflight();
+        ArrayList<Hotels> hotels = new ArrayList<>();
+        hotels = GenerateHotel.GenerateRooms();
         // 
     }
 
@@ -66,7 +68,7 @@ public class SystemUI {
                     case 3: // search hotels by state and brand
                         System.out.println("What state do you want to search for hotels in? (Use state abbreviation)");
                         state = scan.next();
-                        System.out.println("What hotel brand do you want to search for? (brands: )");
+                        System.out.println("What hotel brand do you want to search for? (brands: Marriott, Hilton, Wyndham, Hyatt)");
                         brand = scan.next();
                         System.out.println("Below are all " + brand + " hotels in " + state);
                         bookHotel.SearchHotel(state, brand);

@@ -6,40 +6,64 @@
       "SeatAvalable": [ 
         {
             "col":"a",
-            "row":"1"
+            "row":1
             },{
             "col":"a",
-            "row":"2"
+            "row":2
+            },{
+              "col":"a",
+              "row":3
+            },{
+              "col" :"a",
+              "row": 4
+            },{
+              "col" : "a",
+              "row" :5
+            },{
+              "col" : "b",
+              "row" : 1
+            },{
+              "col" : "b",
+              "row" : 2
             },{
             "col":"b",
-            "row":"3"
+            "row":3
             },{
             "col":"b",
-            "row":"4"
+            "row":4
             },{
             "col":"b",
-            "row":"5"
+            "row":5
             },{
             "col":"c",
-            "row":"1"
+            "row":1
             },{
             "col":"c",
-            "row":"2"
+            "row":2
             },{
             "col":"c",
-            "row":"3"
+            "row":3
             },{
             "col":"c",
-            "row":"4"
+            "row":4
             },{
             "col":"c",
-            "row":"5"
+            "row":5
             },{
             "col":"d",
-            "row":"1"
+            "row":1
             },{
             "col":"d",
-            "row":"2"
+            "row":2
+            },{
+              "col":"d",
+              "row":3
+            },{
+              "col" : "d",
+              "row" : 4
+            },{
+              "col" : "d",
+              "row" :5
             }
             ],
       "cost": 300,
@@ -49,91 +73,68 @@
     "FlightDuration": 2,
     "DepartureDate":"03/19/2022",
     "SeatAvalable":[
-        {
-            "col":"a",
-            "row":"1"
-            },{
-            "col":"a",
-            "row":"2"
-            },{
-            "col":"a",
-            "row":"3"
-            },{
-            "col":"a",
-            "row":"4"
-            },{
-            "col":"b",
-            "row":"1"
-            },{
-            "col":"b",
-            "row":"2"
-            },{
-            "col":"b",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"1"
-            },{
-            "col":"c",
-            "row":"2"
-            },{
-            "col":"c",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"4"
-            },{
-            "col":"c",
-            "row":"5"
-            },{
-            "col":"d",
-            "row":"1"
-            },{
-            "col":"d",
-            "row":"2"
-            },{
-            "col":"d",
-            "row":"3"
-            },{
-            "col":"d",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"3"
-            },{
-            "col":"e",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"5"
-            },{
-            "col":"f",
-            "row":"1"
-            },{
-            "col":"f",
-            "row":"3"
-            },{
-            "col":"f",
-            "row":"4"
-            },{
-            "col":"f",
-            "row":"5"
-            },{
-            "col":"g",
-            "row":"1"
-            },{
-            "col":"g",
-            "row":"2"
-            },{
-            "col":"g",
-            "row":"3"
-            },{
-            "col":"g",
-            "row":"4"
-            },{
-            "col":"g",
-            "row":"5"
-            }],
+        
+      {
+        "col":"a",
+        "row":1
+        },{
+        "col":"a",
+        "row":2
+        },{
+          "col":"a",
+          "row":3
+        },{
+          "col" :"a",
+          "row": 4
+        },{
+          "col" : "a",
+          "row" :5
+        },{
+          "col" : "b",
+          "row" : 1
+        },{
+          "col" : "b",
+          "row" : 2
+        },{
+        "col":"b",
+        "row":3
+        },{
+        "col":"b",
+        "row":4
+        },{
+        "col":"b",
+        "row":5
+        },{
+        "col":"c",
+        "row":1
+        },{
+        "col":"c",
+        "row":2
+        },{
+        "col":"c",
+        "row":3
+        },{
+        "col":"c",
+        "row":4
+        },{
+        "col":"c",
+        "row":5
+        },{
+        "col":"d",
+        "row":1
+        },{
+        "col":"d",
+        "row":2
+        },{
+          "col":"d",
+          "row":3
+        },{
+          "col" : "d",
+          "row" : 4
+        },{
+          "col" : "d",
+          "row" :5
+        }],
     "cost": 300,
 
     "id": "0b9e4cf5-6dc4-4385-9b20-d6953bf992cc"
@@ -142,88 +143,68 @@
     "FlightDuration": 10,
     "DepartureDate":"4/25/22",
     "SeatAvalable":[
-        {
-            "col":"a",
-            "row":"1"
-            },{
-            "col":"a",
-            "row":"2"
-            },{
-            "col":"a",
-            "row":"3"
-            },{
-            "col":"a",
-            "row":"4"
-            },{
-            "col":"b",
-            "row":"1"
-            },{
-            "col":"b",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"1"
-            },{
-            "col":"c",
-            "row":"2"
-            },{
-            "col":"c",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"4"
-            },{
-            "col":"c",
-            "row":"5"
-            },{
-            "col":"d",
-            "row":"1"
-            },{
-            "col":"d",
-            "row":"2"
-            },{
-            "col":"d",
-            "row":"3"
-            },{
-            "col":"d",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"3"
-            },{
-            "col":"e",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"5"
-            },{
-            "col":"f",
-            "row":"1"
-            },{
-            "col":"f",
-            "row":"3"
-            },{
-            "col":"f",
-            "row":"4"
-            },{
-            "col":"f",
-            "row":"5"
-            },{
-            "col":"g",
-            "row":"1"
-            },{
-            "col":"g",
-            "row":"2"
-            },{
-            "col":"g",
-            "row":"3"
-            },{
-            "col":"g",
-            "row":"4"
-            },{
-            "col":"g",
-            "row":"5"
-            }],
+        
+      {
+        "col":"a",
+        "row":1
+        },{
+        "col":"a",
+        "row":2
+        },{
+          "col":"a",
+          "row":3
+        },{
+          "col" :"a",
+          "row": 4
+        },{
+          "col" : "a",
+          "row" :5
+        },{
+          "col" : "b",
+          "row" : 1
+        },{
+          "col" : "b",
+          "row" : 2
+        },{
+        "col":"b",
+        "row":3
+        },{
+        "col":"b",
+        "row":4
+        },{
+        "col":"b",
+        "row":5
+        },{
+        "col":"c",
+        "row":1
+        },{
+        "col":"c",
+        "row":2
+        },{
+        "col":"c",
+        "row":3
+        },{
+        "col":"c",
+        "row":4
+        },{
+        "col":"c",
+        "row":5
+        },{
+        "col":"d",
+        "row":1
+        },{
+        "col":"d",
+        "row":2
+        },{
+          "col":"d",
+          "row":3
+        },{
+          "col" : "d",
+          "row" : 4
+        },{
+          "col" : "d",
+          "row" :5
+        }],
     "cost": 750,
     "id": "f474b716-8295-4d3e-a1e6-05b124cce55c"
   }, {
@@ -231,91 +212,68 @@
     "FlightDuration": 6,
     "DepartureDate":"4/15/22",
     "SeatAvalable":[
-        {
-            "col":"a",
-            "row":"1"
-            },{
-            "col":"a",
-            "row":"2"
-            },{
-            "col":"a",
-            "row":"3"
-            },{
-            "col":"a",
-            "row":"4"
-            },{
-            "col":"b",
-            "row":"1"
-            },{
-            "col":"b",
-            "row":"2"
-            },{
-            "col":"b",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"1"
-            },{
-            "col":"c",
-            "row":"2"
-            },{
-            "col":"c",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"4"
-            },{
-            "col":"c",
-            "row":"5"
-            },{
-            "col":"d",
-            "row":"1"
-            },{
-            "col":"d",
-            "row":"2"
-            },{
-            "col":"d",
-            "row":"3"
-            },{
-            "col":"d",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"3"
-            },{
-            "col":"e",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"5"
-            },{
-            "col":"f",
-            "row":"1"
-            },{
-            "col":"f",
-            "row":"3"
-            },{
-            "col":"f",
-            "row":"4"
-            },{
-            "col":"f",
-            "row":"5"
-            },{
-            "col":"g",
-            "row":"1"
-            },{
-            "col":"g",
-            "row":"2"
-            },{
-            "col":"g",
-            "row":"3"
-            },{
-            "col":"g",
-            "row":"4"
-            },{
-            "col":"g",
-            "row":"5"
-            }],
+        
+      {
+        "col":"a",
+        "row":1
+        },{
+        "col":"a",
+        "row":2
+        },{
+          "col":"a",
+          "row":3
+        },{
+          "col" :"a",
+          "row": 4
+        },{
+          "col" : "a",
+          "row" :5
+        },{
+          "col" : "b",
+          "row" : 1
+        },{
+          "col" : "b",
+          "row" : 2
+        },{
+        "col":"b",
+        "row":3
+        },{
+        "col":"b",
+        "row":4
+        },{
+        "col":"b",
+        "row":5
+        },{
+        "col":"c",
+        "row":1
+        },{
+        "col":"c",
+        "row":2
+        },{
+        "col":"c",
+        "row":3
+        },{
+        "col":"c",
+        "row":4
+        },{
+        "col":"c",
+        "row":5
+        },{
+        "col":"d",
+        "row":1
+        },{
+        "col":"d",
+        "row":2
+        },{
+          "col":"d",
+          "row":3
+        },{
+          "col" : "d",
+          "row" : 4
+        },{
+          "col" : "d",
+          "row" :5
+        }],
     "cost": 400,
     "id": "82e93837-d09b-4cc8-a55e-22729fef32c3"
   }, {
@@ -323,248 +281,206 @@
     "FlightDuration": 4,
     "DepartureDate":"4/15/22",
     "SeatAvalable":[
-        {
-            "col":"a",
-            "row":"1"
-            },{
-            "col":"a",
-            "row":"2"
-            },{
-            "col":"b",
-            "row":"1"
-            },{
-            "col":"b",
-            "row":"2"
-            },{
-            "col":"b",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"1"
-            },{
-            "col":"c",
-            "row":"2"
-            },{
-            "col":"c",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"4"
-            },{
-            "col":"c",
-            "row":"5"
-            },{
-            "col":"e",
-            "row":"3"
-            },{
-            "col":"e",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"5"
-            },{
-            "col":"f",
-            "row":"1"
-            },{
-            "col":"f",
-            "row":"3"
-            },{
-            "col":"f",
-            "row":"4"
-            },{
-            "col":"f",
-            "row":"5"
-            },{
-            "col":"g",
-            "row":"1"
-            },{
-            "col":"g",
-            "row":"2"
-            },{
-            "col":"g",
-            "row":"3"
-            },{
-            "col":"g",
-            "row":"4"
-            },{
-            "col":"g",
-            "row":"5"
-            }],
+        
+      {
+        "col":"a",
+        "row":1
+        },{
+        "col":"a",
+        "row":2
+        },{
+          "col":"a",
+          "row":3
+        },{
+          "col" :"a",
+          "row": 4
+        },{
+          "col" : "a",
+          "row" :5
+        },{
+          "col" : "b",
+          "row" : 1
+        },{
+          "col" : "b",
+          "row" : 2
+        },{
+        "col":"b",
+        "row":3
+        },{
+        "col":"b",
+        "row":4
+        },{
+        "col":"b",
+        "row":5
+        },{
+        "col":"c",
+        "row":1
+        },{
+        "col":"c",
+        "row":2
+        },{
+        "col":"c",
+        "row":3
+        },{
+        "col":"c",
+        "row":4
+        },{
+        "col":"c",
+        "row":5
+        },{
+        "col":"d",
+        "row":1
+        },{
+        "col":"d",
+        "row":2
+        },{
+          "col":"d",
+          "row":3
+        },{
+          "col" : "d",
+          "row" : 4
+        },{
+          "col" : "d",
+          "row" :5
+        }],
     "cost": 450,
     "id": "649adf3e-c053-4b92-9bc2-9447dee20223"
   }, {
     "departureLocation": ["Columbia_Metropolitan_Airport_SC","Quincy_Regional_Airport_IL","Seattle_Tacoma_International_Airport_WA"],
-    "FlightDuration": "5",
+    "FlightDuration": 5,
     "DepartureDate":"4/18/22",
     "SeatAvalable":[
-        {
-            "col":"a",
-            "row":"1"
-            },{
-            "col":"a",
-            "row":"2"
-            },{
-            "col":"a",
-            "row":"3"
-            },{
-            "col":"a",
-            "row":"4"
-            },{
-            "col":"b",
-            "row":"1"
-            },{
-            "col":"b",
-            "row":"2"
-            },{
-            "col":"b",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"1"
-            },{
-            "col":"c",
-            "row":"2"
-            },{
-            "col":"c",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"4"
-            },{
-            "col":"c",
-            "row":"5"
-            },{
-            "col":"d",
-            "row":"1"
-            },{
-            "col":"d",
-            "row":"2"
-            },{
-            "col":"d",
-            "row":"3"
-            },{
-            "col":"d",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"3"
-            },{
-            "col":"e",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"5"
-            },{
-            "col":"f",
-            "row":"1"
-            },{
-            "col":"f",
-            "row":"3"
-            },{
-            "col":"f",
-            "row":"4"
-            },{
-            "col":"f",
-            "row":"5"
-            },{
-            "col":"g",
-            "row":"1"
-            },{
-            "col":"g",
-            "row":"2"
-            },{
-            "col":"g",
-            "row":"3"
-            },{
-            "col":"g",
-            "row":"4"
-            },{
-            "col":"g",
-            "row":"5"
-            }],
+        
+      {
+        "col":"a",
+        "row":1
+        },{
+        "col":"a",
+        "row":2
+        },{
+          "col":"a",
+          "row":3
+        },{
+          "col" :"a",
+          "row": 4
+        },{
+          "col" : "a",
+          "row" :5
+        },{
+          "col" : "b",
+          "row" : 1
+        },{
+          "col" : "b",
+          "row" : 2
+        },{
+        "col":"b",
+        "row":3
+        },{
+        "col":"b",
+        "row":4
+        },{
+        "col":"b",
+        "row":5
+        },{
+        "col":"c",
+        "row":1
+        },{
+        "col":"c",
+        "row":2
+        },{
+        "col":"c",
+        "row":3
+        },{
+        "col":"c",
+        "row":4
+        },{
+        "col":"c",
+        "row":5
+        },{
+        "col":"d",
+        "row":1
+        },{
+        "col":"d",
+        "row":2
+        },{
+          "col":"d",
+          "row":3
+        },{
+          "col" : "d",
+          "row" : 4
+        },{
+          "col" : "d",
+          "row" :5
+        }],
     "cost": 455,
     "id": "3573a1f6-87a8-4689-ad61-2bcb93097d47"
   },{
     "departureLocation": ["Columbia_Metropolitan_Airport_SC","Tucson_International_Airport_AZ,","Fairbanks_International_Airport_Ak" ,"Seattle_Tacoma_International_Airport_WA"],
-    "FlightDuration": "14",
+    "FlightDuration": 14,
     "DepartureDate":"4/14/22",
     "SeatAvalable":[
-        {
-            "col":"a",
-            "row":"1"
-            },{
-            "col":"a",
-            "row":"2"
-            },{
-            "col":"a",
-            "row":"3"
-            },{
-            "col":"a",
-            "row":"4"
-            },{
-            "col":"b",
-            "row":"1"
-            },{
-            "col":"b",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"2"
-            },{
-            "col":"c",
-            "row":"3"
-            },{
-            "col":"c",
-            "row":"4"
-            },{
-            "col":"c",
-            "row":"5"
-            },{
-            "col":"d",
-            "row":"1"
-            },{
-            "col":"d",
-            "row":"3"
-            },{
-            "col":"d",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"3"
-            },{
-            "col":"e",
-            "row":"4"
-            },{
-            "col":"e",
-            "row":"5"
-            },{
-            "col":"f",
-            "row":"1"
-            },{
-            "col":"f",
-            "row":"3"
-            },{
-            "col":"f",
-            "row":"4"
-            },{
-            "col":"f",
-            "row":"5"
-            },{
-            "col":"g",
-            "row":"1"
-            },{
-            "col":"g",
-            "row":"2"
-            },{
-            "col":"g",
-            "row":"3"
-            },{
-            "col":"g",
-            "row":"4"
-            },{
-            "col":"g",
-            "row":"5"
-            }],
+        
+      {
+        "col":"a",
+        "row":1
+        },{
+        "col":"a",
+        "row":2
+        },{
+          "col":"a",
+          "row":3
+        },{
+          "col" :"a",
+          "row": 4
+        },{
+          "col" : "a",
+          "row" :5
+        },{
+          "col" : "b",
+          "row" : 1
+        },{
+          "col" : "b",
+          "row" : 2
+        },{
+        "col":"b",
+        "row":3
+        },{
+        "col":"b",
+        "row":4
+        },{
+        "col":"b",
+        "row":5
+        },{
+        "col":"c",
+        "row":1
+        },{
+        "col":"c",
+        "row":2
+        },{
+        "col":"c",
+        "row":3
+        },{
+        "col":"c",
+        "row":4
+        },{
+        "col":"c",
+        "row":5
+        },{
+        "col":"d",
+        "row":1
+        },{
+        "col":"d",
+        "row":2
+        },{
+          "col":"d",
+          "row":3
+        },{
+          "col" : "d",
+          "row" : 4
+        },{
+          "col" : "d",
+          "row" :5
+        }],
     "cost": 1000,
     "id": "3573a1f6-87a8-4689-ad61-2bcb93097d47"
   }

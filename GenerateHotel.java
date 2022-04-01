@@ -21,9 +21,9 @@ public class GenerateHotel extends HotelConstants {
 			JSONArray HotelsJSON = (JSONArray)new JSONParser().parse(reader);
             //
             for(int i  = 0; i < HotelsJSON.size(); ++i) {
-                JSONObject HotelJSON = (JSObject) HotelsJSON.get(i);
-                String state = HotelJSON.get(Const_State);  //1  state
-                String brand = HotelJSON.get(Const_Brand);  //2 Brand
+                JSONObject HotelJSON = (JSONObject) HotelsJSON.get(i);
+                String state = (String) HotelJSON.get(Const_State);  //1  state
+                String brand = (String) HotelJSON.get(Const_Brand);  //2 Brand
                 HotelBrands BrandToAdd;
                 if(brand.equalsIgnoreCase("Marriot")){
                     BrandToAdd = HotelBrands.Marriot;
@@ -39,9 +39,10 @@ public class GenerateHotel extends HotelConstants {
 
                 JSONArray RoomsJSON = (JSONArray)HotelJSON.get(Const_rooms);  // 3 arraylist hotelroom
                 ArrayList<HotelRoom> RoomsToAdd = new ArrayList<>();
-                for(int ii = 0; ii < RoomsJSON.size();++ii) {
-                    JSONObject RoomJSON = new JSObject() ;
-                    String type = RoomsJSON.get(Const_ROOM_TYPE); 
+                
+                for(int ii = 0; ii < RoomsJSON.size(); ++ii) {
+                    JSONObject RoomJSON = (JSONObject)RoomsJSON.get(i);
+                    String type = (String) RoomJSON.get(Const_ROOM_TYPE); 
                     RoomType RtypeToAdd;  //  4 room type
                     if(type.equalsIgnoreCase("King_Bed")){
                         RtypeToAdd = RoomType.King_Bed;
@@ -54,16 +55,24 @@ public class GenerateHotel extends HotelConstants {
                     }else {
                         RtypeToAdd = RoomType.Twin_Beds;
                     }
-                    String RoomID = RoomsJSON.get(Const_ID);  // 5  room id
+                    String RoomID = (String)RoomJSON.get(Const_ID);  // 5  room id
 
                     ArrayList<DaysBooked> DaysBookToAddRoom = new ArrayList<>();
-                    JSONArray bookedDaysJSON = (JSONArray)HotelsJSON.get(Const_rooms);  // 6 arraylist day booked
+                    JSONArray bookedDaysJSON = (JSONArray)HotelsJSON.get(ii);  // 6 arraylist day booked
                     for(int iii = 0; iii < bookedDaysJSON.size(); ++i) {
                         JSONObject DaysJSON = (JSONObject)bookedDaysJSON.get(iii);
+                        int AddYear = ((Long)DaysJSON.get(Const_Year)).intValue();  //  7 year
 
-                        int AddYear = (int)DaysJSON.get(Const_Year);  //  7 year
-                        int [] Days = (int [])DaysJSON.get(Const_days);
-                        DaysBooked bookedDaysToAddList = new DaysBooked(AddYear, Days);
+                        JSONArray Days = (JSONArray)DaysJSON.get(Const_days);
+                        int [] DaystoAdd = new int[Days.size()];
+                        //for(int iiii = 0; iiii < DaystoAdd.length; ++iiii){    
+                                        DaystoAdd =(int[])DaysJSON.get(Const_days);
+
+                        //}
+
+
+                        
+                        DaysBooked bookedDaysToAddList = new DaysBooked(AddYear, DaystoAdd);
                         DaysBookToAddRoom.add(bookedDaysToAddList);
                     }
                     HotelRoom RoomToaddList = new HotelRoom(RtypeToAdd, DaysBookToAddRoom, RoomID);

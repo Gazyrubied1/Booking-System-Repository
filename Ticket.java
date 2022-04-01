@@ -123,7 +123,7 @@ public class Ticket {
     public void print() {
         
         try {
-            File file = new File("Flight and Hotel Itinerary.txt");
+            File file = new File("BOOK/Flight and Hotel Itinerary.txt");
             file.createNewFile();
             FileWriter writer = new FileWriter("Flight and Hotel Itinerary.txt");
             writer.write("***Flight Information***\n\nDeparture Date: " 
