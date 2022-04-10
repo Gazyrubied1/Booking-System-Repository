@@ -299,7 +299,7 @@ public class RegisteredUser {
      * @param hotel the type of booking 
      */
 
-     public void addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel Booktype, RoomType type, HotelBrands brand) {
+     public Ticket addHotelTicket(ArrayList<String> Location, String Strat, String end, BookHotel Booktype, RoomType type, HotelBrands brand) {
         Ticket toAdd = new Ticket();
         // make cost here based on room type 
         
@@ -313,6 +313,7 @@ public class RegisteredUser {
         }
         toAdd.flight(Location, Strat, end, Booktype, price);
         toAdd.hotel(brand, "03/30/2022");
+        return toAdd;
     }
 
 }

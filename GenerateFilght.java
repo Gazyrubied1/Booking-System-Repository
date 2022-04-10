@@ -21,30 +21,34 @@ public class GenerateFilght extends FlightConstant {
 
             JSONObject flightJSON = (JSONObject)flightsJSON.get(i);
 
-            String[] depatureLocation = (String[])flightJSON.get(Locations);  
+            JSONArray locatiArray = (JSONArray)flightJSON.get(Locations); 
+            String [] depaturelocations = new String [locatiArray.size()];
+            for(int ii = 0; ii < locatiArray.size();++ii){
+                depaturelocations[ii] = (String)locatiArray.get(ii);
+            }
             ArrayList<String> location = new ArrayList<String>();
            
-            for(int ii = 0; ii < depatureLocation.length; ++ii) {
-                location.add(depatureLocation[i]);
+            for(int ii = 0; ii < depaturelocations.length; ++ii) {
+                location.add(depaturelocations[ii]);
             }
 
-            int flight_Duration = (int)flightJSON.get(Flight_Duration);  // 2
+            int flight_Duration = ((Long)flightJSON.get(Flight_Duration)).intValue();  // 2
             String depatureDate = (String)flightJSON.get(DepatureDate);  // 3
             JSONArray seatsAvalableJSON = (JSONArray)flightJSON.get(SeatsAvalable);
             ArrayList<seat> seatsAvailable = new ArrayList<>();  // 4
 
             for(int j = 0; j < seatsAvalableJSON.size(); ++j) {
                 JSONObject seatJson = (JSONObject)seatsAvalableJSON.get(j);
-
                 
-                char colToAdd = (char)seatJson.get(col);
-                int rowToAdd =(int)seatJson.get(row);
+                String temp = (String)seatJson.get(col);
+                char colToAdd = temp.charAt(0);
+                Long rowToAdd = ((Long)seatJson.get(row));
                 //String idToAdd = (String)seatJson.get(id);
-                seat ToAdd = new seat(colToAdd,rowToAdd);
+                seat ToAdd = new seat(colToAdd,(rowToAdd.intValue()));
                 seatsAvailable.add(ToAdd);
             }
             seats seats = new seats(seatsAvailable);
-            int cos = (int)flightJSON.get(cost);  // 5
+            int cos = ((Long)flightJSON.get(cost)).intValue();  // 5
             int trans = location.size();  // 6
             String Id = (String)flightJSON.get(id);  //7
             flights.add(new Flight(location, flight_Duration, depatureDate, seats, cos, Id));

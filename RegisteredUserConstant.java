@@ -10,8 +10,8 @@ public class RegisteredUserConstant {
     protected static final int USER_NUM_FLIGHT= 2;
     protected static final String USER_REVIEW="2.0";
     protected static final String USER_PAST_RESERVATION="pastReservation";
-    protected static final String[] USER_BLACKLISTED_AIRPORTS=[];
-    protected static final String[] USER_PETS=[];
+    //protected static final String[] USER_BLACKLISTED_AIRPORTS=[];
+    //protected static final String[] USER_PETS=[];
     
 
 }
