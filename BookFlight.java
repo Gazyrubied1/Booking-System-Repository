@@ -5,6 +5,10 @@ public class BookFlight extends Book{
     private boolean hasPets;
     private ArrayList<Flight> Flights = new ArrayList<Flight>();
 
+    public BookFlight(){
+
+    }
+    
     public BookFlight (ArrayList<Flight> flight) {
         this.Flights = flight;
 
