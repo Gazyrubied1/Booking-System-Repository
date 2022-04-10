@@ -47,7 +47,7 @@ public class GenerateFilght extends FlightConstant {
             int cos = (int)flightJSON.get(cost);  // 5
             int trans = location.size();  // 6
             String Id = (String)flightJSON.get(id);  //7
-            flights.add(new Flight(location, flight_Duration, depatureDate, seats, cos, trans, Id));
+            flights.add(new Flight(location, flight_Duration, depatureDate, seats, cos, Id));
         }
         return flights;
     }catch(Exception e) {

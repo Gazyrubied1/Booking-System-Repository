@@ -1,5 +1,5 @@
 public class FlightConstant {
-    protected static final String Flight_File_name = "Flights.json";
+    protected static final String Flight_File_name = "Booking-System-Repository/Flights.json";
 
     protected static final String Locations = "departureLocation";
     protected static final String Flight_Duration = "FlightDuration";

@@ -17,6 +17,8 @@ public class SystemUI {
      */
     SystemUI() {
         accounts = new ArrayList(); // this should be loaded from the JSON here
+        ArrayList<Flight> flights = new ArrayList<>();
+        flights = GenerateFilght.Generateflight();
         
         // 
     }
