@@ -29,5 +29,9 @@ class FlightTest{
     assertTrue(test, "false - method didnt run");
     }
 
+    @Test
+    public void testPrint(){
+        
+    }
 
 }

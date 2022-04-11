@@ -25,6 +25,11 @@ public class RegisteredUserTest {
     public void BlackListTest(){
        ArrayList<Flight> flight = GenerateFilght.Generateflight();
        ArrayList<Account> test = UserLoader.getUsers();
-
+       test.get(0).getUsers().get(0).blacklistAirport("airport");
+       int index =0;
+       for (int i = 0; i <test.get(0).getUsers().get(0).getBlackList().size();i++){
+        index++;
+       }
+       assertSame("airport", test.get(0).getUsers().get(0).getBlackList().get(index), "fail - was not added");
     }
 }
