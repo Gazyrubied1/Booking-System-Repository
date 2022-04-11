@@ -1,6 +1,8 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "Library/json-simple-1.1.1.jar"
+        "Library/json-simple-1.1.1.jar",
+        "Library/junit-platform-suite-commons-1.8.2.jar",
+        "Library/junit-platform-console-standalone-1.8.2.jar"
     ]
 }
