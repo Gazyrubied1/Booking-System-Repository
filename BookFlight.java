@@ -94,9 +94,11 @@ public class BookFlight extends Book{
     
     private boolean checkBlackList(ArrayList<String> blacklist, int index) {
         //  fix to split the string of flights
-        for (int i = 0; i < blacklist.size(); ++i) {
-            if(blacklist.get(i).equalsIgnoreCase(Flights.get(index).getlocations().get(i))){
-                return false;
+        for (int j = 0; j < Flights.get(index).getlocations().size(); ++j) {
+            for (int i = 0; i < blacklist.size(); ++i) {
+                if (blacklist.get(i).equalsIgnoreCase(Flights.get(index).getlocations().get(j))){
+                    return false;
+                }
             }
         }
         return true;
