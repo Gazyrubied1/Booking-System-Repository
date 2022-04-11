@@ -16,8 +16,8 @@ public class RegisteredUserTest {
         
        ArrayList<Flight> flight = GenerateFilght.Generateflight();
        ArrayList<Account> test = new ArrayList<>();
-       test = UserLoader.getUsers();
-       asssertNull("should not be null", test);
+       Boolean hasNull = test = UserLoader.getUsers();
+       asssertNotNull(test);
 
     }
 
