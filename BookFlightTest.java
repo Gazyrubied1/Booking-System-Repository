@@ -47,11 +47,11 @@ class BookFlightTest {
         AssertEquals(flight.searchDate("04/11/2022", new ArrayList<String>()).size(), 1);
     }
 
-    public void testBookFlight() {
+    public void testBookFlight() { // test if the bookFlight method works
         BookFlight flight = new BookFlight();
         ArrayList<Flight> flights = new ArrayList<>();
         ArrayList<String> locations = new ArrayList<>(Arrays.asList("loc1", "loc1", "loc2", "loc3"));
         flights.add(new Flight(locations, 3, "04/11/2022", new seats(new ArrayList<seat>()), 100, "test"));
-        AssertFalse(flight.bookFlight(new ArrayList<>(Arrays.asList("loc1", "loc3")),0));
+        AssertSame(flight.bookFlight(flight.bookFlight(input, passengers), new Ticket()));
     }
 }
