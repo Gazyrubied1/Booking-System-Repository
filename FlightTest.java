@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.Verifier;
 import org.junit.jupiter.*;
+
 class FlightTest{
     ArrayList<Flight> flights = new ArrayList<>();
     
@@ -31,7 +32,7 @@ class FlightTest{
 
     @Test
     public void testPrint(){
-        
+       flights.get(0).print(); 
     }
 
 }

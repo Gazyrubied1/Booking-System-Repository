@@ -21,12 +21,14 @@ public class SystemUI {
        Flights = GenerateFilght.Generateflight();
        bookFlight = new BookFlight(Flights);
         
-       // ArrayList<Hotels> Hotels = new ArrayList<>();
-       // Hotels = GenerateHotel.GenerateHotel();
-       // bookHotel(Hotels);
+       ArrayList<Hotels> Hotels = new ArrayList<>();
+       Hotels = GenerateHotel.GenerateRooms();
+        
+       bookHotel = new BookHotel(Hotels);
 
         //accounts = UserLoader.getUsers();
         // this should be loaded from the JSON here
+       /*
         RegisteredUser user01 = new RegisteredUser("Bob", "Jones", "02/19/1990", "123 Waycross St", false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
         RegisteredUser user02 = new RegisteredUser("Sarah", "James", "05/29/1985", "456 Main Rd", false, false, 0, 0.0, new ArrayList<String>(), new ArrayList<Pet>(), UUID.randomUUID().toString());
         Account acc = new Account(UUID.randomUUID().toString(), "user@gmail.com", "aGoodPassword", new ArrayList<RegisteredUser>());
@@ -51,7 +53,7 @@ public class SystemUI {
         //HotelTOadd.add(hotel);
         //HotelTOadd.add(hotel2);
         bookHotel = new BookHotel(HotelTOadd);
-        // 
+        */// 
     }
 
     /**

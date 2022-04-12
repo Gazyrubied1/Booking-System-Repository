@@ -2,11 +2,11 @@
     {
 		"State": "MD",
 		"Brand" : "HotelBrands.Marriot",
-		"HoteRoom": 
+		"HotelRoom": 
 		[ 
 			{
 
-			"roomType" : "King_Bed",
+			"RoomType" : "King_Bed",
 			 "id" : "329cf7a2-e10b-4617-87f9-5410980edab0", 
 			 "DaysBooked" : 
 				[ 
@@ -16,7 +16,7 @@
 					}
 				]
 			},{
-			 "roomType" : "Queen_Bed",
+			 "RoomType" : "Queen_Bed",
 			 "id" : "a725bb47-d201-48f6-9fe5-ffac2144b83d", 
 			 "DaysBooked" : 
 				[ 
@@ -26,7 +26,7 @@
 					}
 				]
 			},{
-				"roomType" : "Twin_Bed",
+				"RoomType" : "Twin_Bed",
 				"id" : "a4333f7f-6d98-4a25-95f6-8c18be612af6", 
 				"DaysBooked" : 
 				   [ 

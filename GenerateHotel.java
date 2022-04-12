@@ -58,26 +58,26 @@ public class GenerateHotel extends HotelConstants {
                     String RoomID = (String)RoomJSON.get(Const_ID);  // 5  room id
 
                     ArrayList<DaysBooked> DaysBookToAddRoom = new ArrayList<>();
-                    JSONArray bookedDaysJSON = (JSONArray)HotelsJSON.get(ii);  // 6 arraylist day booked
-                    for(int iii = 0; iii < bookedDaysJSON.size(); ++i) {
-                        JSONObject DaysJSON = (JSONObject)bookedDaysJSON.get(iii);
-                        int AddYear = ((Long)DaysJSON.get(Const_Year)).intValue();  //  7 year
-
-                        JSONArray Days = (JSONArray)DaysJSON.get(Const_days);
-                        int [] DaystoAdd = new int[Days.size()];
-                        //for(int iiii = 0; iiii < DaystoAdd.length; ++iiii){    
-                                        DaystoAdd =(int[])DaysJSON.get(Const_days);
-
-                        //}
-
-
-                        
-                        DaysBooked bookedDaysToAddList = new DaysBooked(AddYear, DaystoAdd);
-                        DaysBookToAddRoom.add(bookedDaysToAddList);
-                    }
-                    HotelRoom RoomToaddList = new HotelRoom(RtypeToAdd, DaysBookToAddRoom, RoomID);
-                    RoomsToAdd.add(RoomToaddList);
-                }
+                    JSONArray bookedDaysJSON = (JSONArray)RoomJSON.get(Const_bookedDays);  // 6 arraylist day booked
+                   
+                       JSONObject yearJSON = (JSONObject)bookedDaysJSON.get(0);
+                       Long yearLong = (long)yearJSON.get(Const_Year);
+                       int year = yearLong.intValue();
+                       JSONArray days = (JSONArray)bookedDaysJSON.get(1);
+                       int [] daysToAdd = new int [days.size()];
+                       
+                       for(int iii = 0; iii < days.size();++iii ){
+                        JSONObject day = (JSONObject)days.get(iii);
+                        Long tempDay = (Long)day.get(Const_days);
+                        daysToAdd [iii] = tempDay.intValue();
+                        DaysBooked addDayYear = new DaysBooked(year, daysToAdd);
+                        DaysBookToAddRoom.add(addDayYear);
+                       }
+                    
+                    HotelRoom roomAdd = new HotelRoom(RtypeToAdd, DaysBookToAddRoom, RoomID);
+                    RoomsToAdd.add(roomAdd);
+                   }
+                
 
                 // daybook 
                 Hotels toAdd = new Hotels(RoomsToAdd, state, BrandToAdd);

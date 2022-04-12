@@ -1,5 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.AfterEach;
@@ -16,8 +16,8 @@ public class RegisteredUserTest {
         
        ArrayList<Flight> flight = GenerateFilght.Generateflight();
        ArrayList<Account> test = new ArrayList<>();
-       Boolean hasNull = test = UserLoader.getUsers();
-       asssertNotNull(test);
+       test = UserLoader.getUsers();
+       assertNotNull(test, "false - this should have somthing");;
 
     }
 
@@ -25,11 +25,17 @@ public class RegisteredUserTest {
     public void BlackListTest(){
        ArrayList<Flight> flight = GenerateFilght.Generateflight();
        ArrayList<Account> test = UserLoader.getUsers();
-       test.get(0).getUsers().get(0).blacklistAirport("airport");
+       ArrayList<String> black = new ArrayList<>();
+       black.add("test");
+       RegisteredUser user = new RegisteredUser("dave", "long", "12/12/12", "doesn't matter", false, false, 2, 4, black, null, "6543321");
+       ArrayList<RegisteredUser> users = new ArrayList<>();
+       users.add(user);
+       Account tests = new Account("12345", "1235@gmail.com", "4321", users);
+       tests.getUsers().get(0).blacklistAirport("airport");
        int index =0;
-       for (int i = 0; i <test.get(0).getUsers().get(0).getBlackList().size();i++){
+       for (int i = 0; i <tests.getUsers().get(0).getBlackList().size();i++){
         index++;
        }
-       assertSame("airport", test.get(0).getUsers().get(0).getBlackList().get(index), "fail - was not added");
+       assertSame("airport", tests.getUsers().get(0).getBlackList().get(index), "fail - was not added");
     }
 }
